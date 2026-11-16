@@ -111,6 +111,7 @@ make check
 ├── CONTRIBUTING.md           ← 贡献指南
 ├── SECURITY.md               ← 安全边界与负责任披露
 ├── LICENSE                   ← MIT
+├── NOTICE.md                 ← 第三方内容归属与免责声明
 ├── Makefile                  ← 构建 / 安装 / 卸载入口
 ├── docs/ARCHITECTURE.md      ← 设计说明：为什么是这三层
 ├── analysis/                 ← WindowServer/BackBoard 接纳判定反汇编与复现步骤
@@ -173,7 +174,8 @@ make check
 
 ## 9. 许可
 
-[MIT](LICENSE)。反汇编片段仅用于互操作性与安全研究；Apple 系统二进制本身不在本仓库内分发。
+[MIT](LICENSE)。Apple 系统二进制/提取物、第三方调研摘录的权利归属见
+[NOTICE.md](NOTICE.md)——反汇编片段仅用于互操作性与安全研究，Apple 二进制本身不在本仓库内分发。
 
 ---
 

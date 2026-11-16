@@ -19,18 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Note / 说明:
-
-本仓库中的「反汇编片段」仅用于互操作性研究（interoperability）与安全分析，
-用以说明 macOS 为何丢弃外接 digitizer 的事件。Apple 的系统二进制、共享缓存
-及其提取物（tools/x86cache/、tools/dyldsrc/）**不在本仓库内分发**，也不受本
-许可证覆盖；其权利归 Apple Inc. 所有。
-
-The disassembly excerpts in this repository are included solely for
-interoperability research and security analysis. Apple's system binaries,
-shared caches, and their extraction output are NOT distributed in this
-repository and are not covered by this license; all rights remain with Apple
-Inc.
