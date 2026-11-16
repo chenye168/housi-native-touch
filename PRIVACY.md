@@ -39,6 +39,7 @@
 | `tools/harness/samples/touchprobe-*.{txt,log}` | 日志内路径 → `$PROJECT/...`，文件属主列 → `user` |
 
 **未入库（因此不存在泄露风险）**：`evidence/hidutil_dump.plist`（含本机序列号）、
+`evidence/runtime-displayinfo.txt`（含内置显示屏 `DisplaySerialNumber`）、
 所有超过 1 MB 的原始采集日志（含主机名 `*.local` 与用户名路径）。
 排除清单逐条写在 [`.gitignore`](.gitignore) 中，重建方法见 [evidence/README.md](evidence/README.md)。
 

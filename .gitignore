@@ -64,6 +64,13 @@
 # ── 4. 含本机标识的转储（重建时由脚本脱敏后再入库）──────────────────────────
 /evidence/*.ioreg
 /evidence/iokit-*.txt
+# 含 DisplaySerialNumber（内置显示屏序列号）等内容，必须先脱敏才能入库
+/evidence/runtime-displayinfo.txt
+/evidence/displayinfo*.txt
+/evidence/*serial*.txt
+
+# touchedprobe 构建产物（源码 tools/touchedprobe/touchedprobe.c 可另行入库）
+/tools/touchedprobe/touchedprobe
 
 # ── 5. 通用 ──────────────────────────────────────────────────────────────────
 .DS_Store
