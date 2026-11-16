@@ -1,0 +1,66 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 编译检查（macOS）
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 工具链信息
+        run: |
+          sw_vers
+          xcode-select -p
+          clang --version | head -1
+          swiftc --version | head -1
+
+      - name: 构建全部工具
+        run: make build
+
+      - name: 冒烟测试（--help 不触碰设备）
+        run: |
+          ./tools/harness/build/touchprobe --help > /dev/null
+          ./tools/harness/build/hidprobe --help > /dev/null
+          ./tools/displayprobe > /dev/null || true
+          ./tools/ffcheck > /dev/null || true
+
+      - name: 安装脚本语法检查
+        run: |
+          for f in tools/daemon/install.sh tools/daemon/uninstall.sh \
+                   tools/helper/install.sh tools/helper/uninstall.sh \
+                   tools/daemon/build.sh tools/helper/build.sh \
+                   tools/harness/build.sh tools/build-standalone.sh \
+                   evidence/diag1.sh evidence/postlogin_check.sh; do
+            sh -n "$f" 2>/dev/null || bash -n "$f"
+            echo "syntax ok: $f"
+          done
+
+  privacy:
+    name: 隐私检查（禁止提交家目录/序列号/令牌）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 扫描敏感模式
+        run: |
+          set +e
+          # 1) 家目录绝对路径（/Users/<name> 或 /home/<name>）
+          git grep -nI -E '/Users/[A-Za-z0-9._-]+|/home/[A-Za-z0-9._-]+' -- . \
+            ':!PRIVACY.md' ':!CONTRIBUTING.md' ':!SECURITY.md' && FOUND=1
+          # 2) 机器序列号
+          git grep -nI -E 'C02[A-Z0-9]{5,}' -- . && FOUND=1
+          # 3) 密钥/令牌
+          git grep -nI -E 'gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|BEGIN [A-Z ]*PRIVATE KEY' -- . && FOUND=1
+          # 4) 邮件地址（LICENSE/示例文本除外）
+          git grep -nI -E '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' -- . && FOUND=1
+          if [ "${FOUND:-0}" = "1" ]; then
+            echo "::error::发现疑似隐私/密钥内容，请脱敏后再提交（见 PRIVACY.md）"
+            exit 1
+          fi
+          echo "隐私检查通过"

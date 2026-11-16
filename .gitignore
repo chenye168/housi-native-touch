@@ -1,0 +1,79 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 本仓库只收录「源码 + 文档 + 精选小证据」。
+# 下列内容刻意不入库：体积过大 / 含本机标识 / Apple 版权二进制 / 可再生成。
+# 详见 evidence/README.md 与 PRIVACY.md。
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── 1. 本机提取的系统库缓存与第三方源码副本 ──────────────────────────────────
+# tools/x86cache/ 约 6.1 GB，是从 dyld 共享缓存提取的 Apple 系统库（不可再分发）
+/tools/x86cache/
+# tools/dyldsrc/ 是 Apple dyld 开源项目的本地副本（第三方代码，按需自行获取）
+/tools/dyldsrc/
+
+# ── 2. 编译产物与构建缓存 ────────────────────────────────────────────────────
+/tools/harness/build/
+/tools/gesturewatch/build/
+/tools/daemon/housitouchd
+/tools/daemon/housitouch-usbreset
+/tools/helper/housitouch-setmode
+/tools/helper/HOUSITouchHelper.app/Contents/MacOS/
+/tools/helper/HOUSITouchHelper.app/Contents/_CodeSignature/
+/tools/helper/*.dSYM/
+/tools/**/*.dSYM/
+/tools/**/*.o
+/tools/**/__pycache__/
+/analysis/scripts/__pycache__/
+
+# 顶层独立探针：源码（同名 .c / .m / .swift）已入库，二进制不入库
+/tools/displayprobe
+/tools/dscx
+/tools/fastpath
+/tools/ffcheck
+/tools/hidmode_root
+/tools/hidprop
+/tools/hidprop2
+/tools/maindisplay
+/tools/regmark
+/tools/regset
+/tools/svcmode
+/tools/usbmode
+/tools/usbprobe
+/tools/usbreset
+
+# research 探针二进制（同名 .c 源码已入库）
+/research/hid-channels/probes/dumpimg
+/research/hid-channels/probes/imgfind
+/research/hid-channels/probes/svcprobe
+/research/hid-channels/probes/virtdev
+
+# ── 3. 超大原始采集日志（仅保留在本地，重建方法见 evidence/README.md）────────
+/evidence/all_gesture_logs.txt
+/evidence/backboard_2h.txt
+/evidence/digitizer_6h.txt
+/evidence/dock_proc_test.log
+/evidence/dock_test.log
+/evidence/dock_test2.log
+/evidence/gesture-session.ndjson
+/evidence/gesture-session2.ndjson
+/evidence/hidutil_dump.plist
+/evidence/touchevents_6h.txt
+/evidence/touchevents_latest.txt
+/evidence/usb2iic_6h.txt
+/evidence/ws_stream_accepted.log
+
+# ── 4. 含本机标识的转储（重建时由脚本脱敏后再入库）──────────────────────────
+/evidence/*.ioreg
+/evidence/iokit-*.txt
+
+# ── 5. 通用 ──────────────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+*~
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.mobileprovision
+/tmp/
