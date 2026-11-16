@@ -1,0 +1,28 @@
+Timestamp               Ty Process[PID:TID]
+2026-11-16 13:28:21.073 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: touching
+2026-11-16 13:28:21.127 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: none
+2026-11-16 13:28:22.006 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: touching
+2026-11-16 13:28:22.572 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: none
+2026-11-16 13:28:22.881 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: touching
+2026-11-16 13:28:24.868 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: none
+2026-11-16 13:28:25.434 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: touching
+2026-11-16 13:28:26.386 Df WindowServer[424:ff2] [com.apple.BackBoard:TouchEvents] [100001B5A] contact 0 presence: none
+2026-11-16 13:28:34.389 Df WindowServer[424:b790] [com.apple.BackBoard:TouchEvents] touchstats 100001B5A-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 33.3179s ago: [
+    down: 19,
+    up: 19,
+    rangeIn: 19,
+    rangeOut: 19,
+    pathsSeen: 0,
+    destinations: {
+        (null).-1 targetID 5D23E5B3/0: {
+            touchIDs: 64-65 69-6A;
+        };
+        (null).-1 targetID B40D7BFB/0: {
+            touchIDs: 6B-6E;
+        };
+        (null).-1 targetID AE633D9D/0: {
+            touchIDs: 5C-63 66-68;
+        };
+    },
+    averageProcessingTime (µs): 573.34
+]

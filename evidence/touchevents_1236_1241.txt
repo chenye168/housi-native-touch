@@ -1,0 +1,1995 @@
+Timestamp               Ty Process[PID:TID]
+2026-11-16 12:37:25.507 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 12:37:25.507 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 12:37:25.507 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 12:37:25.507 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 12:37:25.829 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7cf6841800; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 33813; ASID: 100346; PIDVersion: 76481> doesn't have the required entitlement
+2026-11-16 12:37:25.829 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7cf6841800; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 33813; ASID: 100346; PIDVersion: 76481> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 12:37:25.941 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100006C1D) service:<BKIOHIDService: 0x7cfca56940; senderID: 0x100006C1D; eventSource: builtin; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; authenticated; builtIn>
+2026-11-16 12:37:25.941 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] *** acquired main display digitizer (after 0.001603s)
+2026-11-16 12:37:25.941 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] service 100006C1D setProperty:160 forKey:QuantizationDPI
+2026-11-16 12:37:25.942 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7cfeda8900; touchScreen; builtin; builtIn: YES; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100006C1D; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 12:37:26.480 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7cf7b0d840; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 33823; ASID: 100457; PIDVersion: 76527> doesn't have the required entitlement
+2026-11-16 12:37:26.480 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7cf7b0d840; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 33823; ASID: 100457; PIDVersion: 76527> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 12:37:26.910 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:37:26.938 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:37:26.989 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 12:37:27.812 Df WindowServer[415:48f52] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7cfc2f8500; touchScreen; builtin; builtIn: YES; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100006C1D; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 12:38:22.057 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 12:38:22.057 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 12:38:22.058 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 12:38:22.058 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 12:38:23.338 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7cfaaf2200; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 33941; ASID: 100457; PIDVersion: 76859> doesn't have the required entitlement
+2026-11-16 12:38:23.339 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7cfaaf2200; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 33941; ASID: 100457; PIDVersion: 76859> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 12:41:01.959 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236949819858
+Timestamp type:      Absolute
+Total Latency:       1920 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:
+2026-11-16 12:41:01.966 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950011839
+Timestamp type:      Absolute
+Total Latency:       797 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:                   0.467468
+Z:
+2026-11-16 12:41:01.976 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950203091
+Timestamp type:      Absolute
+Total Latency:       3155 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:                   0.467468
+Z:
+2026-11-16 12:41:01.981 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950371090
+Timestamp type:      Absolute
+Total Latency:       717 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:                   0.467468
+Z:
+2026-11-16 12:41:01.991 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950610988
+Timestamp type:      Absolute
+Total Latency:       696 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:                   0.467468
+Z:
+2026-11-16 12:41:01.997 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950755788
+Timestamp type:      Absolute
+Total Latency:       752 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.426331
+Y:                   0.467468
+Z:
+2026-11-16 12:41:02.005 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236950946233
+Timestamp type:      Absolute
+Total Latency:       750 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 12:41:02.109 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236953396016
+Timestamp type:      Absolute
+Total Latency:       2542 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:
+2026-11-16 12:41:02.114 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236953586416
+Timestamp type:      Absolute
+Total Latency:       416 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.122 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236953755496
+Timestamp type:      Absolute
+Total Latency:       729 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.130 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236953946790
+Timestamp type:      Absolute
+Total Latency:       644 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.141 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236954187448
+Timestamp type:      Absolute
+Total Latency:       2262 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.148 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236954379361
+Timestamp type:      Absolute
+Total Latency:       829 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.158 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236954498593
+Timestamp type:      Absolute
+Total Latency:       6105 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.401733
+Y:                   0.478882
+Z:
+2026-11-16 12:41:02.161 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236954691287
+Timestamp type:      Absolute
+Total Latency:       585 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 12:41:02.316 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236958412469
+Timestamp type:      Absolute
+Total Latency:       1152 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:
+2026-11-16 12:41:02.324 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236958602608
+Timestamp type:      Absolute
+Total Latency:       496 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.330 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236958770555
+Timestamp type:      Absolute
+Total Latency:       441 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.339 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236958963549
+Timestamp type:      Absolute
+Total Latency:       567 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.348 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236959202860
+Timestamp type:      Absolute
+Total Latency:       465 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.357 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236959395368
+Timestamp type:      Absolute
+Total Latency:       464 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.363 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236959562568
+Timestamp type:      Absolute
+Total Latency:       449 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.346008
+Y:                   0.498047
+Z:
+2026-11-16 12:41:02.370 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236959707679
+Timestamp type:      Absolute
+Total Latency:       497 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 12:41:02.745 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236968707677
+Timestamp type:      Absolute
+Total Latency:       1237 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:
+2026-11-16 12:41:02.752 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236968875104
+Timestamp type:      Absolute
+Total Latency:       656 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.760 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236969067454
+Timestamp type:      Absolute
+Total Latency:       763 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.767 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236969235309
+Timestamp type:      Absolute
+Total Latency:       862 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.777 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236969475554
+Timestamp type:      Absolute
+Total Latency:       794 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.785 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236969668886
+Timestamp type:      Absolute
+Total Latency:       977 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.793 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236969859133
+Timestamp type:      Absolute
+Total Latency:       954 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.800 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236970026376
+Timestamp type:      Absolute
+Total Latency:       477 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.810 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236970268594
+Timestamp type:      Absolute
+Total Latency:       960 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.214539
+Y:                   0.529556
+Z:
+2026-11-16 12:41:02.815 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236970410053
+Timestamp type:      Absolute
+Total Latency:       405 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 12:41:03.125 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236977779883
+Timestamp type:      Absolute
+Total Latency:       2641 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.220825
+Y:
+2026-11-16 12:41:03.133 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236978019940
+Timestamp type:      Absolute
+Total Latency:       828 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.220825
+Y:                   0.502945
+Z:
+2026-11-16 12:41:03.142 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236978211342
+Timestamp type:      Absolute
+Total Latency:       2182 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:
+2026-11-16 12:41:03.148 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236978379770
+Timestamp type:      Absolute
+Total Latency:       733 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.156 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236978572324
+Timestamp type:      Absolute
+Total Latency:       854 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.166 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236978810197
+Timestamp type:      Absolute
+Total Latency:       533 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.176 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979004577
+Timestamp type:      Absolute
+Total Latency:       2411 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.181 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979171602
+Timestamp type:      Absolute
+Total Latency:       701 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.189 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979363210
+Timestamp type:      Absolute
+Total Latency:       760 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.199 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979603499
+Timestamp type:      Absolute
+Total Latency:       1281 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256836
+Y:                   0.485687
+Z:
+2026-11-16 12:41:03.210 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979771705
+Timestamp type:      Absolute
+Total Latency:       4602 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.256927
+Y:                   0.485474
+Z:
+2026-11-16 12:41:03.214 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236979963678
+Timestamp type:      Absolute
+Total Latency:       607 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.257050
+Y:                   0.485291
+Z:
+2026-11-16 12:41:03.222 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236980155143
+Timestamp type:      Absolute
+Total Latency:       974 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.257172
+Y:                   0.484985
+Z:
+2026-11-16 12:41:03.231 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236980371538
+Timestamp type:      Absolute
+Total Latency:       673 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.257385
+Y:                   0.484711
+Z:
+2026-11-16 12:41:03.239 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236980563660
+Timestamp type:      Absolute
+Total Latency:       816 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.257721
+Y:                   0.484314
+Z:
+2026-11-16 12:41:03.247 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236980754996
+Timestamp type:      Absolute
+Total Latency:       630 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.220825
+Y:                   0.502945
+2026-11-16 12:41:03.255 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236980947670
+Timestamp type:      Absolute
+Total Latency:       856 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 12:41:03.649 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236990380301
+Timestamp type:      Absolute
+Total Latency:       1485 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.189575
+Y:
+2026-11-16 12:41:03.656 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236990571469
+Timestamp type:      Absolute
+Total Latency:       732 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:
+2026-11-16 12:41:03.663 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236990739429
+Timestamp type:      Absolute
+Total Latency:       1072 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.671 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236990931659
+Timestamp type:      Absolute
+Total Latency:       789 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.681 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236991171281
+Timestamp type:      Absolute
+Total Latency:       807 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.689 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236991363058
+Timestamp type:      Absolute
+Total Latency:       1195 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.696 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236991532772
+Timestamp type:      Absolute
+Total Latency:       945 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.704 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236991723712
+Timestamp type:      Absolute
+Total Latency:       845 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.714 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236991963578
+Timestamp type:      Absolute
+Total Latency:       728 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.721 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236992131792
+Timestamp type:      Absolute
+Total Latency:       797 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.729 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236992323524
+Timestamp type:      Absolute
+Total Latency:       827 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.736 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236992491482
+Timestamp type:      Absolute
+Total Latency:       1224 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.746 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236992731433
+Timestamp type:      Absolute
+Total Latency:       866 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259552
+Y:                   0.520233
+Z:
+2026-11-16 12:41:03.754 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236992924305
+Timestamp type:      Absolute
+Total Latency:       759 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259644
+Y:                   0.520172
+Z:
+2026-11-16 12:41:03.762 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236993115508
+Timestamp type:      Absolute
+Total Latency:       826 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259735
+Y:                   0.520111
+Z:
+2026-11-16 12:41:03.770 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236993283889
+Timestamp type:      Absolute
+Total Latency:       1702 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259735
+Y:                   0.520111
+Z:
+2026-11-16 12:41:03.779 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236993524559
+Timestamp type:      Absolute
+Total Latency:       1151 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259781
+Y:                   0.519958
+Z:
+2026-11-16 12:41:03.787 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236993714216
+Timestamp type:      Absolute
+Total Latency:       598 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           0
+Events:              
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259781
+Y:                   0.519958
+Z:
+2026-11-16 12:41:03.794 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236993882330
+Timestamp type:      Absolute
+Total Latency:       489 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.259857
+Y:                   0.519958
+Z:
+2026-11-16 12:41:03.802 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236994075468
+Timestamp type:      Absolute
+Total Latency:       797 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.189697
+Y:                   0.515762
+2026-11-16 12:41:03.815 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           236994267235
+Timestamp type:      Absolute
+Total Latency:       6053 us
+SenderID:            0x0000000100006C1D
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000

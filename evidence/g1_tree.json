@@ -1,0 +1,39 @@
+{
+  "sha": "c3189b811582365f79c929f3a4c67cbdd109286d",
+  "url": "https://api.github.com/repos/glasses666/macos27-external-touch/git/trees/c3189b811582365f79c929f3a4c67cbdd109286d",
+  "tree": [
+    {
+      "path": "EVIDENCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57e9dc1f9245d1a0fed3983f7b842ccfa8c57dab",
+      "size": 3353,
+      "url": "https://api.github.com/repos/glasses666/macos27-external-touch/git/blobs/57e9dc1f9245d1a0fed3983f7b842ccfa8c57dab"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677e1f8150d83ecacef2026a30880f4661705eb6",
+      "size": 1070,
+      "url": "https://api.github.com/repos/glasses666/macos27-external-touch/git/blobs/677e1f8150d83ecacef2026a30880f4661705eb6"
+    },
+    {
+      "path": "OUTREACH.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc7f1375e8c1af3d3ce6ed0e0fcf55d59d94b3ce",
+      "size": 3633,
+      "url": "https://api.github.com/repos/glasses666/macos27-external-touch/git/blobs/cc7f1375e8c1af3d3ce6ed0e0fcf55d59d94b3ce"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa848c47eb2d8cb67c329fa201cceedcb1676991",
+      "size": 8326,
+      "url": "https://api.github.com/repos/glasses666/macos27-external-touch/git/blobs/aa848c47eb2d8cb67c329fa201cceedcb1676991"
+    }
+  ],
+  "truncated": false
+}

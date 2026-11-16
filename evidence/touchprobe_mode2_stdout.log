@@ -1,0 +1,49 @@
+2026-11-16T12:32:50.912+08:00 [SYS  ] overlay screen:  uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 frame={{-134, -1066}, {1600, 1066}}
+2026-11-16T12:32:50.921+08:00 [SYS  ] overlay window created on screen frame={{-134, -1066}, {1600, 1066}} level=floating
+2026-11-16T12:32:50.922+08:00 [SYS  ] touchprobe start pid=32587 os=Version 27.2.1 (Build 26B131)
+2026-11-16T12:32:50.922+08:00 [SYS  ] logfile=evidence/touchprobe_mode2.log
+2026-11-16T12:32:50.924+08:00 [SYS  ] === NSScreen.screens (2) ===
+2026-11-16T12:32:50.924+08:00 [SYS  ] [0] name=Built-in Retina Display displayID=1 uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 touchCapabilities=1 (MultiTouch) main=no
+2026-11-16T12:32:50.929+08:00 [SYS  ]     NSScreen.frame={{0, 0}, {1312, 848}} visibleFrame={{0, 0}, {1312, 822}} backingScale=2.0
+2026-11-16T12:32:50.929+08:00 [SYS  ]     CGDisplayBounds={{0, 0}, {1312, 848}} rotation=0°
+2026-11-16T12:32:50.929+08:00 [SYS  ]     HOUSI? = no
+2026-11-16T12:32:50.930+08:00 [SYS  ] [1] name=<空> displayID=3 uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 touchCapabilities=1 (MultiTouch) main=YES
+2026-11-16T12:32:50.930+08:00 [SYS  ]     NSScreen.frame={{-134, -1066}, {1600, 1066}} visibleFrame={{-134, -976}, {1600, 946}} backingScale=1.0
+2026-11-16T12:32:50.931+08:00 [SYS  ]     CGDisplayBounds={{-134, 848}, {1600, 1066}} rotation=180°
+2026-11-16T12:32:50.931+08:00 [SYS  ]     HOUSI? = YES (UUID 匹配)
+2026-11-16T12:32:50.931+08:00 [SYS  ] === CGGetOnlineDisplayList ===
+2026-11-16T12:32:50.931+08:00 [SYS  ] CGGetOnlineDisplayList err=CGError(rawValue: 0) count=2
+2026-11-16T12:32:50.932+08:00 [SYS  ]   id=1 uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 main=1 builtin=1 active=1 bounds={{0, 0}, {1312, 848}} rotation=0°
+2026-11-16T12:32:50.932+08:00 [SYS  ]   id=3 uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 main=0 builtin=0 active=1 bounds={{-134, 848}, {1600, 1066}} rotation=180°
+2026-11-16T12:32:50.932+08:00 [SYS  ] === HOUSI 映射参考（已知 UUID=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07） ===
+2026-11-16T12:32:50.932+08:00 [SYS  ] NSScreen:  id=3 frame={{-134, -1066}, {1600, 1066}}
+2026-11-16T12:32:50.933+08:00 [SYS  ] CGDisplayBounds: {{-134, 848}, {1600, 1066}} (lead 实测已知: {{-134, 848}, {1600, 1066}})
+2026-11-16T12:32:50.933+08:00 [SYS  ] rotation=180° (lead 实测已知: 180°)
+2026-11-16T12:32:50.934+08:00 [SYS  ] 注意: NSScreen 坐标系原点在主屏左下、y 向上；CGDisplayBounds 原点在主屏左上、y 向下，
+2026-11-16T12:32:50.934+08:00 [SYS  ]       同一块屏的 frame 与 bounds 通过主屏高度互相换算（主屏 height=1066）。
+2026-11-16T12:32:50.935+08:00 [SYS  ] 归一化触控坐标映射候选（NSTouch.normalizedPosition 以触控面板左下为 (0,0)）:
+2026-11-16T12:32:50.935+08:00 [SYS  ]   normalized -> 直映射(NSScreen 坐标)            -> 按 rotation 180° 翻转候选
+2026-11-16T12:32:50.935+08:00 [SYS  ]   (0.00,0.00) -> (-134.0,-1066.0) -> (1466.0,0.0)
+2026-11-16T12:32:50.936+08:00 [SYS  ]   (0.50,0.50) -> (666.0,-533.0) -> (666.0,-533.0)
+2026-11-16T12:32:50.936+08:00 [SYS  ]   (1.00,0.00) -> (1466.0,-1066.0) -> (-134.0,0.0)
+2026-11-16T12:32:50.936+08:00 [SYS  ]   (0.00,1.00) -> (-134.0,0.0) -> (1466.0,-1066.0)
+2026-11-16T12:32:50.936+08:00 [SYS  ]   (1.00,1.00) -> (1466.0,0.0) -> (-134.0,-1066.0)
+2026-11-16T12:32:50.937+08:00 [SYS  ] === 事件监听配置 ===
+2026-11-16T12:32:50.937+08:00 [SYS  ] NSEventTypeDirectTouch = 37, NSEventTypeGesture = 29
+2026-11-16T12:32:50.937+08:00 [SYS  ] NSEventMaskDirectTouch raw = 137438953472
+2026-11-16T12:32:50.937+08:00 [SYS  ] 提示: 请触摸 HOUSI 屏幕（外接触控屏），事件会实时写入上方日志与 evidence/touchprobe_mode2.log
+2026-11-16T12:32:50.938+08:00 [SYS  ] local monitor mask=137975824384 types=[directTouch, gesture]
+2026-11-16T12:32:50.938+08:00 [SYS  ] global monitor installed (需要 辅助功能/输入监控 权限才可能收到其他 app 的事件)
+2026-11-16T12:32:50.939+08:00 [SYS  ] 将在 75.0 秒后自动退出
+2026-11-16T12:32:50.942+08:00 [SYS  ] 启动时 NSApp.windows=2
+2026-11-16T12:32:50.943+08:00 [SYS  ]   win[0] number=2084 title=touchprobe — AppKit 原生触控验证（NSEventTypeDirectTouch=37） visible=YES level=3 frame={{166, -861}, {1000, 792}} screen=<空>
+2026-11-16T12:32:50.943+08:00 [SYS  ]   win[1] number=2085 title= visible=YES level=3 frame={{-134, -1066}, {1600, 1066}} screen=<空>
+2026-11-16T12:32:51.311+08:00 [SYS  ] 0.35s 后 NSApp.windows=2
+2026-11-16T12:32:51.312+08:00 [SYS  ]   win[0] number=2084 title=touchprobe — AppKit 原生触控验证（NSEventTypeDirectTouch=37） visible=YES level=3 frame={{166, -861}, {1000, 792}} screen=<空>
+2026-11-16T12:32:51.313+08:00 [SYS  ]   win[1] number=2085 title= visible=YES level=3 frame={{-134, -1066}, {1600, 1066}} screen=<空>
+2026-11-16T12:34:05.939+08:00 [SYS  ] --duration 75.0s 已到，退出
+2026-11-16T12:34:05.941+08:00 [SYS  ] === SUMMARY ===
+2026-11-16T12:34:05.941+08:00 [SYS  ] duration=75.12s directTouchEvents=0 gestureEvents=15 otherEvents=0
+2026-11-16T12:34:05.942+08:00 [SYS  ] touchBegan=0 touchEnded=0 stationTouchBegins=0
+2026-11-16T12:34:05.942+08:00 [SYS  ] eventTypeCounts: type29=592
+2026-11-16T12:34:05.944+08:00 [SYS  ] logfile=evidence/touchprobe_mode2.log

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macOS 27 触控手势验证清单</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; font: 15px/1.5 -apple-system, "SF Pro Text", "PingFang SC", sans-serif; background: Canvas; color: CanvasText; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  p.sub { margin: 0 0 16px; opacity: .7; font-size: 13px; }
+  .toolbar { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; align-items: center; padding: 10px 0; background: Canvas; border-bottom: 1px solid color-mix(in srgb, CanvasText 15%, transparent); margin-bottom: 8px; flex-wrap: wrap; }
+  button { font: inherit; padding: 6px 12px; border-radius: 7px; border: 1px solid color-mix(in srgb, CanvasText 25%, transparent); background: color-mix(in srgb, CanvasText 6%, Canvas); color: inherit; cursor: pointer; }
+  button:hover { background: color-mix(in srgb, CanvasText 12%, Canvas); }
+  button.primary { background: #0a84ff; border-color: #0a84ff; color: #fff; }
+  button.primary:hover { background: #0070e0; }
+  #status { font-size: 12px; opacity: .65; margin-left: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid color-mix(in srgb, CanvasText 10%, transparent); vertical-align: top; }
+  th { font-size: 12px; text-transform: none; opacity: .65; font-weight: 600; position: sticky; top: 54px; background: Canvas; }
+  tr.cat td { padding-top: 18px; font-weight: 700; font-size: 13px; opacity: .85; border-bottom: none; }
+  td.id { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  td.name { white-space: nowrap; }
+  td.expect { opacity: .8; font-size: 13px; }
+  select { font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid color-mix(in srgb, CanvasText 25%, transparent); background: Canvas; color: inherit; }
+  input.note { width: 100%; min-width: 120px; font: inherit; padding: 4px 6px; border-radius: 6px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); background: transparent; color: inherit; }
+  select[data-state="ok"] { border-color: #30d158; }
+  select[data-state="partial"] { border-color: #ffd60a; }
+  select[data-state="fail"] { border-color: #ff453a; }
+  #out { width: 100%; min-height: 120px; margin-top: 10px; font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 10px; border-radius: 8px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); background: color-mix(in srgb, CanvasText 4%, Canvas); color: inherit; display: none; }
+  .foot { margin-top: 18px; font-size: 12px; opacity: .6; }
+</style>
+</head>
+<body>
+<h1>macOS 27 触控手势验证清单</h1>
+<p class="sub">2026 触控 MacBook Pro（PROLED XDR）官方手势 · 在本机 HOUSI 外接屏实测。选择结果后会自动保存在本机浏览器里。</p>
+
+<div class="toolbar">
+  <button class="primary" id="copy">复制反馈</button>
+  <button id="export">导出 Markdown</button>
+  <button id="reset">全部重置</button>
+  <span id="status"></span>
+</div>
+
+<table>
+  <thead><tr><th style="width:44px">编号</th><th style="width:150px">手势</th><th>预期（HOUSI 上应看到）</th><th style="width:110px">结果</th><th style="width:220px">现象 / 备注</th></tr></thead>
+  <tbody id="tbody"></tbody>
+</table>
+
+<textarea id="out" readonly></textarea>
+<p class="foot">结果：✅ 可用 · ⚠️ 部分可用/行为不同 · ❌ 不可用 · ➖ 不适用（硬件缺失）。勾选后点“复制反馈”发我即可。</p>
+
+<script>
+const GROUPS = [
+  ["A. 选择、打开、导览", [
+    ["G01","轻点","选中项目 / 开链接、通知、程序坞启 App"],
+    ["G02","轻点两下","打开文件/App；（宣传）双击窗口填满屏幕"],
+    ["G03","按住后拖移","多选项目"],
+    ["G04","按住项目","弹出右键/快捷键菜单"],
+    ["G05","单指任意方向拖移","滚动 / 平移"],
+    ["G06","快速上下轻扫","快速滚动"],
+  ]],
+  ["B. 处理对象和内容", [
+    ["G07","双指开合","放大 / 缩小"],
+    ["G08","双指旋转","旋转项目"],
+    ["G09","按住拖到目标再抬手","拖放"],
+    ["G10","拖角落手柄","调整大小 / 裁剪"],
+  ]],
+  ["C. 管理窗口", [
+    ["G11","拖标题栏","移动窗口"],
+    ["G12","拖边缘/角落","调整窗口大小"],
+    ["G13","快速向左/右甩","半屏平铺"],
+    ["G14","拖到左右边缘高亮区","平铺窗口"],
+    ["G15","轻点窗口控制","展开红黄绿控制"],
+    ["G16","全屏下从菜单栏下扫/点左上角","显示窗口控制"],
+  ]],
+  ["D. 系统导览", [
+    ["G17","三指上扫","调度中心"],
+    ["G18","三指下扫","App Exposé"],
+    ["G19","台前调度点左边缘","显示所有已打开 App"],
+    ["G20","右上角下扫","控制中心"],
+    ["G21","三指左右扫","切换空间"],
+    ["G22","拇指+三指外张","显示桌面"],
+    ["G23","四指捏合","显示 App（聚焦 App 视图）"],
+    ["G24","底部上扫","显示程序坞（隐藏时）"],
+    ["G25","顶部边缘下扫","显示菜单栏（隐藏时）"],
+    ["G26","右边缘左扫","通知中心"],
+    ["G27","顶部扫过灵动岛","聚焦 / Siri AI"],
+    ["G28","单指左右轻扫","页面间轻扫（Safari 前进/后退）"],
+  ]],
+];
+const STATE_LABEL = {ok:"✅ 可用", partial:"⚠️ 部分", fail:"❌ 不可用", na:"➖ 不适用"};
+const STORE_KEY = "macos27-touch-gestures-v1";
+
+const tbody = document.getElementById("tbody");
+const out = document.getElementById("out");
+
+function build() {
+  for (const [cat, items] of GROUPS) {
+    const tr = document.createElement("tr");
+    tr.className = "cat";
+    tr.innerHTML = `<td colspan="5">${cat}</td>`;
+    tbody.appendChild(tr);
+    for (const [id, name, expect] of items) {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="id">${id}</td>
+        <td class="name">${name}</td>
+        <td class="expect">${expect}</td>
+        <td>
+          <select data-id="${id}" data-state="">
+            <option value="">未测</option>
+            <option value="ok">✅ 可用</option>
+            <option value="partial">⚠️ 部分</option>
+            <option value="fail">❌ 不可用</option>
+            <option value="na">➖ 不适用</option>
+          </select>
+        </td>
+        <td><input class="note" data-note="${id}" placeholder="例如：无反应 / 方向反了"></td>`;
+      tbody.appendChild(row);
+      const sel = row.querySelector("select");
+      sel.addEventListener("change", () => {
+        sel.dataset.state = sel.value;
+        save();
+      });
+    }
+  }
+}
+
+function collect() {
+  const data = {states:{}, notes:{}};
+  document.querySelectorAll("select[data-id]").forEach(sel => {
+    if (sel.value) data.states[sel.dataset.id] = sel.value;
+  });
+  document.querySelectorAll("input[data-note]").forEach(inp => {
+    if (inp.value.trim()) data.notes[inp.dataset.note] = inp.value.trim();
+  });
+  return data;
+}
+
+let timer = null;
+function save() {
+  localStorage.setItem(STORE_KEY, JSON.stringify(collect()));
+  const n = Object.keys(collect().states).length;
+  document.getElementById("status").textContent = `已记录 ${n}/28 · 自动保存`;
+}
+function load() {
+  let data = {};
+  try { data = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); } catch(e) {}
+  for (const [id, v] of Object.entries(data.states || {})) {
+    const sel = document.querySelector(`select[data-id="${id}"]`);
+    if (sel) { sel.value = v; sel.dataset.state = v; }
+  }
+  for (const [id, v] of Object.entries(data.notes || {})) {
+    const inp = document.querySelector(`input[data-note="${id}"]`);
+    if (inp) inp.value = v;
+  }
+  const n = Object.keys(data.states || {}).length;
+  document.getElementById("status").textContent = n ? `已记录 ${n}/28 · 自动保存` : "未测";
+}
+
+function feedback() {
+  const data = collect();
+  const lines = [];
+  for (const [, items] of GROUPS) {
+    for (const [id, name] of items) {
+      const st = data.states[id];
+      if (!st) continue;
+      const note = data.notes[id] ? ` —— ${data.notes[id]}` : "";
+      lines.push(`${id} ${STATE_LABEL[st]} ${name}${note}`);
+    }
+  }
+  return lines.join("\n") || "（还没有选择任何结果）";
+}
+
+function flash(msg) {
+  const s = document.getElementById("status");
+  const old = s.textContent;
+  s.textContent = msg;
+  setTimeout(() => s.textContent = old, 1800);
+}
+
+document.getElementById("copy").addEventListener("click", async () => {
+  const text = feedback();
+  out.value = text;
+  out.style.display = "block";
+  try {
+    await navigator.clipboard.writeText(text);
+    flash("已复制到剪贴板");
+  } catch (e) {
+    out.select();
+    document.execCommand("copy");
+    flash("已复制（兼容模式）");
+  }
+});
+
+document.getElementById("export").addEventListener("click", () => {
+  const text = feedback();
+  const blob = new Blob(["```\n" + text + "\n```\n"], {type: "text/markdown"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "touch-gesture-results.md";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  flash("已导出 Markdown");
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("确定清空所有选择？")) return;
+  localStorage.removeItem(STORE_KEY);
+  document.querySelectorAll("select[data-id]").forEach(sel => { sel.value = ""; sel.dataset.state = ""; });
+  document.querySelectorAll("input[data-note]").forEach(inp => inp.value = "");
+  out.value = "";
+  document.getElementById("status").textContent = "未测";
+});
+
+build();
+load();
+</script>
+</body>
+</html>

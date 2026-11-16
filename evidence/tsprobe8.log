@@ -1,0 +1,57 @@
+2026-11-16T12:48:06.873+08:00 [SYS] screen name=Built-in Retina Display uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 touchCapabilities=1 frame=(0.0, 0.0, 1312.0, 848.0)
+2026-11-16T12:48:06.874+08:00 [SYS] screen name=<空> uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 touchCapabilities=1 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T12:48:06.874+08:00 [SYS] target screen uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T12:48:06.917+08:00 [SYS] monitors installed; isActive=false keyWindow=false
+2026-11-16T12:48:07.337+08:00 [SYS] activation retry +0.4s isActive=false keyWindow=false
+2026-11-16T12:48:08.180+08:00 [SYS] activation retry +1.2s isActive=false keyWindow=false
+2026-11-16T12:48:09.542+08:00 [SYS] activation retry +2.5s isActive=false keyWindow=false
+2026-11-16T12:48:11.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:16.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:21.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:26.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:31.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:36.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:41.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:46.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:51.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:48:56.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:01.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:06.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:11.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:16.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:21.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:26.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:31.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:36.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:41.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:46.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:51.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:49:56.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:01.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:06.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:11.918+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:16.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:21.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:26.916+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:31.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:36.916+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:41.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:46.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:51.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:50:56.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:01.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:06.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:11.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:16.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:21.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:26.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:31.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:36.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:41.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:46.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:51.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:51:56.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:52:01.917+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:52:07.016+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:52:12.016+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T12:52:17.016+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1

@@ -1,0 +1,214 @@
+{
+  "sha": "965dc41c3c778ea8dd01423aa744ae130bb35797",
+  "url": "https://api.github.com/repos/kashmeister/mactouch/git/trees/965dc41c3c778ea8dd01423aa744ae130bb35797",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9f2e4ec3704a49d322c59e0d2a9cc84b1704a51",
+      "size": 22,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/f9f2e4ec3704a49d322c59e0d2a9cc84b1704a51"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c41c498feb80d2c8fdd84a6c38b1cab22bd98b",
+      "size": 10957,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/45c41c498feb80d2c8fdd84a6c38b1cab22bd98b"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce8bc99c8913bdc7e203440c835e26bb9d686fea",
+      "size": 1068,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/ce8bc99c8913bdc7e203440c835e26bb9d686fea"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f6085799ee12681abd77a2974a4c47a1ff62929",
+      "size": 33837,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/2f6085799ee12681abd77a2974a4c47a1ff62929"
+    },
+    {
+      "path": "Sources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e88fc78ca6df9f19c8feac45efa137d971ecc296",
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/trees/e88fc78ca6df9f19c8feac45efa137d971ecc296"
+    },
+    {
+      "path": "Sources/App.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f12e32a8610c6e1daa161f08d1e6ebb20b1e833",
+      "size": 22387,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/6f12e32a8610c6e1daa161f08d1e6ebb20b1e833"
+    },
+    {
+      "path": "Sources/Calibration.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d55f10d4340f57d2175a20d139796b5e73a7950",
+      "size": 7431,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/5d55f10d4340f57d2175a20d139796b5e73a7950"
+    },
+    {
+      "path": "Sources/Capture.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "879a64f26c5dc8d9182cd6b6e773c73e5454cc8f",
+      "size": 7489,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/879a64f26c5dc8d9182cd6b6e773c73e5454cc8f"
+    },
+    {
+      "path": "Sources/Check.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9ef5ecc51e21ac57b95573245b415abdcdd8505",
+      "size": 2795,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/b9ef5ecc51e21ac57b95573245b415abdcdd8505"
+    },
+    {
+      "path": "Sources/Displays.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c270d5bea5de4d9ae907066659a4b9fe1cc4e8",
+      "size": 9460,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/14c270d5bea5de4d9ae907066659a4b9fe1cc4e8"
+    },
+    {
+      "path": "Sources/Gestures.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c2100ee69ac45809d57443cbc1baea1a0e2defb",
+      "size": 27570,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/9c2100ee69ac45809d57443cbc1baea1a0e2defb"
+    },
+    {
+      "path": "Sources/Keyboard.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52eb993b2dd3b6d18f7aa03f620a51831235bcd1",
+      "size": 11899,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/52eb993b2dd3b6d18f7aa03f620a51831235bcd1"
+    },
+    {
+      "path": "Sources/KnownDevices.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0361f5af0d245fe1e925bd190c6570a1b71fabc",
+      "size": 6424,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/c0361f5af0d245fe1e925bd190c6570a1b71fabc"
+    },
+    {
+      "path": "Sources/LoginItem.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49c0e55d7980ea86eab4d650e3a1e748e3d0c159",
+      "size": 5195,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/49c0e55d7980ea86eab4d650e3a1e748e3d0c159"
+    },
+    {
+      "path": "Sources/Music.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69310396b4e10834101ea21c324da3712f1dba40",
+      "size": 40241,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/69310396b4e10834101ea21c324da3712f1dba40"
+    },
+    {
+      "path": "Sources/Pairing.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d5a64724c97068512ff171ebe99a0c7adf9791e",
+      "size": 7634,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/7d5a64724c97068512ff171ebe99a0c7adf9791e"
+    },
+    {
+      "path": "Sources/RawUSB.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be8e2eddd5f41d44b816e722b4c38024d22e7292",
+      "size": 12755,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/be8e2eddd5f41d44b816e722b4c38024d22e7292"
+    },
+    {
+      "path": "Sources/SelfTest.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19c3bc172b9f38abc73215fe87f391b5835948c5",
+      "size": 6277,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/19c3bc172b9f38abc73215fe87f391b5835948c5"
+    },
+    {
+      "path": "Sources/Settings.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "131957fa9f09b57563cf47dfcfc1c0fa1d539452",
+      "size": 15376,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/131957fa9f09b57563cf47dfcfc1c0fa1d539452"
+    },
+    {
+      "path": "Sources/Sketch.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb388e77bc3cd2c45499a0cf54fbcbb485c00952",
+      "size": 16333,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/fb388e77bc3cd2c45499a0cf54fbcbb485c00952"
+    },
+    {
+      "path": "Sources/Support.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec6e3e4740abf54f1f078177be58ffdc7f289eff",
+      "size": 2007,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/ec6e3e4740abf54f1f078177be58ffdc7f289eff"
+    },
+    {
+      "path": "Sources/Touchscreens.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a09a74dc4be1252263e8bec1082a11022c2a7fa2",
+      "size": 20909,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/a09a74dc4be1252263e8bec1082a11022c2a7fa2"
+    },
+    {
+      "path": "Sources/main.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85cd7c04fd98cde78f28a17d708daf7b5e51d624",
+      "size": 3240,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/85cd7c04fd98cde78f28a17d708daf7b5e51d624"
+    },
+    {
+      "path": "build.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "30ce9227d744771c15858a1c548cc952ff32a612",
+      "size": 3070,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/30ce9227d744771c15858a1c548cc952ff32a612"
+    },
+    {
+      "path": "install.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3475b47f319908e62f416bc6acbf2cf742e16ba3",
+      "size": 2920,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/3475b47f319908e62f416bc6acbf2cf742e16ba3"
+    },
+    {
+      "path": "uninstall.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e86966ae14de1204e4daa21d7bbb58fb1c7695ff",
+      "size": 676,
+      "url": "https://api.github.com/repos/kashmeister/mactouch/git/blobs/e86966ae14de1204e4daa21d7bbb58fb1c7695ff"
+    }
+  ],
+  "truncated": false
+}

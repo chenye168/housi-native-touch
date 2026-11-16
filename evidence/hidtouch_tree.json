@@ -1,0 +1,357 @@
+{
+  "sha": "01a4c7d58af9f3d6fb5bf40ae326fed74f1a7286",
+  "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/01a4c7d58af9f3d6fb5bf40ae326fed74f1a7286",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9acf7a2353a31ec8fbefc3c6e1f519e74ad06a4",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/c9acf7a2353a31ec8fbefc3c6e1f519e74ad06a4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "772af015c0c419960af7bccfbd7333b345de1f46",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/772af015c0c419960af7bccfbd7333b345de1f46"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "613901ffcc51e989a4b8db4064eaf7f74dbefcea",
+      "size": 1429,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/613901ffcc51e989a4b8db4064eaf7f74dbefcea"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/panel-not-working.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2414fef07768a0d00eff2dbc128c57b43456f8f1",
+      "size": 2513,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/2414fef07768a0d00eff2dbc128c57b43456f8f1"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/panel-works.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9e37cd6a565d63abc93a0e5682473f7139b7a94",
+      "size": 1835,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/d9e37cd6a565d63abc93a0e5682473f7139b7a94"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87e6adc7dc21519ec8581d60ec4267b195c7cf83",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/87e6adc7dc21519ec8581d60ec4267b195c7cf83"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f3696a1d5d39a93751ef81bd38fff65e971a775",
+      "size": 842,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/3f3696a1d5d39a93751ef81bd38fff65e971a775"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "085573dcd6b47d7edc744a5745d1d2f66e5648f7",
+      "size": 248,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/085573dcd6b47d7edc744a5745d1d2f66e5648f7"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4437544331a2732c9903a9a8183f32ef7de1076",
+      "size": 1054,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/a4437544331a2732c9903a9a8183f32ef7de1076"
+    },
+    {
+      "path": "Package.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e35bd844fb8f6cbd1cfd58aa66e9603d38ba0afa",
+      "size": 1748,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/e35bd844fb8f6cbd1cfd58aa66e9603d38ba0afa"
+    },
+    {
+      "path": "README.ja.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bb33f28a574a96d9ff0fd40ea0fa86e79db51c7",
+      "size": 26049,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/2bb33f28a574a96d9ff0fd40ea0fa86e79db51c7"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44d543a15010cd67245f5a0ff8d3818dd91b7897",
+      "size": 21243,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/44d543a15010cd67245f5a0ff8d3818dd91b7897"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f023349abc36875a4315e4e927e2fbb005f06bd0",
+      "size": 1508,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/f023349abc36875a4315e4e927e2fbb005f06bd0"
+    },
+    {
+      "path": "Sources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f51116ea3cd550b11fbe8d144015bfdd0f406e77",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/f51116ea3cd550b11fbe8d144015bfdd0f406e77"
+    },
+    {
+      "path": "Sources/CHIDUserDevice",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e2058f1003f6b7d2123a03012de5546b0404c1c",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/1e2058f1003f6b7d2123a03012de5546b0404c1c"
+    },
+    {
+      "path": "Sources/CHIDUserDevice/VirtualHIDHelper.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b84c8953f308b6c9fb9d061431a096858418042",
+      "size": 423,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/3b84c8953f308b6c9fb9d061431a096858418042"
+    },
+    {
+      "path": "Sources/CHIDUserDevice/include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3896a647af0426004785a692744919148c5ae1b",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/c3896a647af0426004785a692744919148c5ae1b"
+    },
+    {
+      "path": "Sources/CHIDUserDevice/include/VirtualHIDHelper.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "862306268ad84020bb3ac182706d66664ae9b6db",
+      "size": 841,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/862306268ad84020bb3ac182706d66664ae9b6db"
+    },
+    {
+      "path": "Sources/CoreSelfTest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f970571ef699e91c6087548c19a8941772b90a82",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/f970571ef699e91c6087548c19a8941772b90a82"
+    },
+    {
+      "path": "Sources/CoreSelfTest/Harness.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e4cc1e72caaf4a9aa6f3ae393d7524226d61696",
+      "size": 2587,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/6e4cc1e72caaf4a9aa6f3ae393d7524226d61696"
+    },
+    {
+      "path": "Sources/CoreSelfTest/PanelFixture.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4123ca24f3512dfbfe6260dbea1e61febd5af0d",
+      "size": 6596,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/b4123ca24f3512dfbfe6260dbea1e61febd5af0d"
+    },
+    {
+      "path": "Sources/CoreSelfTest/main.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a933e8e1041eaeeee0b48edd47470c049f30a4db",
+      "size": 32072,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/a933e8e1041eaeeee0b48edd47470c049f30a4db"
+    },
+    {
+      "path": "Sources/HIDDriverCore",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f55c2f54accce65b15e182bdd6a9f0ff33e0e64",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/3f55c2f54accce65b15e182bdd6a9f0ff33e0e64"
+    },
+    {
+      "path": "Sources/HIDDriverCore/CGEventInjector.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b855f0ad07417ee1206750384e456c845549a623",
+      "size": 12203,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/b855f0ad07417ee1206750384e456c845549a623"
+    },
+    {
+      "path": "Sources/HIDDriverCore/CalibrationEngine.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89f80eee166d5079f77f5dc8c71316a9ef9d717c",
+      "size": 5280,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/89f80eee166d5079f77f5dc8c71316a9ef9d717c"
+    },
+    {
+      "path": "Sources/HIDDriverCore/ConfigManager.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3394b7fc5d5bd57f2cf321ffe6c41a41cef887a5",
+      "size": 8087,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/3394b7fc5d5bd57f2cf321ffe6c41a41cef887a5"
+    },
+    {
+      "path": "Sources/HIDDriverCore/DisplayHelper.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e638fb46c64152a4c7d89cfe84439e24b5e193e",
+      "size": 4737,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/3e638fb46c64152a4c7d89cfe84439e24b5e193e"
+    },
+    {
+      "path": "Sources/HIDDriverCore/GestureRecognizer.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61910e054ba31247fa6d9169c3cfb3214f14db67",
+      "size": 8503,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/61910e054ba31247fa6d9169c3cfb3214f14db67"
+    },
+    {
+      "path": "Sources/HIDDriverCore/HIDDeviceMonitor.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6c8cc79d52899ff3f073d57fb63520d117e1813",
+      "size": 31752,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/c6c8cc79d52899ff3f073d57fb63520d117e1813"
+    },
+    {
+      "path": "Sources/HIDDriverCore/HIDParser.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357d507a4266e700eaaa08f68acdf589bfa3e5b5",
+      "size": 6808,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/357d507a4266e700eaaa08f68acdf589bfa3e5b5"
+    },
+    {
+      "path": "Sources/HIDDriverCore/HIDReportDescriptor.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fc19f147c79122071a0ef3915e2b352c719b99a",
+      "size": 13022,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/6fc19f147c79122071a0ef3915e2b352c719b99a"
+    },
+    {
+      "path": "Sources/HIDDriverCore/JitterFilter.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac98c11c978653ca7cf958b9a8a5d2d631b77165",
+      "size": 2068,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/ac98c11c978653ca7cf958b9a8a5d2d631b77165"
+    },
+    {
+      "path": "Sources/HIDDriverCore/Log.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7baaabef508c27897cdd9758ac7077330e9ccea7",
+      "size": 2680,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/7baaabef508c27897cdd9758ac7077330e9ccea7"
+    },
+    {
+      "path": "Sources/HIDDriverCore/MultiTouchParser.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c69a70e0fe40404daa4c11f8e0674fc5b2757d18",
+      "size": 4455,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/c69a70e0fe40404daa4c11f8e0674fc5b2757d18"
+    },
+    {
+      "path": "Sources/HIDDriverCore/Permissions.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbc83f2de725dbc3c27e64ca0258f85bb28d98f6",
+      "size": 5828,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/cbc83f2de725dbc3c27e64ca0258f85bb28d98f6"
+    },
+    {
+      "path": "Sources/HIDDriverCore/TouchPipeline.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a0bbe94b7d0797396f082695be5080beaca5993",
+      "size": 13835,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/7a0bbe94b7d0797396f082695be5080beaca5993"
+    },
+    {
+      "path": "Sources/HIDDriverCore/VirtualHIDDevice.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0ec71cd555ef14224e3e0cc7cb6b51e2d3232cb",
+      "size": 4902,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/d0ec71cd555ef14224e3e0cc7cb6b51e2d3232cb"
+    },
+    {
+      "path": "Sources/TouchDaemon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "213d800eead5ad81c0ecf1e328076f7cca58cc6b",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/213d800eead5ad81c0ecf1e328076f7cca58cc6b"
+    },
+    {
+      "path": "Sources/TouchDaemon/main.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e8f1267a6e24a57958865a9a5c544de212763c3",
+      "size": 5717,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/7e8f1267a6e24a57958865a9a5c544de212763c3"
+    },
+    {
+      "path": "Sources/TouchStudio",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92af85e06ab5b0ba2786ec5e1630a0f529459a66",
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/trees/92af85e06ab5b0ba2786ec5e1630a0f529459a66"
+    },
+    {
+      "path": "Sources/TouchStudio/CalibrationWindow.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ade06651508868b8656be64fff23af7900ee6991",
+      "size": 1760,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/ade06651508868b8656be64fff23af7900ee6991"
+    },
+    {
+      "path": "Sources/TouchStudio/ContentView.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74197c80502c3d6eb72bd938b716560b41033454",
+      "size": 47463,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/74197c80502c3d6eb72bd938b716560b41033454"
+    },
+    {
+      "path": "Sources/TouchStudio/MenuBarController.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c747e49b3281dca54e5d6b2ee62c58f20e9fb92",
+      "size": 6623,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/5c747e49b3281dca54e5d6b2ee62c58f20e9fb92"
+    },
+    {
+      "path": "Sources/TouchStudio/TouchStudioApp.swift",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eda72f4aeaab6cc808fe8fdd519545c285a90ea9",
+      "size": 19443,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/eda72f4aeaab6cc808fe8fdd519545c285a90ea9"
+    },
+    {
+      "path": "build_app.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0ec295721a5cf8cf2f213043034ec07d2ad38b02",
+      "size": 4939,
+      "url": "https://api.github.com/repos/koshi545/HIDTouch/git/blobs/0ec295721a5cf8cf2f213043034ec07d2ad38b02"
+    }
+  ],
+  "truncated": false
+}

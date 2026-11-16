@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>触控手势实验台 · B 组（缩放/旋转/拖放/调整大小）</title>
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0b0d10; --panel:#14181d; --line:#2a3038; --fg:#e8edf3; --dim:#8b96a3;
+    --ok:#30d158; --warn:#ffd60a; --bad:#ff453a; --accent:#0a84ff;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:15px/1.45 -apple-system,"SF Pro Text","PingFang SC",sans-serif;
+    -webkit-user-select:none; user-select:none; overflow:hidden;
+    touch-action:none; overscroll-behavior:none;
+  }
+  header{
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    padding:12px 18px; border-bottom:1px solid var(--line); background:#0f1216;
+  }
+  h1{font-size:16px; margin:0; font-weight:650; letter-spacing:.2px}
+  header .sub{color:var(--dim); font-size:12px}
+  header .spacer{flex:1}
+  button{
+    font:inherit; font-size:13px; padding:7px 13px; border-radius:8px;
+    border:1px solid var(--line); background:#1b2027; color:var(--fg); cursor:pointer;
+  }
+  button:hover{background:#242b34}
+  button.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+  button.primary:hover{background:#0070e0}
+
+  main{
+    display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr;
+    gap:12px; padding:12px; height:calc(100% - 58px - 132px);
+  }
+  .card{
+    position:relative; display:flex; flex-direction:column; min-height:0;
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden;
+  }
+  .card-head{
+    display:flex; align-items:center; gap:10px; padding:10px 14px;
+    border-bottom:1px solid var(--line); flex:none;
+  }
+  .tag{
+    font:600 11px/1 ui-monospace,Menlo,monospace; color:var(--dim);
+    border:1px solid var(--line); border-radius:5px; padding:4px 6px;
+  }
+  .card-head h2{font-size:13.5px; margin:0; font-weight:600}
+  .hint{color:var(--dim); font-size:11.5px}
+  .badge{
+    margin-left:auto; font-size:11.5px; padding:4px 9px; border-radius:999px;
+    border:1px solid var(--line); color:var(--dim); white-space:nowrap;
+  }
+  .badge.pass{color:#0b0d10; background:var(--ok); border-color:var(--ok); font-weight:700}
+  .badge.live{color:var(--warn); border-color:color-mix(in srgb,var(--warn) 55%,transparent)}
+  .stage{
+    position:relative; flex:1; min-height:0; display:flex; align-items:center;
+    justify-content:center; overflow:hidden; touch-action:none; cursor:grab;
+    background:
+      radial-gradient(circle at 50% 45%, #1d232b 0%, #12161b 62%, #0f1318 100%);
+  }
+  .stage:active{cursor:grabbing}
+  .grid-lines{
+    position:absolute; inset:0; opacity:.35; pointer-events:none;
+    background-image:linear-gradient(#ffffff0d 1px,transparent 1px),
+                     linear-gradient(90deg,#ffffff0d 1px,transparent 1px);
+    background-size:32px 32px;
+  }
+  .obj{
+    width:150px; height:150px; border-radius:22px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; font-size:13px; font-weight:600; color:#fff; will-change:transform;
+    background:linear-gradient(145deg,#0a84ff,#5e5ce6 60%,#bf5af2);
+    box-shadow:0 12px 40px #0008, inset 0 1px 0 #ffffff55;
+    transform-origin:center center;
+  }
+  .obj small{display:block; margin-top:6px; font-weight:400; opacity:.85; font-size:11px}
+  .obj.rot{background:linear-gradient(145deg,#ff9f0a,#ff375f 70%)}
+  .readout{
+    position:absolute; left:12px; bottom:10px; font:11.5px/1.4 ui-monospace,Menlo,monospace;
+    color:var(--dim); background:#0009; border:1px solid var(--line);
+    border-radius:7px; padding:5px 8px; pointer-events:none;
+  }
+
+  /* 拖放 */
+  .drag-tile{
+    position:absolute; width:104px; height:104px; border-radius:18px;
+    background:linear-gradient(145deg,#30d158,#0a84ff); box-shadow:0 10px 30px #0008;
+    display:flex; align-items:center; justify-content:center; font-weight:700;
+    cursor:grab; touch-action:none; z-index:3;
+  }
+  .drag-tile:active{cursor:grabbing}
+  .drop-target{
+    position:absolute; width:190px; height:140px; border-radius:18px;
+    border:2px dashed #ffffff40; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; color:var(--dim); font-size:12px; text-align:center;
+    transition:border-color .15s, background .15s;
+  }
+  .drop-target.hot{border-color:var(--ok); background:#30d15818; color:var(--ok)}
+  .drop-target.done{border-style:solid; border-color:var(--ok); background:#30d15822; color:var(--ok)}
+
+  /* 调整大小 / 裁剪 */
+  .resize-wrap{position:absolute; display:flex; align-items:center; justify-content:center}
+  #out-G09{left:auto; right:12px}
+  .resize-box{
+    position:relative; width:220px; height:150px; border-radius:12px; overflow:hidden;
+    outline:1px solid #ffffff35; box-shadow:0 10px 30px #0007;
+  }
+  .resize-box img{
+    width:100%; height:100%; object-fit:cover; display:block; pointer-events:none;
+    user-select:none; -webkit-user-drag:none;
+  }
+  .resize-box::after{
+    content:""; position:absolute; inset:0; border:2px solid #ffffff55; border-radius:12px;
+    pointer-events:none;
+  }
+  .handle{
+    position:absolute; width:26px; height:26px; border-radius:8px;
+    background:#0a84ff; border:2px solid #fff; box-shadow:0 4px 12px #0008;
+    cursor:nwse-resize; touch-action:none; z-index:4;
+  }
+  .handle.br{right:-13px; bottom:-13px}
+  .handle.se{right:-13px; bottom:-13px}
+
+  footer{
+    height:132px; display:grid; grid-template-columns:minmax(320px,1fr) 1.4fr;
+    gap:12px; padding:0 12px 12px;
+  }
+  .summary{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:10px 12px; overflow:auto; font:12px/1.55 ui-monospace,Menlo,monospace;
+    color:var(--fg); white-space:pre-wrap;
+  }
+  .log{
+    margin:0; background:#0f1318; border:1px solid var(--line); border-radius:12px;
+    padding:9px 12px; overflow:auto; font:11.5px/1.5 ui-monospace,Menlo,monospace;
+    color:var(--dim); white-space:pre-wrap;
+  }
+  .log b{color:var(--warn); font-weight:600}
+  .toast{
+    position:fixed; left:50%; bottom:170px; transform:translateX(-50%);
+    background:#000c; border:1px solid var(--line); border-radius:10px;
+    padding:9px 16px; font-size:13px; opacity:0; transition:opacity .2s; pointer-events:none;
+  }
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header>
+  <h1>触控手势实验台 · B 组</h1>
+  <span class="sub">G07 捏合缩放 · G08 双指旋转 · G09 拖放 · G10 调整大小 / 裁剪</span>
+  <span class="spacer"></span>
+  <button id="btn-fs">全屏</button>
+  <button id="btn-copy" class="primary">复制 B 组结果</button>
+  <button id="btn-reset">重置</button>
+</header>
+
+<main>
+  <!-- G07 缩放 -->
+  <section class="card" id="card-G07">
+    <div class="card-head">
+      <span class="tag">G07</span><h2>双指开合：缩放</h2>
+      <span class="hint">两指在方块上捏合 / 张开</span>
+      <span class="badge" id="badge-G07">等待</span>
+    </div>
+    <div class="stage" id="stage-G07">
+      <div class="grid-lines"></div>
+      <div class="obj" id="obj-G07">捏合我<small>双指开合缩放</small></div>
+      <div class="readout" id="out-G07">scale 1.00×</div>
+    </div>
+  </section>
+
+  <!-- G08 旋转 -->
+  <section class="card" id="card-G08">
+    <div class="card-head">
+      <span class="tag">G08</span><h2>双指旋转</h2>
+      <span class="hint">两指按住方块，转动手腕</span>
+      <span class="badge" id="badge-G08">等待</span>
+    </div>
+    <div class="stage" id="stage-G08">
+      <div class="grid-lines"></div>
+      <div class="obj rot" id="obj-G08">转动我<small>双指旋转</small></div>
+      <div class="readout" id="out-G08">rotation 0°</div>
+    </div>
+  </section>
+
+  <!-- G09 拖放 -->
+  <section class="card" id="card-G09">
+    <div class="card-head">
+      <span class="tag">G09</span><h2>按住拖放</h2>
+      <span class="hint">把绿块拖进虚线框后松手</span>
+      <span class="badge" id="badge-G09">等待</span>
+    </div>
+    <div class="stage" id="stage-G09">
+      <div class="grid-lines"></div>
+      <div class="drop-target" id="target-G09">拖到这里<br><small>松开手指</small></div>
+      <div class="drag-tile" id="tile-G09">拖我</div>
+      <div class="readout" id="out-G09">0 次成功拖放</div>
+    </div>
+  </section>
+
+  <!-- G10 调整大小 / 裁剪 -->
+  <section class="card" id="card-G10">
+    <div class="card-head">
+      <span class="tag">G10</span><h2>拖角落手柄：调整大小 / 裁剪</h2>
+      <span class="hint">拖蓝色手柄改变框大小（图片被裁剪）</span>
+      <span class="badge" id="badge-G10">等待</span>
+    </div>
+    <div class="stage" id="stage-G10">
+      <div class="grid-lines"></div>
+      <div class="resize-wrap">
+        <div class="resize-box" id="box-G10">
+          <img id="img-G10" alt="">
+        </div>
+        <div class="handle br" id="handle-G10"></div>
+      </div>
+      <div class="readout" id="out-G10">220 × 150</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="summary" id="summary">用法：Safari 打开本页 → 窗口拖到 HOUSI → ⌃⌘F 全屏 → 按每张卡片的提示做手势。检测到就会变绿。</div>
+  <pre class="log" id="log">等待事件…（gesture / touch / pointer / wheel 都会记录在这里）</pre>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 基础工具 ---------- */
+const $ = id => document.getElementById(id);
+const state = {
+  G07: {ok:false, method:"", scale:1},
+  G08: {ok:false, method:"", rot:0},
+  G09: {ok:false, count:0},
+  G10: {ok:false, size:null},
+};
+const logs = [];
+function log(type, detail){
+  const t = new Date().toISOString().slice(11,23);
+  logs.push(`[${t}] ${type}${detail ? " · " + detail : ""}`);
+  if (logs.length > 200) logs.shift();
+  $("log").textContent = logs.slice(-9).join("\n");
+}
+function toast(msg){
+  const el = $("toast"); el.textContent = msg; el.classList.add("show");
+  clearTimeout(toast._t); toast._t = setTimeout(()=>el.classList.remove("show"), 1600);
+}
+function setBadge(id, kind, text){
+  const b = $("badge-" + id);
+  b.className = "badge" + (kind ? " " + kind : "");
+  b.textContent = text;
+}
+function markPass(id, method, value){
+  const s = state[id];
+  s.ok = true; s.method = method;
+  if (id === "G07") s.scale = value;
+  if (id === "G08") s.rot = value;
+  setBadge(id, "pass", "✅ 生效 · " + method + " · " + value);
+  renderSummary();
+}
+function renderSummary(){
+  const lines = [];
+  const fmt = {
+    G07: v => `缩放至 ${v.toFixed(2)}×`,
+    G08: v => `旋转 ${v.toFixed(1)}°`,
+    G09: () => `成功拖放 ${state.G09.count} 次`,
+    G10: v => `尺寸 ${v.w}×${v.h}`,
+  };
+  const names = {G07:"双指开合", G08:"双指旋转", G09:"按住拖放", G10:"调整大小/裁剪"};
+  for (const id of ["G07","G08","G09","G10"]){
+    if (!state[id].ok){ lines.push(`${id} ⏳ 未检测到  ${names[id]}`); continue; }
+    let detail = "";
+    if (id === "G07") detail = fmt.G07(state.G07.scale);
+    if (id === "G08") detail = fmt.G08(state.G08.rot);
+    if (id === "G09") detail = fmt.G09();
+    if (id === "G10") detail = fmt.G10(state.G10.size);
+    lines.push(`${id} ✅ ${names[id]} —— ${detail}（${state[id].method || "手势"}）`);
+  }
+  $("summary").textContent = lines.join("\n");
+}
+renderSummary();
+
+/* ---------- G07 / G08：Safari gesture + ctrl+wheel + touch 三条路径 ---------- */
+function attachPinchRotate(stageId, objId, kind){
+  const stage = $(stageId), obj = $(objId), out = $(outId(kind));
+  let scale = 1, rot = 0;
+  let gStartScale = 1, gStartRot = 0;
+
+  function apply(){
+    const tf = `scale(${scale.toFixed(3)}) rotate(${rot.toFixed(2)}deg)`;
+    obj.style.transform = tf;
+    if (kind === "G07") out.textContent = `scale ${scale.toFixed(2)}×`;
+    else out.textContent = `rotation ${rot.toFixed(1)}°`;
+  }
+  function noteGesture(how){
+    if (kind === "G07" && Math.abs(scale - 1) > 0.08)
+      markPass("G07", how, Math.round(scale * 100) / 100);
+    if (kind === "G08" && Math.abs(rot) > 5)
+      markPass("G08", how, Math.round(rot * 10) / 10);
+  }
+
+  /* 1) Safari 非标准 GestureEvent（触控板/触屏捏合通常走这里） */
+  stage.addEventListener("gesturestart", e => {
+    e.preventDefault();
+    gStartScale = scale; gStartRot = rot;
+    log("gesturestart", `scale=${scale.toFixed(2)} rot=${rot.toFixed(1)}`);
+  }, {passive:false});
+  stage.addEventListener("gesturechange", e => {
+    e.preventDefault();
+    const s = Number(e.scale || 1), r = Number(e.rotation || 0);
+    scale = Math.min(3.2, Math.max(0.35, gStartScale * s));
+    rot = gStartRot + r;
+    apply(); noteGesture("gesture");
+  }, {passive:false});
+  stage.addEventListener("gestureend", e => {
+    e.preventDefault();
+    log("gestureend", `scale=${scale.toFixed(2)} rot=${rot.toFixed(1)}`);
+  }, {passive:false});
+
+  /* 2) Ctrl + wheel（Safari 把捏合映射成带 ctrlKey 的 wheel 时的兜底） */
+  stage.addEventListener("wheel", e => {
+    if (!e.ctrlKey) return;
+    e.preventDefault();
+    if (kind === "G07"){
+      scale = Math.min(3.2, Math.max(0.35, scale * Math.exp(-e.deltaY * 0.012)));
+    } else {
+      rot += e.deltaY * 0.6;
+    }
+    apply(); noteGesture("wheel(ctrl)");
+    log("wheel(ctrl)", `dy=${e.deltaY.toFixed(1)}`);
+  }, {passive:false});
+
+  /* 3) 真 TouchEvent（如果 WebKit 暴露了直接触摸） */
+  let tStartDist = 0, tStartAngle = 0, tStartScale = 1, tStartRot = 0;
+  stage.addEventListener("touchstart", e => {
+    if (e.touches.length !== 2) return;
+    e.preventDefault();
+    const [a,b] = e.touches;
+    tStartDist = Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY) || 1;
+    tStartAngle = Math.atan2(b.clientY-a.clientY, b.clientX-a.clientX) * 180/Math.PI;
+    tStartScale = scale; tStartRot = rot;
+    log("touchstart(2)", `dist=${tStartDist.toFixed(0)}`);
+  }, {passive:false});
+  stage.addEventListener("touchmove", e => {
+    if (e.touches.length !== 2) return;
+    e.preventDefault();
+    const [a,b] = e.touches;
+    const dist = Math.hypot(a.clientX-b.clientX, a.clientY-b.clientY) || 1;
+    const ang = Math.atan2(b.clientY-a.clientY, b.clientX-a.clientX) * 180/Math.PI;
+    if (kind === "G07") scale = Math.min(3.2, Math.max(0.35, tStartScale * dist / tStartDist));
+    else rot = tStartRot + (ang - tStartAngle);
+    apply(); noteGesture("touch");
+  }, {passive:false});
+  stage.addEventListener("touchend", e => {
+    if (e.touches.length === 0) log("touchend", "");
+  }, {passive:false});
+
+  /* 阻止双击页面缩放 / 文本选择 */
+  stage.addEventListener("dblclick", e => e.preventDefault());
+  stage.addEventListener("contextmenu", e => e.preventDefault());
+  stage.addEventListener("gesturestart", e => e.preventDefault(), {passive:false});
+  apply();
+}
+function outId(kind){ return "out-" + kind; }
+attachPinchRotate("stage-G07", "obj-G07", "G07");
+attachPinchRotate("stage-G08", "obj-G08", "G08");
+
+/* ---------- G09 拖放 ---------- */
+(function(){
+  const stage = $("stage-G09"), tile = $("tile-G09"), target = $("target-G09");
+  let home = null, dragging = false, ox = 0, oy = 0;
+
+  function layout(){
+    const r = stage.getBoundingClientRect();
+    home = {x: 28, y: r.height - 150};
+    if (!dragging) setPos(home.x, home.y);
+  }
+  function setPos(x, y){
+    tile.style.left = x + "px";
+    tile.style.top = y + "px";
+  }
+  function hit(){
+    const t = tile.getBoundingClientRect(), g = target.getBoundingClientRect();
+    const cx = t.left + t.width/2, cy = t.top + t.height/2;
+    return cx > g.left && cx < g.right && cy > g.top && cy < g.bottom;
+  }
+  tile.addEventListener("pointerdown", e => {
+    e.preventDefault();
+    tile.setPointerCapture(e.pointerId);
+    dragging = true;
+    const t = tile.getBoundingClientRect();
+    ox = e.clientX - t.left; oy = e.clientY - t.top;
+    setBadge("G09", "live", "拖动中…");
+    log("pointerdown", "tile");
+  });
+  tile.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    e.preventDefault();
+    const r = stage.getBoundingClientRect();
+    setPos(e.clientX - r.left - ox, e.clientY - r.top - oy);
+    target.classList.toggle("hot", hit());
+  });
+  tile.addEventListener("pointerup", e => {
+    if (!dragging) return;
+    dragging = false;
+    if (hit()){
+      state.G09.count++;
+      state.G09.ok = true;
+      state.G09.method = "pointer/触摸拖放";
+      target.classList.add("done");
+      target.textContent = "✅ 已放入";
+      setBadge("G09", "pass", "✅ 生效 · 拖放成功");
+      $("out-G09").textContent = `${state.G09.count} 次成功拖放`;
+      log("drop", "命中目标");
+      renderSummary();
+      setTimeout(() => {
+        target.classList.remove("done");
+        target.innerHTML = "拖到这里<br><small>松开手指</small>";
+        layout();
+        setBadge("G09", "", "可重复拖动");
+      }, 1100);
+    } else {
+      setBadge("G09", "", "没放进框里");
+      log("drop", "未命中");
+      layout();
+    }
+    target.classList.remove("hot");
+  });
+  window.addEventListener("resize", layout);
+  layout();
+})();
+
+/* ---------- G10 调整大小 / 裁剪 ---------- */
+(function(){
+  const stage = $("stage-G10"), box = $("box-G10"), handle = $("handle-G10"), out = $("out-G10");
+  let dragging = false, sx = 0, sy = 0, sw = 0, sh = 0;
+  const MIN = 90, MAX = 520;
+
+  handle.addEventListener("pointerdown", e => {
+    e.preventDefault();
+    handle.setPointerCapture(e.pointerId);
+    dragging = true;
+    sx = e.clientX; sy = e.clientY;
+    const r = box.getBoundingClientRect();
+    sw = r.width; sh = r.height;
+    setBadge("G10", "live", "调整中…");
+    log("pointerdown", "handle");
+  });
+  handle.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    e.preventDefault();
+    const w = Math.min(MAX, Math.max(MIN, sw + (e.clientX - sx)));
+    const h = Math.min(MAX, Math.max(MIN, sh + (e.clientY - sy)));
+    box.style.width = w + "px";
+    box.style.height = h + "px";
+    out.textContent = `${Math.round(w)} × ${Math.round(h)}`;
+  });
+  handle.addEventListener("pointerup", e => {
+    if (!dragging) return;
+    dragging = false;
+    const r = box.getBoundingClientRect();
+    const changed = Math.abs(r.width - sw) > 12 || Math.abs(r.height - sh) > 12;
+    if (changed){
+      state.G10.ok = true;
+      state.G10.method = "pointer/触摸拖拽手柄";
+      state.G10.size = {w: Math.round(r.width), h: Math.round(r.height)};
+      setBadge("G10", "pass", `✅ 生效 · ${state.G10.size.w}×${state.G10.size.h}`);
+      log("resize", `${state.G10.size.w}x${state.G10.size.h}`);
+      renderSummary();
+    } else {
+      setBadge("G10", "", "尺寸没变");
+      log("resize", "无变化");
+    }
+  });
+})();
+
+/* ---------- 图片：生成一张本地渐变图，避免外链 ---------- */
+(function(){
+  const c = document.createElement("canvas");
+  c.width = 640; c.height = 420;
+  const g = c.getContext("2d");
+  const grad = g.createLinearGradient(0,0,640,420);
+  grad.addColorStop(0,"#0a84ff"); grad.addColorStop(.45,"#5e5ce6");
+  grad.addColorStop(.75,"#ff375f"); grad.addColorStop(1,"#ff9f0a");
+  g.fillStyle = grad; g.fillRect(0,0,640,420);
+  g.globalAlpha = .22; g.fillStyle = "#fff";
+  for (let i=0;i<26;i++){
+    g.beginPath();
+    g.arc(Math.random()*640, Math.random()*420, 12+Math.random()*46, 0, Math.PI*2);
+    g.fill();
+  }
+  g.globalAlpha = 1;
+  g.fillStyle = "#fff"; g.font = "600 34px -apple-system, sans-serif";
+  g.textAlign = "center"; g.fillText("CROP / RESIZE", 320, 220);
+  g.font = "400 16px -apple-system, sans-serif"; g.fillText("拖动蓝色手柄裁剪这张图", 320, 252);
+  $("img-G10").src = c.toDataURL("image/png");
+})();
+
+/* ---------- 顶部按钮 ---------- */
+$("btn-fs").addEventListener("click", async () => {
+  try {
+    if (!document.fullscreenElement) await document.documentElement.requestFullscreen();
+    else await document.exitFullscreen();
+  } catch (e) { toast("该浏览器不支持网页全屏，用 ⌃⌘F 也可以"); }
+});
+
+$("btn-copy").addEventListener("click", async () => {
+  const lines = ["B 组：处理对象和内容（HOUSI 实测）"];
+  const names = {G07:"双指开合（缩放）", G08:"双指旋转", G09:"按住拖放", G10:"调整大小/裁剪"};
+  for (const id of ["G07","G08","G09","G10"]){
+    if (!state[id].ok){ lines.push(`${id} ❌ 未检测到 —— ${names[id]}`); continue; }
+    let d = "";
+    if (id === "G07") d = `缩放至 ${state.G07.scale.toFixed(2)}×`;
+    if (id === "G08") d = `旋转 ${state.G08.rot.toFixed(1)}°`;
+    if (id === "G09") d = `成功拖放 ${state.G09.count} 次`;
+    if (id === "G10") d = `尺寸 ${state.G10.size.w}×${state.G10.size.h}`;
+    lines.push(`${id} ✅ 可用 —— ${names[id]}，${d}（${state[id].method}）`);
+  }
+  const text = lines.join("\n");
+  try { await navigator.clipboard.writeText(text); toast("已复制 B 组结果"); }
+  catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove(); toast("已复制（兼容模式）");
+  }
+  log("copy", "结果已复制");
+});
+
+$("btn-reset").addEventListener("click", () => location.reload());
+
+/* 全局事件计数，便于判断“有没有事件进来” */
+["gesturestart","gesturechange","gestureend","touchstart","pointerdown","wheel"].forEach(t => {
+  window.addEventListener(t, () => {}, {passive:true});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+2026-11-16T12:45:34.432+08:00 [SYS] screen name=Built-in Retina Display uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 touchCapabilities=1 frame=(0.0, 0.0, 1312.0, 848.0)
+2026-11-16T12:45:34.432+08:00 [SYS] screen name=<空> uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 touchCapabilities=1 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T12:45:34.435+08:00 [SYS] target screen uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T12:45:34.464+08:00 [SYS] monitors installed; isActive=false keyWindow=false
+2026-11-16T12:45:34.886+08:00 [SYS] activation retry +0.4s isActive=false keyWindow=false
+2026-11-16T12:45:35.724+08:00 [SYS] activation retry +1.2s isActive=false keyWindow=false
+2026-11-16T12:45:37.087+08:00 [SYS] activation retry +2.5s isActive=false keyWindow=false

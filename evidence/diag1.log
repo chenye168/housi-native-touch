@@ -1,0 +1,711 @@
+=== date: Mon Nov 16 11:05:50 CST 2026 ===
+ProductName:		macOS
+ProductVersion:		27.2.1
+BuildVersion:		26B131
+
+=== processes (WindowServer/backboard/HID/driverkit) ===
+  415     1 _windowserver    01:08:57 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer
+  486     1 _hidd            01:08:56 /usr/libexec/hidd
+  518     1 _windowserver    01:08:56 /usr/sbin/distnoted
+  534     1 _cmiodalassistants 01:08:55 /usr/libexec/com.apple.cmio.videodriverkithostextension.systemextension/Contents/MacOS/com.apple.cmio.videodriverkithostextension
+  587     1 _driverkit       01:08:55 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN
+  588     1 _driverkit       01:08:55 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers
+  589     1 _driverkit       01:08:55 /System/Library/DriverExtensions/com.apple.DriverKit-IOUserDockChannelSerial.dext/com.apple.DriverKit-IOUserDockChannelSerial
+ 1079     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1080     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1081     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1082     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1083     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1084     1 _driverkit       01:08:43 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+ 1484     1 _accessoryupdater 01:08:21 /System/Library/PrivateFrameworks/MobileAccessoryUpdater.framework/XPCServices/UARPUpdaterServiceHID.xpc/Contents/MacOS/UARPUpdaterServiceHID
+ 1990  1852 user             01:06:03 $HOME/.tooling/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService
+11445     1 user                06:17 /System/Library/PrivateFrameworks/SkyLight.framework//Versions/A/Resources/AquaAppearanceHelper.app/Contents/MacOS/AquaAppearanceHelper
+--- WindowServer full command ---
+pid=415
+  PID USER           ELAPSED    RSS COMMAND
+  415 _windowserver 01:08:57 235008 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+
+=== TouchEvents logs (info+debug, last 6h) ===
+   65156 $PROJECT/evidence/touchevents_6h.txt
+Timestamp               Ty Process[PID:TID]
+2026-11-16 09:15:35.628 E  WindowServer[86:8e6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x758f2719c0; AUID: 0; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 179; ASID: 100001; PIDVersion: 432> doesn't have the required entitlement
+2026-11-16 09:15:35.628 E  WindowServer[86:8e6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x758f2719c0; AUID: 0; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 179; ASID: 100001; PIDVersion: 432> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:19:39.205 Df WindowServer[86:8e6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100000D64) service:<BKIOHIDService: 0x758fdeaa80; senderID: 0x100000D64; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:19:39.205 Df WindowServer[86:8e6] [com.apple.BackBoard:TouchEvents] service 100000D64 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:19:39.207 Df WindowServer[86:8e6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x758ec48700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000D64; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:19:49.045 Df WindowServer[86:10b5] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100000D64) builtIn:0
+2026-11-16 09:19:49.045 Df WindowServer[86:10b5] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x758ec48700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000D64; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:19:49.045 Df WindowServer[86:10b5] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x758ec48700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000D64; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:19:53.884 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100000FE9) service:<BKIOHIDService: 0x7633133840; senderID: 0x100000FE9; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:19:53.884 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] service 100000FE9 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:19:53.885 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7632810100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000FE9; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:19:54.180 E  WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x76334ea400; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 609; ASID: 100020; PIDVersion: 1468> doesn't have the required entitlement
+2026-11-16 09:19:54.180 E  WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x76334ea400; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 609; ASID: 100020; PIDVersion: 1468> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:19:55.819 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 09:19:55.819 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 09:19:55.819 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 09:19:55.819 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 09:19:57.213 E  WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7633108b40; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 768; ASID: 100020; PIDVersion: 1843> doesn't have the required entitlement
+2026-11-16 09:19:57.215 E  WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7633108b40; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 768; ASID: 100020; PIDVersion: 1843> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:21:05.895 Df WindowServer[469:374f] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100000FE9) builtIn:0
+2026-11-16 09:21:05.895 Df WindowServer[469:374f] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7632810100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000FE9; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:21:05.895 Df WindowServer[469:374f] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7632810100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000FE9; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:21:22.242 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001593) service:<BKIOHIDService: 0x76336bdb80; senderID: 0x100001593; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:21:22.242 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] service 100001593 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:21:22.243 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x76309cd700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001593; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:27:20.307 Df WindowServer[469:6036] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100001593) builtIn:0
+2026-11-16 09:27:20.307 Df WindowServer[469:6036] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x76309cd700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001593; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:27:20.307 Df WindowServer[469:6036] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x76309cd700; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001593; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:27:31.937 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001A1B) service:<BKIOHIDService: 0x763494b7a0; senderID: 0x100001A1B; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:27:31.937 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] service 100001A1B setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:27:31.938 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7630fa7b00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001A1B; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:30:46.982 Df WindowServer[469:810a] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100001A1B) builtIn:0
+2026-11-16 09:30:46.982 Df WindowServer[469:810a] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7630fa7b00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001A1B; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:30:46.982 Df WindowServer[469:810a] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7630fa7b00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001A1B; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:30:50.876 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001C8A) service:<BKIOHIDService: 0x7634949cc0; senderID: 0x100001C8A; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:30:50.876 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] service 100001C8A setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:30:50.878 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7630f8fd00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001C8A; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:31:45.184 Df WindowServer[469:913e] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100001C8A) builtIn:0
+2026-11-16 09:31:45.184 Df WindowServer[469:913e] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7630f8fd00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001C8A; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:31:45.184 Df WindowServer[469:913e] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7630f8fd00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001C8A; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:31:57.950 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001D96) service:<BKIOHIDService: 0x763494b020; senderID: 0x100001D96; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:31:57.950 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] service 100001D96 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:31:57.951 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7630f8f100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001D96; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:33:13.301 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 09:33:13.301 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 09:33:13.301 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 09:33:13.301 Df WindowServer[469:127d] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 09:38:27.475 Df WindowServer[86:8f1] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100000C40) service:<BKIOHIDService: 0x7c3cc2c280; senderID: 0x100000C40; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:38:27.475 Df WindowServer[86:8f1] [com.apple.BackBoard:TouchEvents] service 100000C40 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:38:27.476 Df WindowServer[86:8f1] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7c3d050100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000C40; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:38:28.317 E  WindowServer[86:8f1] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7c3c001a40; AUID: 0; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 181; ASID: 100001; PIDVersion: 435> doesn't have the required entitlement
+2026-11-16 09:38:28.317 E  WindowServer[86:8f1] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7c3c001a40; AUID: 0; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 181; ASID: 100001; PIDVersion: 435> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:38:41.115 Df WindowServer[86:b7e] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100000C40) builtIn:0
+2026-11-16 09:38:41.116 Df WindowServer[86:b7e] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7c3d050100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000C40; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:38:41.116 Df WindowServer[86:b7e] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7c3d050100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000C40; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:38:45.973 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100000F86) service:<BKIOHIDService: 0x74ab5df980; senderID: 0x100000F86; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:38:45.973 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] service 100000F86 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:38:45.974 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x74ad430600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000F86; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:38:46.019 E  WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x74acb43900; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 562; ASID: 100020; PIDVersion: 1332> doesn't have the required entitlement
+2026-11-16 09:38:46.019 E  WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x74acb43900; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 562; ASID: 100020; PIDVersion: 1332> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:38:47.894 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 09:38:47.894 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 09:38:47.894 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 09:38:47.894 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 09:38:49.314 E  WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x74acb45080; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 706; ASID: 100020; PIDVersion: 1698> doesn't have the required entitlement
+2026-11-16 09:38:49.317 E  WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x74acb45080; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 706; ASID: 100020; PIDVersion: 1698> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 09:40:17.780 Df WindowServer[421:4432] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100000F86) builtIn:0
+2026-11-16 09:40:17.780 Df WindowServer[421:4432] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x74ad430600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000F86; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:40:17.780 Df WindowServer[421:4432] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x74ad430600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000F86; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:40:40.919 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001462) service:<BKIOHIDService: 0x74aa951cc0; senderID: 0x100001462; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 09:40:40.919 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] service 100001462 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:40:40.921 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x74ae662d00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001462; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 09:42:07.933 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 09:42:07.933 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 09:42:07.933 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 09:42:07.933 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 09:42:08.488 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100001462) service:<BKIOHIDService: 0x74ab5dd720; senderID: 0x100001462; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB>
+2026-11-16 09:42:08.488 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] service 100001462 setProperty:320 forKey:QuantizationDPI
+2026-11-16 09:42:08.489 Df WindowServer[421:fcc] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x74ae569c00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100001462; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+--- tail ---
+Timestamp type:      Absolute
+Total Latency:       2922 us
+SenderID:            0x0000000100000F95
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.172241
+Y:                   0.225983
+Z:
+2026-11-16 10:29:33.770 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfbf908c0; senderID: 0x100000F95; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           47633775689
+Timestamp type:      Absolute
+Total Latency:       1397 us
+SenderID:            0x0000000100000F95
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           4
+Events:              Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.171204
+Y:                   0.212463
+Z:
+2026-11-16 10:29:33.781 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfbf908c0; senderID: 0x100000F95; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           47634038898
+Timestamp type:      Absolute
+Total Latency:       807 us
+SenderID:            0x0000000100000F95
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0xb0003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           7
+Events:              Range Touch Position 
+ButtonMask:          0
+Range:               1
+Touch:               1
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.192383
+Y:                   0
+2026-11-16 10:29:33.788 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] ignoring digitizer event for display <main> from unsupported service: (<BKIOHIDService: 0x7cfbf908c0; senderID: 0x100000F95; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>):+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Timestamp:           47634207170
+Timestamp type:      Absolute
+Total Latency:       1078 us
+SenderID:            0x0000000100000F95
+BuiltIn:             0
+ValueType:           Absolute
+EventType:           Digitizer
+Flags:               0x80003
+Phase:               Undefined
+DisplayIntegrated:   1
+TransducerType:      Hand
+TransducerIndex:     0
+Identity:            0
+EventMask:           3
+Events:              Range Touch 
+ButtonMask:          0
+Range:               0
+Touch:               0
+Pressure:            0.000000
+AuxiliaryPressure:   0.000000
+Twist:               0.000000
+GenerationCount:     0
+WillUpdateMask:      00000000
+DidUpdateMask:       00000000
+X:                   0.000000
+Y:                   0.000000
+2026-11-16 10:31:09.110 Df WindowServer[415:147cf] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100000F95) builtIn:0
+2026-11-16 10:31:09.111 Df WindowServer[415:147cf] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7cfb495100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000F95; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 10:31:09.111 Df WindowServer[415:147cf] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7cfb495100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100000F95; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 10:31:23.389 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100003FA3) service:<BKIOHIDService: 0x7cfca54280; senderID: 0x100003FA3; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 10:31:23.389 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] service 100003FA3 setProperty:320 forKey:QuantizationDPI
+2026-11-16 10:31:23.390 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7cfedab100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100003FA3; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 10:35:48.035 Df WindowServer[415:16172] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100003FA3) builtIn:0
+2026-11-16 10:35:48.035 Df WindowServer[415:16172] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7cfedab100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100003FA3; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 10:35:48.035 Df WindowServer[415:16172] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7cfedab100; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100003FA3; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 10:35:59.604 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 10000426E) service:<BKIOHIDService: 0x7cfca55680; senderID: 0x10000426E; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 10:35:59.604 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] service 10000426E setProperty:320 forKey:QuantizationDPI
+2026-11-16 10:35:59.605 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7cfeea4f00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x10000426E; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+
+=== digitizer/displayUUID/unsupported logs (last 6h) ===
+   77156 $PROJECT/evidence/digitizer_6h.txt
+2026-11-16 11:04:49.204 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 3 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:49.228 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x64 _childEventMask=0x66 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:49.846 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x24 _childEventMask=0x7 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:50.000 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:50.463 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:50.601 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:50.789 Df WindowServer[415:202cd] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:50.861 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:51.080 Df WindowServer[415:202cd] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:51.316 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:51.495 Df WindowServer[415:202cd] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:51.730 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:52.153 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:52.454 Df WindowServer[415:202cd] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:52.624 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:52.957 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:53.193 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:53.664 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:53.843 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:54.143 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:54.405 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:55.492 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:55.638 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:55.705 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:55.955 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:56.922 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:57.020 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:57.093 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:57.231 Df WindowServer[415:202cd] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:57.288 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:57.458 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:57.531 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:57.671 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:57.751 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:57.947 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:58.035 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:58.206 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:58.263 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:58.563 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:58.612 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:58.799 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:58.848 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:04:59.116 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:04:59.969 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:00.156 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 3 children, _eventMask=0x63 _childEventMask=0x63 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:00.164 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 3 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:00.188 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:01.106 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 5 children, _eventMask=0x20 _childEventMask=0x3 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:01.301 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:01.504 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:01.634 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:01.708 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:02.440 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 3 children, _eventMask=0x63 _childEventMask=0x63 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:02.448 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 3 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:02.967 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x2b _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:03.991 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:04.917 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:05.096 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x63 _childEventMask=0x63 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:05.112 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:08.687 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:09.427 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:09.524 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:09.605 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:09.735 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:09.760 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:09.898 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:09.963 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:10.101 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:10.150 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:10.272 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:10.329 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:10.450 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:10.516 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:10.653 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:10.735 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:10.881 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:10.954 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:11.036 Df WindowServer[415:2018e] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:11.133 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:11.498 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:16.088 Df WindowServer[415:1e4ce] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:37.492 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:37.996 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:38.037 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:38.134 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:38.427 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:39.394 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:39.524 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:39.824 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:40.003 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:40.044 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:40.312 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:40.653 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:40.799 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:41.174 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:41.531 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:41.758 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:41.905 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:42.205 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:42.359 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:42.676 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:42.790 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:43.797 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:43.976 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:44.253 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:44.399 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:45.731 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:45.878 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:46.649 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:46.771 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:46.861 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:47.348 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:47.592 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:47.738 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:47.926 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:48.063 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:48.713 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:48.868 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x63 _childEventMask=0x63 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:48.876 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x60 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:49.397 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x24 _childEventMask=0x7 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:49.534 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:50.241 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:50.396 Df WindowServer[415:20333] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:50.460 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:50.460 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:50.777 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:50.777 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:51.419 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:51.419 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:51.582 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:51.582 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:51.956 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:51.956 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:52.150 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:52.150 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:52.459 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:52.459 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:52.638 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:52.638 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:53.150 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:53.150 Df WindowServer[415:20ab6] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x7 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:53.329 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:53.329 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:53.825 Df log[12510:20c65] [com.apple.log:] log run noninteractively, parent: 12487 (bash), args: 'log' 'show' '--last' '6h' '--info' '--debug' '--style' 'compact' '--predicate' 'eventMessage CONTAINS[c] "digitizer" OR eventMessage CONTAINS[c] "displayUUID" OR eventMessage CONTAINS[c] "unsupported 
+2026-11-16 11:05:54.149 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:54.149 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:54.255 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:54.255 Df WindowServer[415:20332] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 2 children, _eventMask=0x63 _childEventMask=0x62 Cancel=0 Touching=1 inRange=1
+2026-11-16 11:05:54.336 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+2026-11-16 11:05:54.336 Df WindowServer[415:20a2f] [com.apple.Multitouch:Plugin] [TP] Dispatching digitizer event with 4 children, _eventMask=0x23 _childEventMask=0x3 Cancel=0 Touching=0 inRange=0
+
+=== USB2IIC logs (last 6h) ===
+   65803 $PROJECT/evidence/usb2iic_6h.txt
+    ---------------------------
+    DeviceUsagePage:     1
+    DeviceUsage:         6
+    ---------------------------
+    DeviceUsagePage:     13
+    DeviceUsage:         14
+    ---------------------------
+    DeviceUsagePage:     65280
+    DeviceUsage:         1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-16 10:31:23.389 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100003FA3) service:<BKIOHIDService: 0x7cfca54280; senderID: 0x100003FA3; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 10:35:48.026 Df kernel[0:60c] (IOUSBHostFamily) usb-drd2-port-hs@02100000: AppleUSBHostPort::terminateDevice: destroying 0x32d7/0001/0106 (USB2IIC_CTP_CONTROL): hardware connection lost
+2026-11-16 10:35:48.029 E  kernel[0:941] (IOUSBHostFamily) AppleUSBXHCIRequest: AppleUSBIORequest::complete: device 1 (USB2IIC_CTP_CONTROL@02100000) endpoint 0x81: status 0xe00002ed (transaction error): 0 bytes transferred
+2026-11-16 10:35:48.029 E  kernel[0:941] (IOUSBHostFamily) AppleUSBXHCIRequest: AppleUSBIORequest::complete: device 1 (USB2IIC_CTP_CONTROL@02100000) endpoint 0x82: status 0xe00002ed (transaction error): 0 bytes transferred
+2026-11-16 10:35:48.035 I  WindowServer[415:164d8] [com.apple.iohid:default] IOHIDTelemetrySessionFilter dispatch com.apple.hid.device.usage event: {
+    builtin = 0;
+    eventcounter = 627;
+    productdescription = "USB2IIC_CTP_CONTROL";
+    serviceid = 4294983595;
+    thirdpartydevice = 1;
+    transport = USB;
+    usagepairs =     (
+                {
+            DeviceUsage = 2;
+            DeviceUsagePage = 1;
+        },
+                {
+            DeviceUsage = 1;
+            DeviceUsagePage = 1;
+        }
+    );
+    vendorid = 13015;
+}
+2026-11-16 10:35:48.036 I  WindowServer[415:164d8] [com.apple.iohid:default] IOHIDTelemetrySessionFilter dispatch com.apple.hid.device.usage event: {
+    builtin = 0;
+    eventcounter = 43;
+    productdescription = "USB2IIC_CTP_CONTROL";
+    serviceid = 4294983587;
+    thirdpartydevice = 1;
+    transport = USB;
+    usagepairs =     (
+                {
+            DeviceUsage = 4;
+            DeviceUsagePage = 13;
+        },
+                {
+            DeviceUsage = 6;
+            DeviceUsagePage = 1;
+        },
+                {
+            DeviceUsage = 14;
+            DeviceUsagePage = 13;
+        },
+                {
+            DeviceUsage = 1;
+            DeviceUsagePage = 65280;
+        }
+    );
+    vendorid = 13015;
+}
+2026-11-16 10:35:48.037 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]            [Removed] | [USB][ USB2IIC_CTP_CONTROL ] ( 0, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:48.037 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]            [Removed] | [USB][ USB2IIC_CTP_CONTROL ] ( 3, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:48.037 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]            [Removed] | [USB][ USB2IIC_CTP_CONTROL ] ( 3, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:59.510 Df kernel[0:59b] (IOUSBHostFamily) usb-drd2-port-hs@02100000: AppleUSBHostPort::enumerateDeviceComplete_block_invoke: enumerated 0x32d7/0001/0106 (USB2IIC_CTP_CONTROL / 1) at 12 Mbps
+2026-11-16 10:35:59.516 Df kernel[0:59b] (IOUSBHostFamily) USB2IIC_CTP_CONTROL@02100000: IOUSBHostDevice::setConfigurationGated: AppleUSBHostCompositeDevice selected configuration 1
+2026-11-16 10:35:59.517 E  kernel[0:59cc] (IOUSBHostFamily) ChatGPT@(null): AppleUSBHostUserClient::openGated: failed to open USB2IIC_CTP_CONTROL@02100000: provider is already opened for exclusive access by AppleUSBHostCompositeDevice
+2026-11-16 10:35:59.540 Df kernel[0:165af] (IOHIDFamily) <dict ID="0"><key>IORegistryEntryID</key><integer size="64" ID="1">0x10000425d</integer><key>IOName</key><string ID="2">AppleUserUSBHostHIDDevice</string><key>Transport</key><string ID="3">USB</string><key>VendorID</key><integer size="64" ID="4">0x32d7</integer><key>ProductID</key><integer size="64" ID="5">0x1</integer><key>VersionNumber</key><integer size="64" ID="6">0x106</integer><key>Manufacturer</key><string ID="7">wch.cn</string><key>Product</key><string ID="8">USB2IIC_CTP_CONTROL</string><key>LocationID</key><integer size="32" ID="9">0x2100000</integer><key>CountryCode</key><integer size="64" ID="10">0x0</integer><key>ReportDescriptor</key><data ID="11">BQEJAqEBhVgJAaEABQkZASkCFQAlAXUBlQKBApUGgQMFAQkwFQAm/38JMSb/f3UQlQJVDmURNQBG/3+BAgk4FYElf3UIlQGBBsDA</data></dict>
+2026-11-16 10:35:59.552 Df kernel[0:165af] (IOHIDFamily) <dict ID="0"><key>IORegistryEntryID</key><integer size="64" ID="1">0x10000425e</integer><key>IOName</key><string ID="2">AppleUserUSBHostHIDDevice</string><key>Transport</key><string ID="3">USB</string><key>VendorID</key><integer size="64" ID="4">0x32d7</integer><key>ProductID</key><integer size="64" ID="5">0x1</integer><key>VersionNumber</key><integer size="64" ID="6">0x106</integer><key>Manufacturer</key><string ID="7">wch.cn</string><key>Product</key><string ID="8">USB2IIC_CTP_CONTROL</string><key>LocationID</key><integer size="32" ID="9">0x2100000</integer><key>CountryCode</key><integer size="64" ID="10">0x0</integer><key>ReportDescriptor</key><data ID="11">BQ0JBKEBhVQJIqECCUIVACUBdQGVAYEClQeBAwlRdQiVAYECBQF1EFUOZREVADUACTAm/39GtBSBAgkxJv9/RrgLgQLABQ0JIqECCUIVACUBdQGVAYEClQeBAwlRdQiVAYECBQF1EFUOZREVADUACTAm/39GtBSBAgkxJv9/RrgLgQLABQ0JIqECCUIVACUBdQGVAYEClQeBAwlRdQiVAYECBQF1EFUOZREVADUACTAm/39GtBSBAgkxJv9/RrgLgQLABQ0JIqECCUIVACUBdQGVAYEClQeBAwlRdQiVAYECBQF1EFUOZREVADUACTAm/39GtBSBAgkxJv9/Rrg<…>
+2026-11-16 10:35:59.556 Df kernel[0:165af] () [AppleUserHIDEventDriver.cpp:116][0x100004266] USB2IIC_CTP_CONTROL usagePage: 1 usage: 2 vid: 13015 pid: 1
+2026-11-16 10:35:59.564 Df kernel[0:167b5] () [AppleUserHIDEventDriver.cpp:116][0x10000426e] USB2IIC_CTP_CONTROL usagePage: 13 usage: 4 vid: 13015 pid: 1
+2026-11-16 10:35:59.567 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]                Added | 0x10000022 - [USB][ USB2IIC_CTP_CONTROL ] ( 0, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:59.567 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]             Inferior | 0x10000023 - [USB][ USB2IIC_CTP_CONTROL ] ( 3, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:59.567 Df icdd[1064:24b2] [com.apple.imagecapture:icdd]             Inferior | 0x10000025 - [USB][ USB2IIC_CTP_CONTROL ] ( 3, 0, 0) @ 0x2100000 |
+2026-11-16 10:35:59.598 Df WindowServer[415:164d8] [com.apple.BackBoard:HID] Services added: [<BKIOHIDService: 0x7cfca55680; senderID: 0x10000426E; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB>]
+2026-11-16 10:35:59.602 Df loginwindow[418:feb] [com.apple.loginwindow.logging:KeyboardSetupAssistant] KeyboardServiceAddedCallback | Keyboard Service added: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SenderID:            0x000000010000426e
+Manufacturer:        wch.cn
+Product:             USB2IIC_CTP_CONTROL
+Transport:           USB
+LocationID:          34603008
+VendorID:            13015
+ProductID:           1
+CountryCode:         0
+PrimaryUsagePage:    13
+PrimaryUsage:        4
+DeviceUsagePairs:   
+    DeviceUsagePage:     13
+    DeviceUsage:         4
+    ---------------------------
+    DeviceUsagePage:     1
+    DeviceUsage:         6
+    ---------------------------
+    DeviceUsagePage:     13
+    DeviceUsage:         14
+    ---------------------------
+    DeviceUsagePage:     65280
+    DeviceUsage:         1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-16 10:35:59.604 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 10000426E) service:<BKIOHIDService: 0x7cfca55680; senderID: 0x10000426E; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 11:07:26.421 Df log[12628:21403] [com.apple.log:] log run noninteractively, parent: 12487 (bash), args: 'log' 'show' '--last' '6h' '--info' '--debug' '--style' 'compact' '--predicate' 'eventMessage CONTAINS "USB2IIC"'
+
+=== BackBoard subsystem (last 2h) ===
+  120794 $PROJECT/evidence/backboard_2h.txt
+2026-11-16 11:07:25.457 Df SCIM_Extension[887:213c3] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df ThemeWidgetControlViewService[5264:edb8] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[5255:20c69] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[3202:20c6e] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df CursorUIViewService[906:213c1] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] chain did update (setDeferringRules) <<keyboardFocus>; generation: 1281; finalStringTargetIndex: 3> containsEndOfChain: YES; [
+    <token: <frontmost>; pid: 415>,
+    <token: Typora Codex:0x0-0xba0ba; pid: 415>,
+    <pid: 5245>,
+    <token: viewbridge-key-window; pid: 5245>
+]
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[908:20c74] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[3040:20c71] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[1989:20c6f] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[3120:20c72] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df com.apple.SafariPlatformSupport.Helper[1361:20c6a] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.457 Df ThemeWidgetControlViewService[8833:1ab37] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[3202:20c6e] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df SCIM_Extension[887:213cf] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df ThemeWidgetControlViewService[5264:1330f] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.appkit.xpc.openAndSavePanelService[8180:2132e] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df CursorUIViewService[906:20c77] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[5255:20c69] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[908:20c74] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[1812:20aec] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[3120:20c72] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[1989:20c6f] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:07:25.458 Df com.apple.SafariPlatformSupport.Helper[3040:20c71] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:05.588 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:05.707 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:05.876 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:06.079 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:06.099 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:09.859 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:10.089 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:10.375 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:10.641 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:10.759 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] destinations for Keyboard event: (<keyboardFocus; Typora.5245; token: viewbridge-key-window>)
+2026-11-16 11:08:28.217 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] new deferring rules for pid:5245: [[5245-184]; <keyboardFocus> -> <token: viewbridge-key-window; pid: 5245>; reason: …RemoteView deferKeyboardEventsToParticularWindow:forReason:]]
+2026-11-16 11:08:28.217 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] [<keyboardFocus> 0x7cfab2ce00] setRules:forPID(5245) generation: 1282: [[5245-184]; <keyboardFocus> -> <token: viewbridge-key-window; pid: 5245>; reason: -[NSRemoteView deferKeyboardEventsToParticularWindow:forReason:]]
+2026-11-16 11:08:28.217 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] chain did update (setDeferringRules) <<keyboardFocus>; generation: 1282; finalStringTargetIndex: 3> containsEndOfChain: YES; [
+    <token: <frontmost>; pid: 415>,
+    <token: Typora Codex:0x0-0xba0ba; pid: 415>,
+    <pid: 5245>,
+    <token: viewbridge-key-window; pid: 5245>
+]
+2026-11-16 11:08:28.218 Df com.apple.appkit.xpc.openAndSavePanelService[8180:2167b] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df SCIM_Extension[887:2183a] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df ThemeWidgetControlViewService[5264:1330f] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df ThemeWidgetControlViewService[8833:1ab37] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[5255:213df] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1361:213de] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[908:213e1] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] new deferring rules for pid:5245: [[5245-185]; <keyboardFocus> -> <token: viewbridge-key-window; pid: 5245>; reason: …RemoteView deferKeyboardEventsToParticularWindow:forReason:]]
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1812:213dd] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] [<keyboardFocus> 0x7cfab2ce00] setRules:forPID(5245) generation: 1283: [[5245-185]; <keyboardFocus> -> <token: viewbridge-key-window; pid: 5245>; reason: -[NSRemoteView deferKeyboardEventsToParticularWindow:forReason:]]
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3040:213e2] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3202:213e0] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df WindowServer[415:fc6] [com.apple.BackBoard:EventDelivery] chain did update (setDeferringRules) <<keyboardFocus>; generation: 1283; finalStringTargetIndex: 3> containsEndOfChain: YES; [
+    <token: <frontmost>; pid: 415>,
+    <token: Typora Codex:0x0-0xba0ba; pid: 415>,
+    <pid: 5245>,
+    <token: viewbridge-key-window; pid: 5245>
+]
+2026-11-16 11:08:28.218 Df CursorUIViewService[906:21838] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3120:213e4] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df SCIM_Extension[887:21839] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1989:213e3] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.appkit.xpc.openAndSavePanelService[8180:2167b] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1361:213de] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1812:213dd] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df ThemeWidgetControlViewService[5264:edb8] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[5255:213df] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[908:213e1] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df ThemeWidgetControlViewService[8833:1ab36] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3202:213e0] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3040:213e2] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df CursorUIViewService[906:21838] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[3120:213e4] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+2026-11-16 11:08:28.218 Df com.apple.SafariPlatformSupport.Helper[1989:213e3] [com.apple.BackBoard:EventDelivery] will update observations for 0 observers
+
+=== sudo test (do not prompt) ===
+NO_PASSWORDLESS_SUDO
+
+=== systemextensionsctl ===
+3 extension(s)
+--- com.apple.system_extension.cmio (Go to 'System Settings > General > Login Items & Extensions > Camera Extensions' to modify these system extension(s))
+enabled	active	teamID	bundleID (version)	name	[state]
+	*	2MMRE5MTB8	com.obsproject.obs-studio.mac-camera-extension (32.0.4/20197751539)	OBS Virtual Camera	[activated waiting for user]
+--- com.apple.system_extension.network_extension (Go to 'System Settings > General > Login Items & Extensions > Network Extensions' to modify these system extension(s))
+enabled	active	teamID	bundleID (version)	name	[state]
+*	*	NXELXU5YLW	com.initex.proxifier.v3.macos.ProxifierExtension (3.15.0/3.15.0)	ProxifierExtension	[activated enabled]
+*	*	W5364U7YZB	io.tailscale.ipn.macsys.network-extension (1.104.6/101.104.6)	Tailscale Network Extension	[activated enabled]
+
+=== third-party extension/plugin directories ===
+ls: /Library/HIDPlugins: No such file or directory
+total 0
+drwxr-xr-x   2 root  wheel    64 Nov  6 13:22 .
+drwxr-xr-x  71 root  wheel  2272 Nov 16 09:50 ..
+total 0
+drwxr-xr-x   3 root  wheel    96 Nov 12 10:09 .
+drwxr-xr-x  71 root  wheel  2272 Nov 16 09:50 ..
+drwxr-xr-x   3 root  wheel    96 Jan 26  2026 BJUSBLoad.kext
+
+=== security posture ===
+System Integrity Protection status: enabled.
+Authenticated Root status: enabled
+
+=== displays (system_profiler) ===
+Graphics/Displays:
+
+    Apple M1 Pro:
+
+      Chipset Model: Apple M1 Pro
+      Type: GPU
+      Bus: Built-In
+      Total Number of Cores: 16
+      Vendor: Apple (0x106b)
+      Metal Support: Metal 4
+      Displays:
+        Color LCD:
+          Display Type: Built-in Liquid Retina XDR Display
+          Resolution: 3456 x 2234 Retina
+          Main Display: Yes
+          Mirror: Off
+          Online: Yes
+          Automatically Adjust Brightness: Yes
+          Connection Type: Internal
+        Display:
+          Resolution: 1600 x 1066
+          UI Looks like: 1600 x 1066 @ 60.00Hz
+          Mirror: Off
+          Online: Yes
+          Rotation: 180
+
+
+=== windowserver display uuid prefs ===
+{
+  "DisplayAnyUserSets" => {
+    "Configs" => [
+      0 => {
+        "ConfigVersion" => 1
+        "DisplayConfig" => [
+          0 => {
+            "CurrentInfo" => {
+              "Depth" => 8
+              "High" => 848
+              "Hz" => 120
+              "IsGenlock" => false
+              "IsLink" => false
+              "IsVRR" => true
+              "OriginX" => 0
+              "OriginY" => 0
+              "Scale" => 2
+              "Wide" => 1312
+            }
+            "Rotation" => 0
+            "UnmirrorInfo" => {
+              "Depth" => 8
+              "High" => 848
+              "Hz" => 120
+              "IsGenlock" => false
+              "IsLink" => false
+              "IsVRR" => true
+              "OriginX" => 0
+              "OriginY" => 0
+              "Scale" => 2
+              "Wide" => 1312
+            }
+            "UUID" => "37D8832A-2D66-02CA-B9F7-8F30A301B230"
+          }
+          1 => {
+            "CurrentInfo" => {
+              "Depth" => 8
+              "High" => 1066
+              "Hz" => 60
+              "IsGenlock" => false
+              "IsLink" => false
+              "IsVRR" => false
+              "OriginX" => -134
+              "OriginY" => 848
+              "Scale" => 1
+              "Wide" => 1600
+            }
+            "Rotation" => 180
+            "UnmirrorInfo" => {
+              "Depth" => 8
+              "High" => 1066
+              "Hz" => 60
+              "IsGenlock" => false
+              "IsLink" => false
+              "IsVRR" => false
+              "OriginX" => 0
+              "OriginY" => 0
+              "Scale" => 1
+              "Wide" => 1600
+            }
+            "UUID" => "30D985CD-BE3F-4C0E-B055-C5E22CFF2E07"
+          }
+        ]
+      }
+      1 => {
+        "ConfigVersion" => 1
+        "DisplayConfig" => [
+          0 => {
+            "CurrentInfo" => {
+              "Depth" => 8
+              "High" => 848
+              "Hz" => 120
+              "IsGenlock" => false
+              "IsLink" => false
+              "IsVRR" => true
+              "OriginX" => 0
+              "OriginY" => 0
+              "Scale" => 2
+              "Wide" => 1312
+            }
+
+=== feature flag storage / override files ===
+-rw-r--r--@ 1 root  wheel  83 Dec 26  2025 /Library/Preferences/com.apple.iclouddrive.features.plist
+
+=== DONE ===

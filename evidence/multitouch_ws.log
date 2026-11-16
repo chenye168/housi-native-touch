@@ -1,0 +1,277 @@
+Timestamp               Ty Process[PID:TID]
+2026-11-16 14:26:07.944 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: touching
+2026-11-16 14:26:08.739 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: none
+2026-11-16 14:26:10.086 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: touching
+2026-11-16 14:26:10.168 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: none
+2026-11-16 14:26:11.090 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: touching
+2026-11-16 14:26:11.755 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: none
+2026-11-16 14:26:12.156 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: touching
+2026-11-16 14:26:15.549 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [100001D48] contact 0 presence: none
+2026-11-16 14:26:23.599 Df WindowServer[414:722e] [com.apple.BackBoard:TouchEvents] touchstats 100001D48-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 18.0528s ago: [
+    down: 9,
+    up: 9,
+    rangeIn: 9,
+    rangeOut: 9,
+    pathsSeen: 0 1,
+    destinations: {
+        (null).-1 targetID EB789C8/0: {
+            touchIDs: 255 257-25D;
+        };
+        (null).-1 targetID 0/1F5: {
+            touchIDs: 256;
+        };
+    },
+    averageProcessingTime (µs): 665.75
+]
+2026-11-16 14:26:41.224 Df WindowServer[414:a7a0] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100001D48) builtIn:1
+2026-11-16 14:26:41.224 E  WindowServer[414:a7a0] [com.apple.BackBoard:TouchEvents] *** lost main display digitizer ***
+2026-11-16 14:26:41.224 Df WindowServer[414:a7a0] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x785712ac00; touchScreen; builtin; builtIn: YES; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100001D48; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:41.224 Df WindowServer[414:a7a0] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x785712ac00; touchScreen; builtin; builtIn: YES; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100001D48; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:41.320 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100002099) service:<BKIOHIDService: 0x7854c50b40; senderID: 0x100002099; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; serviceStatus: matched>
+2026-11-16 14:26:41.320 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] service 100002099 setProperty:160 forKey:QuantizationDPI
+2026-11-16 14:26:41.321 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x78555c4600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100002099; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:42.192 Df WindowServer[414:722e] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 100002099) builtIn:0
+2026-11-16 14:26:42.192 Df WindowServer[414:722e] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x78555c4600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100002099; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:42.192 Df WindowServer[414:722e] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x78555c4600; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100002099; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:42.292 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 1000020B8) service:<BKIOHIDService: 0x7854c51860; senderID: 0x1000020B8; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; serviceStatus: matched>
+2026-11-16 14:26:42.292 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] service 1000020B8 setProperty:160 forKey:QuantizationDPI
+2026-11-16 14:26:42.293 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7857177800; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x1000020B8; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 14:26:46.492 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:26:46.560 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:26:47.340 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:26:48.589 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:26:49.813 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:26:49.883 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:26:57.958 Df WindowServer[414:adff] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 11.4662s ago: [
+    down: 3,
+    up: 3,
+    rangeIn: 3,
+    rangeOut: 3,
+    pathsSeen: 0,
+    destinations: {
+        (null).-1 targetID EB789C8/0: {
+            touchIDs: 25E-260;
+        };
+    },
+    averageProcessingTime (µs): 1498.69
+]
+2026-11-16 14:27:06.318 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:06.692 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:06.919 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:07.235 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:08.026 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:09.289 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:09.774 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:11.322 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:11.563 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:11.748 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:12.492 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:12.761 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:21.253 Df WindowServer[414:adff] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 14.9346s ago: [
+    down: 6,
+    up: 6,
+    rangeIn: 6,
+    rangeOut: 6,
+    pathsSeen: 0,
+    destinations: {
+        (null).-1 targetID EB789C8/0: {
+            touchIDs: 261-266;
+        };
+    },
+    averageProcessingTime (µs): 1121.43
+]
+2026-11-16 14:27:54.370 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:54.455 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:27:54.560 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: touching
+2026-11-16 14:27:54.702 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: none
+2026-11-16 14:27:54.709 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 2>
+2026-11-16 14:27:54.709 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 2>
+2026-11-16 14:27:54.720 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:54.722 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:54.722 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:54.728 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:54.778 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:27:54.785 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:54.785 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eedf40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:54.786 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:55.455 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:55.455 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:55.464 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:55.464 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:27:55.483 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: touching
+2026-11-16 14:27:55.701 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:27:55.703 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 2>
+2026-11-16 14:27:55.703 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 2>
+2026-11-16 14:27:55.718 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:27:55.720 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:55.720 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:55.726 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:27:55.751 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: none
+2026-11-16 14:27:55.757 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:55.757 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eeea40; (hitTest); contextID: 0x0; windowID: 0x1F5; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:27:55.769 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:28:03.839 Df WindowServer[414:6c1f] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 9.46856s ago: [
+    down: 9,
+    up: 9,
+    rangeIn: 9,
+    rangeOut: 9,
+    pathsSeen: 0 1 2,
+    destinations: {
+        (null).-1 targetID 0/1F5: {
+            touchIDs: 267-26A 26C-26F;
+        };
+    },
+    averageProcessingTime (µs): 2534.44
+]
+2026-11-16 14:28:08.861 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:28:08.949 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:28:09.091 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:28:09.142 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:28:10.608 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:28:10.686 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:28:10.790 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:28:10.853 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:28:18.861 Df WindowServer[414:6c1f] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 9.99983s ago: [
+    down: 4,
+    up: 4,
+    rangeIn: 4,
+    rangeOut: 4,
+    pathsSeen: 0,
+    destinations: {
+        (null).-1 targetID EB789C8/0: {
+            touchIDs: 270-273;
+        };
+    },
+    averageProcessingTime (µs): 2294.12
+]
+2026-11-16 14:29:08.867 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:08.867 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:29:10.988 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:10.988 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:29:12.003 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:12.025 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:12.026 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:12.026 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:29:12.715 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:12.723 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f6ad80; (hitTest); contextID: 0x19996DF4; windowID: 0x0; clientTaskName: 0x45657; clientConnectionIdentifier: 0xCC5EB; externalReferences: 1>
+2026-11-16 14:29:12.723 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f6ad80; (hitTest); contextID: 0x19996DF4; windowID: 0x0; clientTaskName: 0x45657; clientConnectionIdentifier: 0xCC5EB; externalReferences: 1>
+2026-11-16 14:29:12.727 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:29:13.045 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:13.065 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:13.066 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:13.107 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:13.592 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:13.612 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:29:15.298 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:15.302 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eed780; (hitTest); contextID: 0x19996DF4; windowID: 0x0; clientTaskName: 0x45657; clientConnectionIdentifier: 0xCC5EB; externalReferences: 1>
+2026-11-16 14:29:15.302 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7854eed780; (hitTest); contextID: 0x19996DF4; windowID: 0x0; clientTaskName: 0x45657; clientConnectionIdentifier: 0xCC5EB; externalReferences: 1>
+2026-11-16 14:29:15.308 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:29:17.136 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:17.151 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:17.152 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:17.642 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:17.893 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:19.320 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:22.527 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:23.686 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:24.727 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:25.555 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:26.322 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:26.688 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:26.952 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:29:28.448 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:29:36.523 Df WindowServer[414:6c1f] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 27.654s ago: [
+    down: 16,
+    up: 16,
+    rangeIn: 16,
+    rangeOut: 16,
+    pathsSeen: 0 1,
+    destinations: {
+        (null).-1 targetID 19996DF4/0: {
+            touchIDs: 274-283;
+        };
+    },
+    averageProcessingTime (µs): 949.67
+]
+2026-11-16 14:30:41.079 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:30:41.133 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:30:41.510 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:30:41.587 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:30:41.874 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:30:41.942 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:30:42.117 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:30:42.178 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:30:50.457 Df WindowServer[414:b8f2] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 9.37766s ago: [
+    down: 4,
+    up: 4,
+    rangeIn: 4,
+    rangeOut: 4,
+    pathsSeen: 0,
+    destinations: {
+        (null).-1 targetID 1E00F663/0: {
+            touchIDs: 284-287;
+        };
+    },
+    averageProcessingTime (µs): 5393.66
+]
+2026-11-16 14:33:20.332 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:20.332 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:33:20.491 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:33:20.491 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f6b240; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 1>
+2026-11-16 14:33:20.491 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f6b240; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 1>
+2026-11-16 14:33:20.498 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:22.147 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:22.147 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:33:22.162 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: touching
+2026-11-16 14:33:22.270 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: none
+2026-11-16 14:33:22.275 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x785224fc00; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 2>
+2026-11-16 14:33:22.275 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x785224fc00; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 2>
+2026-11-16 14:33:22.280 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:22.291 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x785224fc00; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 1>
+2026-11-16 14:33:22.291 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x785224fc00; (hitTest); contextID: 0x34B1062D; windowID: 0x0; clientTaskName: 0x75DD3; clientConnectionIdentifier: 0x60E0F; externalReferences: 1>
+2026-11-16 14:33:22.295 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:33:23.864 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:23.864 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:33:23.946 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:23.946 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:33:24.845 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:24.862 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:24.863 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:24.863 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:33:24.863 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: touching
+2026-11-16 14:33:24.991 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:33:24.991 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: none
+2026-11-16 14:33:24.992 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f69740; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:33:24.992 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851f69740; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:33:25.009 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:25.728 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: touching
+2026-11-16 14:33:25.744 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: touching
+2026-11-16 14:33:25.758 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: touching
+2026-11-16 14:33:25.758 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 3 presence: touching
+2026-11-16 14:33:25.897 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 2 presence: none
+2026-11-16 14:33:25.902 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851dd4cc0; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 3>
+2026-11-16 14:33:25.902 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851dd4cc0; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 3>
+2026-11-16 14:33:25.918 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 0 presence: none
+2026-11-16 14:33:25.918 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 3 presence: none
+2026-11-16 14:33:25.922 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851dd4cc0; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:33:25.922 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] not removing destination (external): <BKTouchDestination: 0x7851dd4cc0; (hitTest); contextID: 0x0; windowID: 0x273; clientTaskName: 0x59F13; clientConnectionIdentifier: 0x59C07; externalReferences: 1>
+2026-11-16 14:33:25.928 Df WindowServer[414:fb6] [com.apple.BackBoard:TouchEvents] [1000020B8] contact 1 presence: none
+2026-11-16 14:33:34.429 Df WindowServer[414:b8f2] [com.apple.BackBoard:TouchEvents] touchstats 1000020B8-30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 events starting 14.097s ago: [
+    down: 15,
+    up: 15,
+    rangeIn: 15,
+    rangeOut: 15,
+    pathsSeen: 0 1 2 3,
+    destinations: {
+        (null).-1 targetID 0/273: {
+            touchIDs: 28D-294 296;
+        };
+        (null).-1 targetID 34B1062D/0: {
+            touchIDs: 288-28C;
+        };
+        (null).-1 targetID EB789C8/0: {
+            touchIDs: 295;
+        };
+    },
+    averageProcessingTime (µs): 2774.71
+]

@@ -1,0 +1,20 @@
+2026-11-16T13:19:29.486+08:00 [SYS] screen name=Built-in Retina Display uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 touchCapabilities=1 frame=(0.0, 0.0, 1312.0, 848.0)
+2026-11-16T13:19:29.487+08:00 [SYS] screen name=<空> uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 touchCapabilities=1 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T13:19:29.487+08:00 [SYS] target screen uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 frame=(-134.0, -1066.0, 1600.0, 1066.0)
+2026-11-16T13:19:29.516+08:00 [SYS] monitors installed; isActive=false keyWindow=false
+2026-11-16T13:19:29.923+08:00 [SYS] activation retry +0.4s isActive=false keyWindow=false
+2026-11-16T13:19:30.774+08:00 [SYS] activation retry +1.2s isActive=false keyWindow=false
+2026-11-16T13:19:32.144+08:00 [SYS] activation retry +2.5s isActive=false keyWindow=false
+2026-11-16T13:19:34.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:19:39.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:19:44.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:19:49.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:19:54.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:19:59.516+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:04.517+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:09.615+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:14.616+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:19.615+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:24.616+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:29.615+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1
+2026-11-16T13:20:34.615+08:00 [STATUS] isActive=false keyWindow=false mainWindow=-1

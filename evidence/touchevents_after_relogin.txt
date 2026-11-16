@@ -1,0 +1,22 @@
+Timestamp               Ty Process[PID:TID]
+2026-11-16 12:10:53.953 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:21:36.773 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:22:23.468 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 12:22:23.468 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 12:22:23.468 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 12:22:23.468 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 12:22:23.873 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100006C1D) service:<BKIOHIDService: 0x7cfb83bb60; senderID: 0x100006C1D; eventSource: builtin; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; authenticated; builtIn>
+2026-11-16 12:22:23.873 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] *** acquired main display digitizer (after 0.000770708s)
+2026-11-16 12:22:23.873 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] service 100006C1D setProperty:160 forKey:QuantizationDPI
+2026-11-16 12:22:23.874 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7cfc2f8500; touchScreen; builtin; builtIn: YES; displayIntegrated: YES; displayUUID: 30D985CD-BE3F-4C0E-B055-C5E22CFF2E07; senderID: 0x100006C1D; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 12:22:24.524 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7cf731b440; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 29548; ASID: 100346; PIDVersion: 66540> doesn't have the required entitlement
+2026-11-16 12:22:24.524 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7cf731b440; AUID: 4294967295; EUID: 0; EGID: 0; RUID: 0; RGID: 0; PID: 29548; ASID: 100346; PIDVersion: 66540> doesn't have entitlement com.apple.backboardd.hitTestContextCategory
+2026-11-16 12:22:25.085 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:22:25.118 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:22:30.221 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] [BKTouchEvents] connection invalidated: (MenuBarAgent)
+2026-11-16 12:22:30.221 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextID category map is now (null)
+2026-11-16 12:22:30.221 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterBySenderID now (null)
+2026-11-16 12:22:30.221 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] contextIDsToFilterPerStimulus now (null)
+2026-11-16 12:22:30.223 Df WindowServer[415:40690] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7cfcf7ec00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100006C1D; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 12:22:31.106 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setHitTestFilterParameters: <BSAuditToken: 0x7cf8163780; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 29654; ASID: 100346; PIDVersion: 66808> doesn't have the required entitlement
+2026-11-16 12:22:31.106 E  WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] setContextIDs:forHitTestContextCategory: <BSAuditToken: 0x7cf8163780; AUID: 501; EUID: 501; EGID: 20; RUID: 501; RGID: 20; PID: 29654; ASID: 100346; PIDVersion: 66808> doesn't have entitlement com.apple.backboardd.hitTestContextCategory

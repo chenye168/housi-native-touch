@@ -1,0 +1,14 @@
+Filtering the log data using "process == "WindowServer" AND (category == "TouchEvents" OR category == "HID")"
+Timestamp               Ty Process[PID:TID]
+2026-11-16 11:50:43.629 Df WindowServer[415:33a89] [com.apple.BackBoard:TouchEvents] digitizer detached (sender 10000426E) builtIn:0
+2026-11-16 11:50:43.629 Df WindowServer[415:33a89] [com.apple.BackBoard:TouchEvents] cancel -- digitizer did disappear:<BKDirectTouchState: 0x7cfeea4f00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x10000426E; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 11:50:43.629 Df WindowServer[415:33a89] [com.apple.BackBoard:TouchEvents] invalidate: <BKDirectTouchState: 0x7cfeea4f00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x10000426E; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 11:50:43.633 Df WindowServer[415:32754] [com.apple.BackBoard:HID] purge sender info for senderID:100004266 -- BKIOHIDService
+2026-11-16 11:50:43.634 Df WindowServer[415:32754] [com.apple.BackBoard:HID] purge sender info for senderID:10000426E -- BKIOHIDService
+2026-11-16 11:50:53.848 Df WindowServer[415:33a89] [com.apple.BackBoard:HID] Services added: [<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB>]
+2026-11-16 11:50:53.853 Df WindowServer[415:fc6] [com.apple.BackBoard:HID] cache sender info for senderID:100006C1D -- BKIOHIDService
+2026-11-16 11:50:53.853 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] digitizer attached (sender 100006C1D) service:<BKIOHIDService: 0x7cfca33f20; senderID: 0x100006C1D; eventSource: externalKeyboard; primaryUsagePage: 0xD; primaryUsage: 0x4; name: USB2IIC_CTP_CONTROL; transport: USB; serviceStatus: matched>
+2026-11-16 11:50:53.853 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] service 100006C1D setProperty:320 forKey:QuantizationDPI
+2026-11-16 11:50:53.854 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] init: <BKDirectTouchState: 0x7cfcf7ec00; touchScreen; keyboard; builtIn: NO; displayIntegrated: YES; senderID: 0x100006C1D; contacts: contacts: []; destinations: []; latentSystemGestureDestinations: ()>
+2026-11-16 12:10:53.949 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
+2026-11-16 12:21:36.765 Df WindowServer[415:fc6] [com.apple.BackBoard:TouchEvents] soft cancel on all displays
