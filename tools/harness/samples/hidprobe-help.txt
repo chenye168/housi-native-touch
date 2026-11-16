@@ -1,0 +1,36 @@
+hidprobe — HOUSI / USB2IIC_CTP 触控 HID 探针（IOHIDManager）
+
+用法:
+  hidprobe [--list] [--descriptor] [--elements]
+  hidprobe --dump [--seconds N] [--interface digitizer|mouse|all]
+  hidprobe --setmode [--mode N] [--dry-run] [--force] [--restore]
+  hidprobe --request-access
+  hidprobe [--vid 0x32d7] [--pid 0x0001] [--logfile PATH]
+
+选项:
+  --list            枚举 VID/PID 匹配的 HID 接口（默认动作）
+  --descriptor      额外打印完整 Report Descriptor hex
+  --elements        额外打印所有 Feature Report 元素（IOHIDDeviceCopyMatchingElements）
+  --dump            读取并打印 input report（含 reportID、原始 hex、触点解码）
+  --seconds N       --dump 运行 N 秒后退出（默认 10；0 = Ctrl-C 退出）
+  --interface ARG   digitizer（默认）| mouse | all
+  --setmode         发送 Feature Report 把 Input Mode (0x0D/0x52) 设为 --mode（默认 2）
+  --mode N          Input Mode 目标值（0..10，默认 2 = multi-touch）
+  --dry-run         --setmode 时只打印将发送的 report，不实际写设备
+  --force           Input Mode 已等于目标值时仍发送一次 SetReport
+  --restore         写完并验证后把 Input Mode 恢复为原值
+  --request-access  调用 IOHIDRequestAccess(kIOHIDRequestTypeListenEvent) 触发授权提示
+  --logfile PATH    日志追加写入该文件
+  --vid/--pid       覆盖默认 VID=0x32d7 PID=0x0001
+  --help/-h         显示本帮助
+
+内部子命令（--setmode 会自动以子进程方式调用；也可手动运行）:
+  --inspect         只读: 枚举 digitizer、dump feature 元素、打印当前 Input Mode、GetReport
+  --open-close      只读: 打印 IOHIDDeviceOpen / IOHIDDeviceClose 的返回值（不做任何 GetValue）
+  --read-mode       只读: 打印 READ_MODE mode=<n> devid=<n>
+  --get-report [RID] 只读: 对 Feature Report 调 IOHIDDeviceGetReport 并打印返回值
+  --write-mode N    写: 构造并发送 report，把 Input Mode 设为 N（内部用）
+
+权限: 本机该设备 RequiresTCCAuthorization=Yes。读取 input report / SetReport 需要
+      「系统设置 → 隐私与安全性 → 输入监控」授权给运行本程序的终端 App（TCC 记在负责进程上），
+      然后完全退出并重开终端。返回 0xE00002E2 即权限被拒。

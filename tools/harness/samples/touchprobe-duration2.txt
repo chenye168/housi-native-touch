@@ -1,0 +1,51 @@
+2026-11-16T11:33:30.923+08:00 [SYS  ] overlay screen:  uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 frame={{-134, -1066}, {1600, 1066}}
+2026-11-16T11:33:30.928+08:00 [SYS  ] overlay window created on screen frame={{-134, -1066}, {1600, 1066}} level=floating
+2026-11-16T11:33:30.931+08:00 [SYS  ] touchprobe start pid=22414 os=Version 27.2.1 (Build 26B131)
+2026-11-16T11:33:30.932+08:00 [SYS  ] logfile=$PROJECT/tools/harness/samples/touchprobe-selftest.log
+2026-11-16T11:33:30.934+08:00 [SYS  ] === NSScreen.screens (2) ===
+2026-11-16T11:33:30.934+08:00 [SYS  ] [0] name=Built-in Retina Display displayID=1 uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 touchCapabilities=1 (MultiTouch) main=YES
+2026-11-16T11:33:30.935+08:00 [SYS  ]     NSScreen.frame={{0, 0}, {1312, 848}} visibleFrame={{0, 0}, {1312, 822}} backingScale=2.0
+2026-11-16T11:33:30.935+08:00 [SYS  ]     CGDisplayBounds={{0, 0}, {1312, 848}} rotation=0°
+2026-11-16T11:33:30.935+08:00 [SYS  ]     HOUSI? = no
+2026-11-16T11:33:30.935+08:00 [SYS  ] [1] name=<空> displayID=3 uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 touchCapabilities=1 (MultiTouch) main=no
+2026-11-16T11:33:30.936+08:00 [SYS  ]     NSScreen.frame={{-134, -1066}, {1600, 1066}} visibleFrame={{-134, -1066}, {1600, 1036}} backingScale=1.0
+2026-11-16T11:33:30.936+08:00 [SYS  ]     CGDisplayBounds={{-134, 848}, {1600, 1066}} rotation=180°
+2026-11-16T11:33:30.936+08:00 [SYS  ]     HOUSI? = YES (UUID 匹配)
+2026-11-16T11:33:30.936+08:00 [SYS  ] === CGGetOnlineDisplayList ===
+2026-11-16T11:33:30.937+08:00 [SYS  ] CGGetOnlineDisplayList err=CGError(rawValue: 0) count=2
+2026-11-16T11:33:30.937+08:00 [SYS  ]   id=1 uuid=37D8832A-2D66-02CA-B9F7-8F30A301B230 main=1 builtin=1 active=0 bounds={{0, 0}, {1312, 848}} rotation=0°
+2026-11-16T11:33:30.937+08:00 [SYS  ]   id=3 uuid=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07 main=0 builtin=0 active=0 bounds={{-134, 848}, {1600, 1066}} rotation=180°
+2026-11-16T11:33:30.937+08:00 [SYS  ] === HOUSI 映射参考（已知 UUID=30D985CD-BE3F-4C0E-B055-C5E22CFF2E07） ===
+2026-11-16T11:33:30.938+08:00 [SYS  ] NSScreen:  id=3 frame={{-134, -1066}, {1600, 1066}}
+2026-11-16T11:33:30.938+08:00 [SYS  ] CGDisplayBounds: {{-134, 848}, {1600, 1066}} (lead 实测已知: {{-134, 848}, {1600, 1066}})
+2026-11-16T11:33:30.938+08:00 [SYS  ] rotation=180° (lead 实测已知: 180°)
+2026-11-16T11:33:30.939+08:00 [SYS  ] 注意: NSScreen 坐标系原点在主屏左下、y 向上；CGDisplayBounds 原点在主屏左上、y 向下，
+2026-11-16T11:33:30.939+08:00 [SYS  ]       同一块屏的 frame 与 bounds 通过主屏高度互相换算（主屏 height=848）。
+2026-11-16T11:33:30.939+08:00 [SYS  ] 归一化触控坐标映射候选（NSTouch.normalizedPosition 以触控面板左下为 (0,0)）:
+2026-11-16T11:33:30.940+08:00 [SYS  ]   normalized -> 直映射(NSScreen 坐标)            -> 按 rotation 180° 翻转候选
+2026-11-16T11:33:30.940+08:00 [SYS  ]   (0.00,0.00) -> (-134.0,-1066.0) -> (1466.0,0.0)
+2026-11-16T11:33:30.940+08:00 [SYS  ]   (0.50,0.50) -> (666.0,-533.0) -> (666.0,-533.0)
+2026-11-16T11:33:30.941+08:00 [SYS  ]   (1.00,0.00) -> (1466.0,-1066.0) -> (-134.0,0.0)
+2026-11-16T11:33:30.941+08:00 [SYS  ]   (0.00,1.00) -> (-134.0,0.0) -> (1466.0,-1066.0)
+2026-11-16T11:33:30.941+08:00 [SYS  ]   (1.00,1.00) -> (1466.0,0.0) -> (-134.0,-1066.0)
+2026-11-16T11:33:30.941+08:00 [SYS  ] === 事件监听配置 ===
+2026-11-16T11:33:30.941+08:00 [SYS  ] NSEventTypeDirectTouch = 37, NSEventTypeGesture = 29
+2026-11-16T11:33:30.942+08:00 [SYS  ] NSEventMaskDirectTouch raw = 137438953472
+2026-11-16T11:33:30.942+08:00 [SYS  ] 提示: 请触摸 HOUSI 屏幕（外接触控屏），事件会实时写入上方日志与 $PROJECT/tools/harness/samples/touchprobe-selftest.log
+2026-11-16T11:33:30.942+08:00 [SYS  ] local monitor mask=137975824384 types=[directTouch, gesture]
+2026-11-16T11:33:30.943+08:00 [SYS  ] global monitor installed (需要 辅助功能/输入监控 权限才可能收到其他 app 的事件)
+2026-11-16T11:33:30.943+08:00 [SYS  ] 将在 2.0 秒后自动退出
+2026-11-16T11:33:30.944+08:00 [SYS  ] 启动时 NSApp.windows=2
+2026-11-16T11:33:30.944+08:00 [SYS  ]   win[0] number=1342 title=touchprobe — AppKit 原生触控验证（NSEventTypeDirectTouch=37） visible=YES level=3 frame={{198, 22}, {1000, 792}} screen=Built-in Retina Display
+2026-11-16T11:33:30.945+08:00 [SYS  ]   win[1] number=1343 title= visible=YES level=3 frame={{-134, -1066}, {1600, 1066}} screen=<空>
+2026-11-16T11:33:31.300+08:00 [SYS  ] 0.35s 后 NSApp.windows=2
+2026-11-16T11:33:31.301+08:00 [SYS  ]   win[0] number=1342 title=touchprobe — AppKit 原生触控验证（NSEventTypeDirectTouch=37） visible=YES level=3 frame={{198, 22}, {1000, 792}} screen=Built-in Retina Display
+2026-11-16T11:33:31.301+08:00 [SYS  ]   win[1] number=1343 title= visible=YES level=3 frame={{-134, -1066}, {1600, 1066}} screen=<空>
+2026-11-16T11:33:32.944+08:00 [SYS  ] --duration 2.0s 已到，退出
+2026-11-16T11:33:32.948+08:00 [SYS  ] === SUMMARY ===
+2026-11-16T11:33:32.949+08:00 [SYS  ] duration=2.12s directTouchEvents=0 gestureEvents=0 otherEvents=0
+2026-11-16T11:33:32.951+08:00 [SYS  ] touchBegan=0 touchEnded=0 stationTouchBegins=0
+2026-11-16T11:33:32.951+08:00 [SYS  ] 未收到 directTouch/gesture 事件。若你确实触摸了 HOUSI 屏，这通常意味着 WindowServer
+2026-11-16T11:33:32.952+08:00 [SYS  ] 在该 digitizer 服务上丢弃了事件（'ignoring digitizer event for display ... from unsupported service'），
+2026-11-16T11:33:32.953+08:00 [SYS  ] 可用 log show --last 2m --predicate 'category == "TouchEvents"' 交叉验证。
+2026-11-16T11:33:32.954+08:00 [SYS  ] logfile=$PROJECT/tools/harness/samples/touchprobe-selftest.log

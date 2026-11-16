@@ -1,0 +1,19 @@
+touchprobe — AppKit 原生触控验证探针
+
+用法:
+  touchprobe [--duration 秒] [--logfile 路径] [--no-overlay] [--all-events]
+
+选项:
+  --duration N     运行 N 秒后自动退出（默认 0 = 一直运行，Ctrl-C 退出）
+  --logfile PATH   事件日志文件（追加写，默认 WORK/evidence/touchprobe.log）
+  --no-overlay     不在 HOUSI 触控屏上创建全屏触控接收窗口
+  --overlay        强制在 HOUSI 屏上创建覆盖窗口（默认行为）
+  --all-events     额外监听 NSEventMaskAny（调试用，事件很多）
+  --help/-h        显示本帮助
+
+行为:
+  * 启动时打印 NSScreen / CGDisplay 信息，并把同样的信息写进日志；
+  * 监听 NSEventMaskDirectTouch 与 NSEventMaskGesture（本地 + 全局）；
+  * 主窗口浮于最前显示“请触摸 HOUSI 屏幕”；默认在 HOUSI 屏上覆盖一个
+    接收 direct touch 的透明窗口（窗口内容显示提示文字）；
+  * 每个事件写一行带 ISO8601 毫秒时间戳的日志（stdout + 日志文件 + 窗口文本）。

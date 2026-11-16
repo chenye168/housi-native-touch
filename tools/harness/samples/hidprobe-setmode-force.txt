@@ -1,0 +1,86 @@
+2026-11-16T11:37:38.233+0800 hidprobe — HOUSI / USB2IIC_CTP HID 探针
+2026-11-16T11:37:38.233+0800 OS: macOS 27.2.1 (26B131) / VID=0x32D7 PID=0x0001 / pid=23400
+2026-11-16T11:37:38.233+0800 logfile=(未启用，仅 stdout)
+2026-11-16T11:37:38.233+0800 参数: list=0 dump=0 setmode=1 mode=2 dry-run=0 force=1 restore=0 seconds=10
+2026-11-16T11:37:38.233+0800 
+2026-11-16T11:37:38.233+0800 === SetMode: 把 Digitizer 的 Input Mode (0x0D/0x52) 设为 2 ===
+2026-11-16T11:37:38.247+0800 Input Monitoring 权限 (IOHIDCheckAccess/kIOHIDRequestTypeListenEvent): granted(0)
+2026-11-16T11:37:38.247+0800 
+2026-11-16T11:37:38.247+0800 --- STEP 0: 子进程验证 IOHIDDeviceOpen / IOHIDDeviceClose 返回值 ---
+2026-11-16T11:37:38.279+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:38.279+0800   IOHIDDeviceClose(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:38.279+0800 
+2026-11-16T11:37:38.279+0800 --- STEP 1: 子进程只读检查（feature 元素 dump / 描述符定位 / GetReport）---
+2026-11-16T11:37:38.327+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:38.327+0800   Digitizer ReportDescriptor = 847 bytes
+2026-11-16T11:37:38.327+0800     [Input reports]
+2026-11-16T11:37:38.327+0800       Input ReportID=0x54: data=63 bytes, on-wire=64 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800       Input ReportID=0x60: data=8 bytes, on-wire=9 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800     [Output reports]
+2026-11-16T11:37:38.327+0800       Output ReportID=0x60: data=1 bytes, on-wire=2 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800       Output ReportID=0x63: data=11 bytes, on-wire=12 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800     [Feature reports]
+2026-11-16T11:37:38.327+0800       Feature ReportID=0x11: data=1 bytes, on-wire=2 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800         bit=0    size=8    idOffset=0  usagePage/Usage=000D/0055  logical=0..10
+2026-11-16T11:37:38.327+0800       Feature ReportID=0x12: data=1 bytes, on-wire=2 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800         bit=0    size=1    idOffset=0  usagePage/Usage=000D/0060  logical=0..1
+2026-11-16T11:37:38.327+0800         bit=1    size=7    idOffset=0  usagePage/Usage=padding    logical=0..1
+2026-11-16T11:37:38.327+0800       Feature ReportID=0x13: data=2 bytes, on-wire=3 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800         bit=0    size=8    idOffset=0  usagePage/Usage=000D/0052  logical=0..10   <-- Input Mode (多点=2)
+2026-11-16T11:37:38.327+0800         bit=8    size=8    idOffset=1  usagePage/Usage=000D/0053  logical=0..10
+2026-11-16T11:37:38.327+0800       Feature ReportID=0x44: data=256 bytes, on-wire=257 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800         bit=0    size=8    idOffset=0  usagePage/Usage=FF00/FFC5  logical=0..255
+2026-11-16T11:37:38.327+0800         bit=8    size=2040 idOffset=1  usagePage/Usage=padding    logical=0..255
+2026-11-16T11:37:38.327+0800       Feature ReportID=0x64: data=63 bytes, on-wire=64 bytes (含 ReportID)
+2026-11-16T11:37:38.327+0800         bit=0    size=8    idOffset=0  usagePage/Usage=FF00/0002  logical=0..255
+2026-11-16T11:37:38.327+0800         bit=8    size=496  idOffset=1  usagePage/Usage=padding    logical=0..255
+2026-11-16T11:37:38.327+0800   定位 Input Mode: Feature ReportID=0x13, bitOffset=0 (byte 0), size=8 bits, logical=0..10
+2026-11-16T11:37:38.327+0800   该 report 数据长度 = 2 字节（含 ReportID 共 3 字节）
+2026-11-16T11:37:38.327+0800     IOHIDDeviceCopyMatchingElements(type=Feature) -> 6 个元素
+2026-11-16T11:37:38.327+0800       Feature[0] reportID=18 usagePage=0x0D usage=0x60 size=1 count=1 logical=0..1 current=0
+2026-11-16T11:37:38.327+0800       Feature[1] reportID=17 usagePage=0x0D usage=0x55 size=8 count=1 logical=0..10 current=10
+2026-11-16T11:37:38.327+0800       Feature[2] reportID=68 usagePage=0xFF00 usage=0xC5 size=2048 count=256 logical=0..255 current=(vendor/大块数据不读取)
+2026-11-16T11:37:38.327+0800       Feature[3] reportID=19 usagePage=0x0D usage=0x52 size=8 count=1 logical=0..10 current=2
+2026-11-16T11:37:38.327+0800       Feature[4] reportID=19 usagePage=0x0D usage=0x53 size=8 count=1 logical=0..10 current=11
+2026-11-16T11:37:38.327+0800       Feature[5] reportID=100 usagePage=0xFF00 usage=0x02 size=504 count=63 logical=0..255 current=(vendor/大块数据不读取)
+2026-11-16T11:37:38.327+0800   当前 Input Mode (0x0D/0x52) = 2, Device Identifier (0x0D/0x53) = 11
+2026-11-16T11:37:38.327+0800   IOHIDDeviceGetReport(Feature, reportID=0x13, buffer=3) -> kr=0x00000000 len=3
+2026-11-16T11:37:38.327+0800     raw = 11 0a 00 
+2026-11-16T11:37:38.327+0800     注意: 返回的第一字节 0x11 与请求的 reportID 0x13 不一致；本机固件实测对任意 report ID
+2026-11-16T11:37:38.327+0800           都返回同一段 3 字节数据（0x11=Contact Count Maximum 的 report），GetReport 回读不可用于校验 0x13。
+2026-11-16T11:37:38.327+0800   IOHIDDeviceClose: 本进程执行过 GetValue/GetReport，为规避本机 IOHIDLib 崩溃怪癖不调用 Close；
+2026-11-16T11:37:38.327+0800     进程退出时由系统回收。Open/Close 返回值可看 --open-close 模式。
+2026-11-16T11:37:38.327+0800 
+2026-11-16T11:37:38.327+0800 --- STEP 2: 子进程读取当前 Input Mode（重新打开设备的权威值）---
+2026-11-16T11:37:38.372+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:38.372+0800   digitizer current Input Mode (0x0D/0x52) = 2, Device Identifier (0x0D/0x53) = 11
+2026-11-16T11:37:38.372+0800   READ_MODE mode=2 devid=11
+2026-11-16T11:37:38.372+0800 当前 Input Mode = 2 (multi-touch=是), Device Identifier = 11
+2026-11-16T11:37:38.372+0800 
+2026-11-16T11:37:38.372+0800 --- STEP 3: 子进程发送 IOHIDDeviceSetReport（Input Mode = 2）---
+2026-11-16T11:37:38.728+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:38.729+0800   写入前: Input Mode=2, Device Identifier=11（来自 IOHIDDeviceGetValue，单次顺序遍历缓存）
+2026-11-16T11:37:38.729+0800   构造 Feature Report: reportID=0x13, 总长度=3 字节（含 ReportID）: 13 02 0b 
+2026-11-16T11:37:38.729+0800     buffer[0]=ReportID=0x13, data byte[0] (Input Mode) = 2
+2026-11-16T11:37:38.729+0800   IOHIDDeviceSetReport(Feature, 0x13, buffer[0]=ReportID): kr=0x00000000 (kIOReturnSuccess)
+2026-11-16T11:37:38.729+0800   SetReport 结果: SUCCESS
+2026-11-16T11:37:38.729+0800 
+2026-11-16T11:37:38.729+0800 --- STEP 4: 用全新子进程回读 Input Mode（每次 SetReport 后设备会重新枚举）---
+2026-11-16T11:37:39.037+0800 回读尝试 1/6 ...
+2026-11-16T11:37:39.114+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:39.114+0800   digitizer current Input Mode (0x0D/0x52) = 2, Device Identifier (0x0D/0x53) = 11
+2026-11-16T11:37:39.114+0800   READ_MODE mode=2 devid=11
+2026-11-16T11:37:39.114+0800 回读: Input Mode = 2, Device Identifier = 11
+2026-11-16T11:37:39.114+0800 验证结果: MATCH (期望 Input Mode=2, 实际=2)
+2026-11-16T11:37:39.114+0800 
+2026-11-16T11:37:39.114+0800 --- STEP 5: IOHIDDeviceGetReport 回读（原始 API 返回值，见上方已知固件怪癖）---
+2026-11-16T11:37:39.152+0800   IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+2026-11-16T11:37:39.152+0800   IOHIDDeviceGetReport(Feature, reportID=0x13, buffer=3) -> kr=0x00000000 len=3
+2026-11-16T11:37:39.152+0800     raw = 11 0a 00 
+2026-11-16T11:37:39.152+0800     注意: 返回的第一字节 0x11 与请求的 reportID 0x13 不一致；本机固件实测对任意 report ID
+2026-11-16T11:37:39.152+0800           都返回同一段 3 字节数据（0x11=Contact Count Maximum 的 report），GetReport 回读不可用于校验 0x13。
+2026-11-16T11:37:39.152+0800 
+2026-11-16T11:37:39.152+0800 RESULT: OK — Input Mode=2 已生效。
+2026-11-16T11:37:39.152+0800 
+2026-11-16T11:37:39.152+0800 完成 (exit=0)。提示: --dump 查看实时报告；--setmode 进入多点模式；--help 查看全部选项。
+2026-11-16T11:37:39.152+0800 辅助功能(Accessibility)授权仅在本工具主动发送 CGEvent 时需要；本探针只监听 + 读写 HID feature，不需要。

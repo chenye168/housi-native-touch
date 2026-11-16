@@ -1,0 +1,2 @@
+IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+IOHIDDeviceClose(digitizer): kr=0x00000000 (success)

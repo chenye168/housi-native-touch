@@ -1,0 +1,13 @@
+2026-11-16T11:33:38.303+0800 hidprobe — HOUSI / USB2IIC_CTP HID 探针
+2026-11-16T11:33:38.304+0800 OS: macOS 27.2.1 (26B131) / VID=0x32D7 PID=0x0001 / pid=22523
+2026-11-16T11:33:38.304+0800 logfile=(未启用，仅 stdout)
+2026-11-16T11:33:38.304+0800 参数: list=0 dump=0 setmode=0 mode=2 dry-run=0 force=0 restore=0 seconds=10
+2026-11-16T11:33:38.304+0800 
+2026-11-16T11:33:38.304+0800 === 请求 Input Monitoring 授权（IOHIDRequestAccess） ===
+2026-11-16T11:33:38.329+0800 Input Monitoring 权限 (IOHIDCheckAccess/kIOHIDRequestTypeListenEvent): granted(0)
+2026-11-16T11:33:38.329+0800 调用 IOHIDRequestAccess(kIOHIDRequestTypeListenEvent) ...（如弹出系统对话框请允许）
+2026-11-16T11:33:38.346+0800 IOHIDRequestAccess 返回: true (已授权)
+2026-11-16T11:33:38.360+0800 Input Monitoring 权限 (IOHIDCheckAccess/kIOHIDRequestTypeListenEvent): granted(0)
+2026-11-16T11:33:38.360+0800 
+2026-11-16T11:33:38.360+0800 完成 (exit=0)。提示: --dump 查看实时报告；--setmode 进入多点模式；--help 查看全部选项。
+2026-11-16T11:33:38.360+0800 辅助功能(Accessibility)授权仅在本工具主动发送 CGEvent 时需要；本探针只监听 + 读写 HID feature，不需要。

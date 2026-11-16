@@ -1,0 +1,42 @@
+IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+Digitizer ReportDescriptor = 847 bytes
+  [Input reports]
+    Input ReportID=0x54: data=63 bytes, on-wire=64 bytes (含 ReportID)
+    Input ReportID=0x60: data=8 bytes, on-wire=9 bytes (含 ReportID)
+  [Output reports]
+    Output ReportID=0x60: data=1 bytes, on-wire=2 bytes (含 ReportID)
+    Output ReportID=0x63: data=11 bytes, on-wire=12 bytes (含 ReportID)
+  [Feature reports]
+    Feature ReportID=0x11: data=1 bytes, on-wire=2 bytes (含 ReportID)
+      bit=0    size=8    idOffset=0  usagePage/Usage=000D/0055  logical=0..10
+    Feature ReportID=0x12: data=1 bytes, on-wire=2 bytes (含 ReportID)
+      bit=0    size=1    idOffset=0  usagePage/Usage=000D/0060  logical=0..1
+      bit=1    size=7    idOffset=0  usagePage/Usage=padding    logical=0..1
+    Feature ReportID=0x13: data=2 bytes, on-wire=3 bytes (含 ReportID)
+      bit=0    size=8    idOffset=0  usagePage/Usage=000D/0052  logical=0..10   <-- Input Mode (多点=2)
+      bit=8    size=8    idOffset=1  usagePage/Usage=000D/0053  logical=0..10
+    Feature ReportID=0x44: data=256 bytes, on-wire=257 bytes (含 ReportID)
+      bit=0    size=8    idOffset=0  usagePage/Usage=FF00/FFC5  logical=0..255
+      bit=8    size=2040 idOffset=1  usagePage/Usage=padding    logical=0..255
+    Feature ReportID=0x64: data=63 bytes, on-wire=64 bytes (含 ReportID)
+      bit=0    size=8    idOffset=0  usagePage/Usage=FF00/0002  logical=0..255
+      bit=8    size=496  idOffset=1  usagePage/Usage=padding    logical=0..255
+定位 Input Mode: Feature ReportID=0x13, bitOffset=0 (byte 0), size=8 bits, logical=0..10
+该 report 数据长度 = 2 字节（含 ReportID 共 3 字节）
+
+  IOHIDDeviceCopyMatchingElements(type=Feature) -> 6 个元素
+    Feature[0] reportID=18 usagePage=0x0D usage=0x60 size=1 count=1 logical=0..1 current=0
+    Feature[1] reportID=17 usagePage=0x0D usage=0x55 size=8 count=1 logical=0..10 current=10
+    Feature[2] reportID=68 usagePage=0xFF00 usage=0xC5 size=2048 count=256 logical=0..255 current=(vendor/大块数据不读取)
+    Feature[3] reportID=19 usagePage=0x0D usage=0x52 size=8 count=1 logical=0..10 current=2
+    Feature[4] reportID=19 usagePage=0x0D usage=0x53 size=8 count=1 logical=0..10 current=11
+    Feature[5] reportID=100 usagePage=0xFF00 usage=0x02 size=504 count=63 logical=0..255 current=(vendor/大块数据不读取)
+
+当前 Input Mode (0x0D/0x52) = 2, Device Identifier (0x0D/0x53) = 11
+IOHIDDeviceGetReport(Feature, reportID=0x13, buffer=3) -> kr=0x00000000 len=3
+  raw = 11 0a 00 
+  注意: 返回的第一字节 0x11 与请求的 reportID 0x13 不一致；本机固件实测对任意 report ID
+        都返回同一段 3 字节数据（0x11=Contact Count Maximum 的 report），GetReport 回读不可用于校验 0x13。
+
+IOHIDDeviceClose: 本进程执行过 GetValue/GetReport，为规避本机 IOHIDLib 崩溃怪癖不调用 Close；
+  进程退出时由系统回收。Open/Close 返回值可看 --open-close 模式。

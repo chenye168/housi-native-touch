@@ -1,0 +1,5 @@
+IOHIDDeviceOpen(digitizer): kr=0x00000000 (success)
+IOHIDDeviceGetReport(Feature, reportID=0x13, buffer=3) -> kr=0x00000000 len=3
+  raw = 11 0a 00 
+  注意: 返回的第一字节 0x11 与请求的 reportID 0x13 不一致；本机固件实测对任意 report ID
+        都返回同一段 3 字节数据（0x11=Contact Count Maximum 的 report），GetReport 回读不可用于校验 0x13。
