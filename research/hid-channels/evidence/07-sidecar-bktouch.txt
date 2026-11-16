@@ -1,0 +1,74 @@
+# SidecarDisplayAgent / replayd 中的触控注入路径线索（本机二进制字符串 + entitlement）
+
+## /usr/libexec/SidecarDisplayAgent 关键字符串
+Display doesn't support MacOSCompatibleTouchReports
+IOHIDUserDeviceCreate: %llx
+TouchScreenDigitizer
+Unable to configure displayUUID for %{public}u
+_TtC10SidecarHID20TouchScreenDigitizer
+configureTouchScreenDigitizer(for:with:)
+initializeTouchScreenDigitizer()
+supportsMacOSCompatibleTouchReports
+
+## SidecarDisplayAgent entitlements (节选)
+	[Key] com.apple.hid.manager.user-access-device
+		[Bool] true
+	[Key] com.apple.iohideventsystem.server
+		[Bool] true
+	[Key] com.apple.mediacontinuitykit.coex
+		[Bool] true
+	[Key] com.apple.private.airplay.mangrove.client
+		[Bool] true
+	[Key] com.apple.private.audio.interprocess-tap
+		[Bool] true
+	[Key] com.apple.private.ensemble
+		[Bool] true
+	[Key] com.apple.private.hid.client.event-dispatch
+		[Bool] true
+	[Key] com.apple.private.hid.client.event-monitor
+		[Bool] true
+	[Key] com.apple.private.rtcreportingd
+		[Bool] true
+	[Key] com.apple.private.screencapturekit.suppress-screen-indicator
+		[Bool] true
+	[Key] com.apple.private.tcc.allow
+			[String] kTCCServiceListenEvent
+			[String] kTCCServicePostEvent
+	[Key] com.apple.security.exception.mach-lookup.global-name
+			[String] com.apple.ensemble
+			[String] com.apple.MenuBarAgent.systemservices
+	[Key] com.apple.videoconference.allow-conferencing
+		[Bool] true
+
+## /usr/libexec/replayd SCTouchStream/BKSTouchStream 字符串
+ [ERROR] %{public}s:%d SCTouchTracker: CFMachPortCreateRunLoopSource failed for touch stream
+ [ERROR] %{public}s:%d SCTouchTracker: BKSTouchStream init failed contextID=0x%x displayUUID=%@
+ [INFO] %{public}s:%d SCTouchTracker: touchStream=%@ connectionID=%u windowID=%u contextID=0x%x displayUUID=%@
+ [DEBUG] %{public}s:%d SCTouchTracker: discarding contacts replayed at touch stream creation
+ [INFO] %{public}s:%d SCTouchTracker: started touch stream for display %u
+ [ERROR] %{public}s:%d SCTouchTracker: touch stream unavailable for display capture on display %u; touch tracking not started
+-[SCTouchStreamSystemBackend startForDisplay:eventsPendingHandler:]
+-[SCTouchStreamSystemBackend startForDisplay:eventsPendingHandler:]_block_invoke
+-[SCTouchStreamSystemBackend copyNextEvent]
+SCTouchStreamSystemBackend
+SCTouchStreamBackend
+initWithContextID:displayUUID:identifier:policy:
+@"BKSTouchStream"
+@"<SCTouchStreamBackend>"
+
+## replayd 关键 entitlement
+	[Key] com.apple.backboardd.touchStreams
+	[Key] com.apple.backboardd.virtualDisplay
+	[Key] com.apple.frontboardservices.display-layout-monitor
+	[Key] com.apple.private.SkyLight.contentstream
+	[Key] com.apple.private.SkyLight.screencaptureproxying
+			[String] com.apple.replaykit.controlcenter.screencapture
+	[Key] com.apple.private.screencapturekit.noprompt
+	[Key] com.apple.private.screencapturekit.sharingsession
+	[Key] com.apple.private.screencapturekit.sharingsessionsystemui
+	[Key] com.apple.private.screencapturekit.suppress-screen-indicator
+
+## BKTouchStream / BKTouchEvents 相关类名（BackBoardServices / SkyLight / BackBoardHIDTouchEventProcessor）
+BackBoardServices: BKSTouchStream.m / BKSTouchStream / BKSHIDEventDisplay
+BackBoardHIDTouchEventProcessor: BKTouchStreamServer.m / BKDigitizerTouchStreamCreate / com.apple.backboardd.touchStreams
+SkyLight: BKTouchEvents / BKTouchEventServer / BKSTouchEventService / BKTouchDeliveryObservation

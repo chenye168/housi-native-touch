@@ -1,0 +1,56 @@
+# 系统扩展 / dext / kext 在本机的门槛证据
+
+## csrutil
+System Integrity Protection status: enabled.
+Authenticated Root status: enabled
+
+## systemextensionsctl 拒绝在 SIP 开启时启用 developer mode（二进制字符串）
+At this time, this tool cannot be used if System Integrity Protection is enabled.
+Please remember to re-enable System Integrity Protection!
+Failed to get developer mode: %s
+Developer mode is on
+Developer mode is off
+Developer mode set to on
+Developer mode set to off
+System Integrity Protection Enabled: 
+Developer Mode Enabled: 
+
+## man systemextensionsctl developer
+     systemextensionsctl developer [on | off]
+     systemextensionsctl list
+     systemextensionsctl reset
+
+     developer [on | off]
+	     Turn developer mode on and off.
+
+
+## 已有系统扩展状态（说明普通用户可批准已签名扩展，但开发签名仍需 developer mode）
+3 extension(s)
+--- com.apple.system_extension.cmio (Go to 'System Settings > General > Login Items & Extensions > Camera Extensions' to modify these system extension(s))
+enabled	active	teamID	bundleID (version)	name	[state]
+	*	2MMRE5MTB8	com.obsproject.obs-studio.mac-camera-extension (32.0.4/20197751539)	OBS Virtual Camera	[activated waiting for user]
+--- com.apple.system_extension.network_extension (Go to 'System Settings > General > Login Items & Extensions > Network Extensions' to modify these system extension(s))
+enabled	active	teamID	bundleID (version)	name	[state]
+*	*	NXELXU5YLW	com.initex.proxifier.v3.macos.ProxifierExtension (3.15.0/3.15.0)	ProxifierExtension	[activated enabled]
+*	*	W5364U7YZB	io.tailscale.ipn.macsys.network-extension (1.104.6/101.104.6)	Tailscale Network Extension	[activated enabled]
+
+## SDK: 只有 MacOSX*.sdk，无 DriverKit*.sdk
+MacOSX.sdk
+MacOSX26.5.sdk
+MacOSX26.sdk
+MacOSX27.2.sdk
+MacOSX27.sdk
+
+## CLT MacOSX.sdk 内有 DriverKit.framework 头，但**无** HIDDriverKit.framework
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/DriverKit.framework
+ls: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/HIDDriverKit.framework: No such file or directory
+102
+
+## dext 目标三元组 clang 可用（但缺 HIDDriverKit 头/DriverKit SDK 链接环境）
+clang: warning: using sysroot for 'macOS 27.2' but targeting 'arm64-apple-driverkit27.2.0' [-Wincompatible-sysroot]
+clang exit=0
+
+## kext 工具仍在，但第三方 kext 在 Apple Silicon 需要降低启动安全性（SIP 开启时不可行）
+-rwxr-xr-x /sbin/kextload
+-rwxr-xr-x /usr/bin/kextutil
+-rwxr-xr-x /usr/bin/kmutil

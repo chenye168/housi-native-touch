@@ -1,0 +1,41 @@
+# HID 插件 Info.plist 匹配条件 (plutil -p) 与签名 (codesign -d -r-)
+## DFRTouchServiceFilter
+  "Matching" => {
+    "DeviceUsagePairs" => [
+      0 => {
+        "DeviceUsage" => 4
+        "DeviceUsagePage" => 13
+      }
+    ]
+  }
+  "NSPrincipalClass" => "DFRTouchServiceFilter"
+
+## HSTouchHIDService
+  "Matching" => {
+    "IOKitPersonalities" => {
+      "Default" => {
+        "IOPropertyMatch" => {
+          "HSTouchHIDService" => true
+        }
+        "IOProviderClass" => "AppleMultitouchDevice"
+      }
+    }
+  }
+  "NSPrincipalClass" => "HSTouchHIDService"
+
+## DualSenseHIDServicePlugin
+  "Matching" => {
+    "IOPropertyMatch" => {
+      "GameControllerCategory" => "ps5"
+      "GameControllerSupport" => true
+    }
+  }
+  "NSHumanReadableCopyright" => "Copyright © 2026 Apple Inc. All rights reserved."
+  "NSPrincipalClass" => "DualSenseHIDServicePlugin"
+}
+
+## 签名要求 (全部 anchor apple)
+ServiceFilters/DFRTouchServiceFilter.plugin => designated => identifier "com.apple.hid.DFRTouchServiceFilter" and anchor apple
+ServicePlugins/HSTouchHIDService.plugin => designated => identifier "com.apple.hid.HSTouchHIDService" and anchor apple
+ServicePlugins/DualSenseHIDServicePlugin.plugin => designated => identifier "com.apple.GameController.HID.DualSense" and anchor apple
+SessionFilters/MultitouchSessionFilter.plugin => designated => identifier "com.apple.MultitouchSessionFilter" and anchor apple

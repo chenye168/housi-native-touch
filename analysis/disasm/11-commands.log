@@ -1,0 +1,74 @@
+# ---------------------------------------------------------------------------
+# 本次分析实际执行的命令记录（只读；除 analysis/ 与 /tmp 外无写入）
+# ---------------------------------------------------------------------------
+export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+X=$ROOT/tools/x86cache
+BIN=$X/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor
+FND=$X/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation
+BKS=$X/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices
+SL=$X/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+
+## 0. 确认提取完成（lead 后台任务已结束：extract result: 0）
+cat $ROOT/evidence/dscx_x86.log
+ls -la $X/System/Library/PrivateFrameworks | grep -iE "sky|backboard"
+
+## 1. 哪个二进制含日志串
+grep -rl "ignoring digitizer" $X/System/Library/PrivateFrameworks/
+strings -t x $BIN | grep -E "ignoring digitizer|digitizer attached|displayUUID"
+
+## 2. 段表：fileoff <-> vmaddr
+otool -l $BIN | grep -E "sectname|addr |size |offset " | paste - - - - -
+
+## 3. 日志串 xref
+llvm-objdump -d --no-show-raw-insn $BIN > /tmp/bbtp.disasm.txt
+grep -n "0x7ffd00953500" /tmp/bbtp.disasm.txt
+llvm-nm -an --defined-only $BIN | sort | awk '$1<="00007ffd0091ea8b"' | tail -3
+
+## 4. 关键符号地址
+llvm-nm -an $BIN | grep -iE "displayUUID|digitizerState|displayInfoForDisplay|handlePathCollectionEvent"
+llvm-nm -an $FND | grep -E "\-\[BKIOHIDService (displayUUID|propertyForKey|_setUpInitialProperties)"
+llvm-nm -an $SL  | grep -E "WSHIDDisplayEventListener|handle_digitizer_added"
+
+## 5. 自研工具：缓存 mapping / 反汇编注释 / 大函数 xref
+python3 $ROOT/analysis/scripts/dscmap.py | head -40
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091e645 --stop 0x7ffd0091e898
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091e898 --stop 0x7ffd0091eadf
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091d627 --stop 0x7ffd0091d6fe
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091c380 --stop 0x7ffd0091c4a3
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091b3d3 --stop 0x7ffd0091b560
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091b557 --stop 0x7ffd0091b700
+python3 $ROOT/analysis/scripts/annotate.py $FND --addr 0x7ffa14fef67f --stop 0x7ffa14fef9a0
+python3 $ROOT/analysis/scripts/annotate.py $FND --addr 0x7ffa14ff0a35 --stop 0x7ffa14ff0c59
+python3 $ROOT/analysis/scripts/annotate.py $BKS --addr 0x7ff819b23ff8 --stop 0x7ff819b24060
+python3 $ROOT/analysis/scripts/xrefs.py $SL 0x7ff805fb1790,0x7ff805fb17f0,0x7ff805fb1850,0x7ff805fb1880,0x7ff805f6ae2e
+python3 $ROOT/analysis/scripts/annotate.py $SL --addr 0x7ff805e021c5 --stop 0x7ff805e02b70
+
+## 6. ivar 偏移：0xd8 == _queue_chamoisDisplayUUID
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091d321 --stop 0x7ffd0091d343   # getter block: movq 0xd8(%rax)
+python3 $ROOT/analysis/scripts/annotate.py $BIN --addr 0x7ffd0091d39e --stop 0x7ffd0091d3d0   # setter block: movq 0xd8(%rax)
+llvm-nm -an $BIN | grep "_OBJC_IVAR_\$_BKHIDDirectTouchEventProcessor"
+
+## 7. 常量与 sentinel 证明
+python3 - <<'PY'   # kDigitizerUsagePairs @0x7ff805f09710 -> (13,4,13,1)
+from analysis.scripts.dscmap import Cache
+c=Cache(); print(c.read(0x7ff805f09710,16).hex())
+PY
+python3 - <<'PY'   # _BKSDisplayUUIDMainKey -> CFString "<main>" (len 6)
+import sys,struct; sys.path.insert(0,'analysis/scripts')
+from dscmap import Cache
+c=Cache(); raw=struct.unpack("<Q", c.read(0x7ff84292a460,8))[0]
+cs=0x7ff800000000|(raw&0xffffffff); b=c.read(cs,32)
+isa,flags,cstr,length=struct.unpack_from("<QQQQ",b,0)
+print(hex(cs),hex(flags),length, repr(c.cstring(0x7ff800000000|(cstr&0xffffffff),64)))
+PY
+
+## 8. 证据交叉验证（只读日志）
+grep -c "unsupported service" $ROOT/evidence/touchevents_6h.txt            # 2322
+grep -c "digitizer added for display" $ROOT/evidence/*.txt                  # 0
+grep -m1 "unsupported service" $ROOT/evidence/touchevents_6h.txt
+grep -c -i displayuuid $ROOT/evidence/ioreg_hideventservice.txt             # 0
+
+## 9. 特性开关是否有定义（只读）
+ls /System/Library/FeatureFlags/Domain/ | grep -i backboard                    # 无
+grep -rl "SupportExternalTouchscreen" /System/Library/FeatureFlags/ 2>/dev/null  # 无

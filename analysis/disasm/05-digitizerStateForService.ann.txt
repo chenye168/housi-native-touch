@@ -1,0 +1,88 @@
+# -[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]
+# state lookup: displayUUID (or BKSDisplayUUIDMainKey '<main>' if empty) -> perDisplayInfo -> digitizers[senderID]
+
+
+00007ffd0091c380 <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]>:
+7ffd0091c380: 55                          	pushq	%rbp
+7ffd0091c381: 48 89 e5                    	movq	%rsp, %rbp
+7ffd0091c384: 41 57                       	pushq	%r15
+7ffd0091c386: 41 56                       	pushq	%r14
+7ffd0091c388: 41 55                       	pushq	%r13
+7ffd0091c38a: 41 54                       	pushq	%r12
+7ffd0091c38c: 53                          	pushq	%rbx
+7ffd0091c38d: 50                          	pushq	%rax
+7ffd0091c38e: 48 89 d3                    	movq	%rdx, %rbx
+7ffd0091c391: 49 89 ff                    	movq	%rdi, %r15
+7ffd0091c394: 48 8b 7f 08                 	movq	0x8(%rdi), %rdi
+7ffd0091c398: e8 2f a8 03 00              	callq	0x7ffd00956bcc <_tan+0x7ffd00956bcc>  ; IMPORT _dispatch_assert_queue$V2
+7ffd0091c39d: 48 8b 35 44 b5 85 3f        	movq	0x3f85b544(%rip), %rsi  ## 0x7ffd401778e8 <_tan+0x7ffd401778e8>  ; -> 0x7ffd401778e8 __objc_selrefs _queue_displayUUIDForDigitizerService:
+7ffd0091c3a4: 4c 8b 35 cd 4e 7a 3f        	movq	0x3f7a4ecd(%rip), %r14  ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091c3ab: 4c 89 ff                    	movq	%r15, %rdi
+7ffd0091c3ae: 48 89 da                    	movq	%rbx, %rdx
+7ffd0091c3b1: 41 ff d6                    	callq	*%r14
+7ffd0091c3b4: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091c3b7: e8 ee a8 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091c3bc: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091c3bf: ff 15 23 4f 7a 3f           	callq	*0x3f7a4f23(%rip)       ## 0x7ffd400c12e8 <_tan+0x7ffd400c12e8>
+7ffd0091c3c5: 49 89 c4                    	movq	%rax, %r12
+7ffd0091c3c8: 48 8b 35 81 ae 85 3f        	movq	0x3f85ae81(%rip), %rsi  ## 0x7ffd40177250 <_tan+0x7ffd40177250>  ; -> 0x7ffd40177250 __objc_selrefs length
+7ffd0091c3cf: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091c3d2: 41 ff d6                    	callq	*%r14
+7ffd0091c3d5: 4c 89 e7                    	movq	%r12, %rdi
+7ffd0091c3d8: 48 85 c0                    	testq	%rax, %rax
+7ffd0091c3db: 75 0a                       	jne	0x7ffd0091c3e7 <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]+0x67>
+7ffd0091c3dd: 48 8b 05 44 23 72 3f        	movq	0x3f722344(%rip), %rax  ## 0x7ffd4003e728 <_tan+0x7ffd4003e728>
+7ffd0091c3e4: 48 8b 38                    	movq	(%rax), %rdi
+7ffd0091c3e7: ff 15 fb 4e 7a 3f           	callq	*0x3f7a4efb(%rip)       ## 0x7ffd400c12e8 <_tan+0x7ffd400c12e8>
+7ffd0091c3ed: 49 89 c6                    	movq	%rax, %r14
+7ffd0091c3f0: 4c 8b 2d e9 4e 7a 3f        	movq	0x3f7a4ee9(%rip), %r13  ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091c3f7: 4c 89 e7                    	movq	%r12, %rdi
+7ffd0091c3fa: 41 ff d5                    	callq	*%r13
+7ffd0091c3fd: 4c 89 e7                    	movq	%r12, %rdi
+7ffd0091c400: 41 ff d5                    	callq	*%r13
+7ffd0091c403: 48 8b 35 e6 b3 85 3f        	movq	0x3f85b3e6(%rip), %rsi  ## 0x7ffd401777f0 <_tan+0x7ffd401777f0>  ; -> 0x7ffd401777f0 __objc_selrefs _queue_displayInfoForDisplay:createIfNeeded:
+7ffd0091c40a: 4c 89 ff                    	movq	%r15, %rdi
+7ffd0091c40d: 4c 89 f2                    	movq	%r14, %rdx
+7ffd0091c410: b9 01 00 00 00              	movl	$0x1, %ecx
+7ffd0091c415: ff 15 5d 4e 7a 3f           	callq	*0x3f7a4e5d(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091c41b: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091c41e: e8 87 a8 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091c423: 49 89 c7                    	movq	%rax, %r15
+7ffd0091c426: 48 85 c0                    	testq	%rax, %rax
+7ffd0091c429: 74 41                       	je	0x7ffd0091c46c <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]+0xec>
+7ffd0091c42b: 49 8b 7f 30                 	movq	0x30(%r15), %rdi
+7ffd0091c42f: 48 8b 35 fa aa 85 3f        	movq	0x3f85aafa(%rip), %rsi  ## 0x7ffd40176f30 <_tan+0x7ffd40176f30>  ; -> 0x7ffd40176f30 __objc_selrefs objectForKeyedSubscript:
+7ffd0091c436: 48 89 da                    	movq	%rbx, %rdx
+7ffd0091c439: ff 15 39 4e 7a 3f           	callq	*0x3f7a4e39(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091c43f: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091c442: e8 63 a8 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091c447: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091c44a: 4c 89 ff                    	movq	%r15, %rdi
+7ffd0091c44d: 41 ff d5                    	callq	*%r13
+7ffd0091c450: 4c 89 f7                    	movq	%r14, %rdi
+7ffd0091c453: 41 ff d5                    	callq	*%r13
+7ffd0091c456: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091c459: 48 83 c4 08                 	addq	$0x8, %rsp
+7ffd0091c45d: 5b                          	popq	%rbx
+7ffd0091c45e: 41 5c                       	popq	%r12
+7ffd0091c460: 41 5d                       	popq	%r13
+7ffd0091c462: 41 5e                       	popq	%r14
+7ffd0091c464: 41 5f                       	popq	%r15
+7ffd0091c466: 5d                          	popq	%rbp
+7ffd0091c467: e9 d8 a7 03 00              	jmp	0x7ffd00956c44 <_tan+0x7ffd00956c44>
+7ffd0091c46c: 31 db                       	xorl	%ebx, %ebx
+7ffd0091c46e: eb da                       	jmp	0x7ffd0091c44a <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]+0xca>
+7ffd0091c470: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091c473: 4c 89 ff                    	movq	%r15, %rdi
+7ffd0091c476: ff 15 64 4e 7a 3f           	callq	*0x3f7a4e64(%rip)       ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091c47c: eb 03                       	jmp	0x7ffd0091c481 <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]+0x101>
+7ffd0091c47e: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091c481: 4d 89 f4                    	movq	%r14, %r12
+7ffd0091c484: eb 0c                       	jmp	0x7ffd0091c492 <-[BKHIDDirectTouchEventProcessor _queue_digitizerStateForService:]+0x112>
+7ffd0091c486: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091c489: 4c 89 e7                    	movq	%r12, %rdi
+7ffd0091c48c: ff 15 4e 4e 7a 3f           	callq	*0x3f7a4e4e(%rip)       ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091c492: 4c 89 e7                    	movq	%r12, %rdi
+7ffd0091c495: ff 15 45 4e 7a 3f           	callq	*0x3f7a4e45(%rip)       ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091c49b: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091c49e: e8 d5 a6 03 00              	callq	0x7ffd00956b78 <_tan+0x7ffd00956b78>  ; IMPORT __Unwind_Resume

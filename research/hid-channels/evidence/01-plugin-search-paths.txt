@@ -1,0 +1,27 @@
+# IOKit.framework 中 HID 插件搜索路径 + 插件协议/匹配字符串
+# 方法: ./dumpimg IOKit.framework/Versions/A/IOKit "/System/Library/HIDPlugins" 30000 | grep ...
+
+226:Start Matching Exclude Level
+351:Found plugin %s.
+653:kIOKitPersonalitiesKey
+694:HIDServiceFilter
+695:filterEventMatching:event:forClient:
+700:IOHIDServiceFilter
+701:IOHIDServiceFilter uuid:%@ name:%@ %@
+889:/System/Library/HIDPlugins
+890:/AppleInternal/Library/HIDPlugins
+891:/usr/appleinternal/lib/HIDPlugins
+892:/Library/Apple/System/Library/HIDPlugins
+893:/System/Library/HIDPlugins/SessionFilters
+894:/AppleInternal/Library/HIDPlugins/SessionFilters
+895:/usr/appleinternal/lib/HIDPlugins/SessionFilters
+896:/Library/Apple/System/Library/HIDPlugins/SessionFilters
+897:/System/Library/HIDPlugins/ServiceFilters
+898:/AppleInternal/Library/HIDPlugins/ServiceFilters
+899:/usr/appleinternal/lib/HIDPlugins/ServiceFilters
+900:/Library/Apple/System/Library/HIDPlugins/ServiceFilters
+901:/System/Library/HIDPlugins/ServicePlugins
+902:/AppleInternal/Library/HIDPlugins/ServicePlugins
+903:/usr/appleinternal/lib/HIDPlugins/ServicePlugins
+904:/System/Library/HIDPlugins/ConnectionPlugins
+905:/usr/appleinternal/lib/HIDPlugins/ConnectionPlugins

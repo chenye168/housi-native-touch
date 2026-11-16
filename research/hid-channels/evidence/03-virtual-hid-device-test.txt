@@ -1,0 +1,31 @@
+# 虚拟 HID 设备创建实测（普通用户 501，无 sudo）
+# 构建: clang -O1 -o virtdev virtdev.c -framework IOKit -framework CoreFoundation
+# 运行: ./virtdev
+
+== IOHIDUserDevice virtual device probe ==
+uid=501 euid=501
+note: this binary is ad-hoc/plain signed; check `codesign -d --entitlements - ./virtdev`
+IOHIDUserDeviceCreateWithProperties -> 0x0 (errno=3 No such process)
+RESULT: BLOCKED (no entitlement / no permission)
+hint: `log show --last 30s --predicate 'eventMessage CONTAINS "IOHIDUserDevice"'` for the kernel/server reason
+
+exit=0
+
+# 该二进制无任何 entitlement:
+Executable=$PROJECT/research/hid-channels/probes/virtdev
+
+# SDK 头文件 IOHIDUserDevice.h 原文要求:
+/*!
+ * @function IOHIDUserDeviceCreateWithProperties
+ *
+ * @abstract
+ * Creates a virtual IOHIDDevice in the kernel.
+ *
+ * @discussion
+ * The IOHIDUserDeviceRef represents a virtual IOHIDDevice. In order to create
+ * the device, the entitlement "com.apple.developer.hid.virtual.device" is
+ * required to validate the source of the device.
+ *
+ * @param allocator
+ * Allocator to be used during creation.
+ *

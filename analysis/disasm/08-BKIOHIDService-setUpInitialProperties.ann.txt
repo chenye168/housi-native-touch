@@ -1,0 +1,200 @@
+# -[BKIOHIDService _setUpInitialProperties]  (BackBoardHIDEventFoundation)
+# displayUUID comes from propertyForKey:@"displayUUID" -> IOHIDServiceGetProperty(serviceRef, key), then -copy
+# other keys: PrimaryUsagePage/PrimaryUsage/Product/Transport/Authenticated/Built-In
+
+
+00007ffa14fef67f <-[BKIOHIDService _setUpInitialProperties]>:
+7ffa14fef67f: 55                          	pushq	%rbp
+7ffa14fef680: 48 89 e5                    	movq	%rsp, %rbp
+7ffa14fef683: 41 57                       	pushq	%r15
+7ffa14fef685: 41 56                       	pushq	%r14
+7ffa14fef687: 41 55                       	pushq	%r13
+7ffa14fef689: 41 54                       	pushq	%r12
+7ffa14fef68b: 53                          	pushq	%rbx
+7ffa14fef68c: 48 83 ec 38                 	subq	$0x38, %rsp
+7ffa14fef690: 48 89 fb                    	movq	%rdi, %rbx
+7ffa14fef693: 4c 8b 2d de d1 ad 2c        	movq	0x2cadd1de(%rip), %r13  ## 0x7ffa41acc878 <_usleep+0x7ffa41acc878>  ; -> 0x7ffa41acc878 __objc_selrefs propertyForKey:
+7ffa14fef69a: 48 8d 15 47 50 ad 2c        	leaq	0x2cad5047(%rip), %rdx  ## 0x7ffa41ac46e8 <_usleep+0x7ffa41ac46e8>  ; -> 0x7ffa41ac46e8 __cfstring 'displayUUID'
+7ffa14fef6a1: 4c 8b 25 a8 01 0e 2b        	movq	0x2b0e01a8(%rip), %r12  ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef6a8: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef6ab: 41 ff d4                    	callq	*%r12
+7ffa14fef6ae: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef6b1: e8 fc db 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef6b6: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef6b9: 48 8b 35 d0 c7 ad 2c        	movq	0x2cadc7d0(%rip), %rsi  ## 0x7ffa41acbe90 <_usleep+0x7ffa41acbe90>  ; -> 0x7ffa41acbe90 __objc_selrefs copy
+7ffa14fef6c0: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef6c3: 41 ff d4                    	callq	*%r12
+7ffa14fef6c6: 48 8b 7b 78                 	movq	0x78(%rbx), %rdi
+7ffa14fef6ca: 48 89 43 78                 	movq	%rax, 0x78(%rbx)
+7ffa14fef6ce: 4c 8b 3d db 01 0e 2b        	movq	0x2b0e01db(%rip), %r15  ## 0x7ffa400cf8b0 <_usleep+0x7ffa400cf8b0>
+7ffa14fef6d5: 41 ff d7                    	callq	*%r15
+7ffa14fef6d8: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef6db: 41 ff d7                    	callq	*%r15
+7ffa14fef6de: 48 8d 15 23 50 ad 2c        	leaq	0x2cad5023(%rip), %rdx  ## 0x7ffa41ac4708 <_usleep+0x7ffa41ac4708>  ; -> 0x7ffa41ac4708 __cfstring 'PrimaryUsagePage'
+7ffa14fef6e5: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef6e8: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef6eb: 41 ff d4                    	callq	*%r12
+7ffa14fef6ee: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef6f1: e8 bc db 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef6f6: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef6f9: 4c 8b 2d 20 c9 ad 2c        	movq	0x2cadc920(%rip), %r13  ## 0x7ffa41acc020 <_usleep+0x7ffa41acc020>  ; -> 0x7ffa41acc020 __objc_selrefs intValue
+7ffa14fef700: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef703: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef706: 41 ff d4                    	callq	*%r12
+7ffa14fef709: 89 43 48                    	movl	%eax, 0x48(%rbx)
+7ffa14fef70c: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef70f: 41 ff d7                    	callq	*%r15
+7ffa14fef712: 48 8d 15 0f 50 ad 2c        	leaq	0x2cad500f(%rip), %rdx  ## 0x7ffa41ac4728 <_usleep+0x7ffa41ac4728>  ; -> 0x7ffa41ac4728 __cfstring 'PrimaryUsage'
+7ffa14fef719: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef71c: 48 8b 35 55 d1 ad 2c        	movq	0x2cadd155(%rip), %rsi  ## 0x7ffa41acc878 <_usleep+0x7ffa41acc878>  ; -> 0x7ffa41acc878 __objc_selrefs propertyForKey:
+7ffa14fef723: 41 ff d4                    	callq	*%r12
+7ffa14fef726: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef729: e8 84 db 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef72e: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef731: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef734: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef737: 4c 8b 2d 3a d1 ad 2c        	movq	0x2cadd13a(%rip), %r13  ## 0x7ffa41acc878 <_usleep+0x7ffa41acc878>  ; -> 0x7ffa41acc878 __objc_selrefs propertyForKey:
+7ffa14fef73e: 41 ff d4                    	callq	*%r12
+7ffa14fef741: 89 43 4c                    	movl	%eax, 0x4c(%rbx)
+7ffa14fef744: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef747: 41 ff d7                    	callq	*%r15
+7ffa14fef74a: 48 8b 3d 17 d0 02 2b        	movq	0x2b02d017(%rip), %rdi  ## 0x7ffa4001c768 <_usleep+0x7ffa4001c768>
+7ffa14fef751: e8 32 db 03 00              	callq	0x7ffa1502d288 <_usleep+0x7ffa1502d288>  ; IMPORT _objc_opt_class
+7ffa14fef756: 4c 8b 35 23 d1 ad 2c        	movq	0x2cadd123(%rip), %r14  ## 0x7ffa41acc880 <_usleep+0x7ffa41acc880>  ; -> 0x7ffa41acc880 __objc_selrefs propertyOfClass:forKey:
+7ffa14fef75d: 48 8d 0d e4 4f ad 2c        	leaq	0x2cad4fe4(%rip), %rcx  ## 0x7ffa41ac4748 <_usleep+0x7ffa41ac4748>  ; -> 0x7ffa41ac4748 __cfstring 'Product'
+7ffa14fef764: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef767: 4c 89 f6                    	movq	%r14, %rsi
+7ffa14fef76a: 48 89 c2                    	movq	%rax, %rdx
+7ffa14fef76d: 41 ff d4                    	callq	*%r12
+7ffa14fef770: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef773: e8 3a db 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef778: 48 8b 7b 60                 	movq	0x60(%rbx), %rdi
+7ffa14fef77c: 48 89 43 60                 	movq	%rax, 0x60(%rbx)
+7ffa14fef780: 41 ff d7                    	callq	*%r15
+7ffa14fef783: 48 8b 3d de cf 02 2b        	movq	0x2b02cfde(%rip), %rdi  ## 0x7ffa4001c768 <_usleep+0x7ffa4001c768>
+7ffa14fef78a: e8 f9 da 03 00              	callq	0x7ffa1502d288 <_usleep+0x7ffa1502d288>  ; IMPORT _objc_opt_class
+7ffa14fef78f: 48 8d 0d d2 4f ad 2c        	leaq	0x2cad4fd2(%rip), %rcx  ## 0x7ffa41ac4768 <_usleep+0x7ffa41ac4768>  ; -> 0x7ffa41ac4768 __cfstring 'Transport'
+7ffa14fef796: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef799: 4c 89 f6                    	movq	%r14, %rsi
+7ffa14fef79c: 48 89 c2                    	movq	%rax, %rdx
+7ffa14fef79f: 41 ff d4                    	callq	*%r12
+7ffa14fef7a2: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef7a5: e8 08 db 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef7aa: 48 8b 7b 68                 	movq	0x68(%rbx), %rdi
+7ffa14fef7ae: 48 89 43 68                 	movq	%rax, 0x68(%rbx)
+7ffa14fef7b2: 41 ff d7                    	callq	*%r15
+7ffa14fef7b5: 48 8d 15 cc 4f ad 2c        	leaq	0x2cad4fcc(%rip), %rdx  ## 0x7ffa41ac4788 <_usleep+0x7ffa41ac4788>  ; -> 0x7ffa41ac4788 __cfstring 'Authenticated'
+7ffa14fef7bc: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef7bf: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef7c2: 41 ff d4                    	callq	*%r12
+7ffa14fef7c5: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef7c8: e8 e5 da 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef7cd: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef7d0: 48 85 c0                    	testq	%rax, %rax
+7ffa14fef7d3: 74 33                       	je	0x7ffa14fef808 <-[BKIOHIDService _setUpInitialProperties]+0x189>
+7ffa14fef7d5: 48 8b 3d 6c ce 02 2b        	movq	0x2b02ce6c(%rip), %rdi  ## 0x7ffa4001c648 <_usleep+0x7ffa4001c648>
+7ffa14fef7dc: e8 a7 da 03 00              	callq	0x7ffa1502d288 <_usleep+0x7ffa1502d288>  ; IMPORT _objc_opt_class
+7ffa14fef7e1: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef7e4: 48 89 c6                    	movq	%rax, %rsi
+7ffa14fef7e7: e8 a2 da 03 00              	callq	0x7ffa1502d28e <_usleep+0x7ffa1502d28e>  ; IMPORT _objc_opt_isKindOfClass
+7ffa14fef7ec: 84 c0                       	testb	%al, %al
+7ffa14fef7ee: 74 18                       	je	0x7ffa14fef808 <-[BKIOHIDService _setUpInitialProperties]+0x189>
+7ffa14fef7f0: 48 8b 35 89 c8 ad 2c        	movq	0x2cadc889(%rip), %rsi  ## 0x7ffa41acc080 <_usleep+0x7ffa41acc080>  ; -> 0x7ffa41acc080 __objc_selrefs boolValue
+7ffa14fef7f7: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef7fa: ff 15 50 00 0e 2b           	callq	*0x2b0e0050(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef800: 84 c0                       	testb	%al, %al
+7ffa14fef802: 74 04                       	je	0x7ffa14fef808 <-[BKIOHIDService _setUpInitialProperties]+0x189>
+7ffa14fef804: c6 43 40 01                 	movb	$0x1, 0x40(%rbx)
+7ffa14fef808: 48 8d 15 99 4c ad 2c        	leaq	0x2cad4c99(%rip), %rdx  ## 0x7ffa41ac44a8 <_usleep+0x7ffa41ac44a8>  ; -> 0x7ffa41ac44a8 __cfstring 'Built-In'
+7ffa14fef80f: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef812: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef815: ff 15 35 00 0e 2b           	callq	*0x2b0e0035(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef81b: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef81e: e8 8f da 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef823: 49 89 c7                    	movq	%rax, %r15
+7ffa14fef826: 48 85 c0                    	testq	%rax, %rax
+7ffa14fef829: 74 33                       	je	0x7ffa14fef85e <-[BKIOHIDService _setUpInitialProperties]+0x1df>
+7ffa14fef82b: 48 8b 3d 16 ce 02 2b        	movq	0x2b02ce16(%rip), %rdi  ## 0x7ffa4001c648 <_usleep+0x7ffa4001c648>
+7ffa14fef832: e8 51 da 03 00              	callq	0x7ffa1502d288 <_usleep+0x7ffa1502d288>  ; IMPORT _objc_opt_class
+7ffa14fef837: 4c 89 ff                    	movq	%r15, %rdi
+7ffa14fef83a: 48 89 c6                    	movq	%rax, %rsi
+7ffa14fef83d: e8 4c da 03 00              	callq	0x7ffa1502d28e <_usleep+0x7ffa1502d28e>  ; IMPORT _objc_opt_isKindOfClass
+7ffa14fef842: 84 c0                       	testb	%al, %al
+7ffa14fef844: 74 18                       	je	0x7ffa14fef85e <-[BKIOHIDService _setUpInitialProperties]+0x1df>
+7ffa14fef846: 48 8b 35 33 c8 ad 2c        	movq	0x2cadc833(%rip), %rsi  ## 0x7ffa41acc080 <_usleep+0x7ffa41acc080>  ; -> 0x7ffa41acc080 __objc_selrefs boolValue
+7ffa14fef84d: 4c 89 ff                    	movq	%r15, %rdi
+7ffa14fef850: ff 15 fa ff 0d 2b           	callq	*0x2b0dfffa(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef856: 84 c0                       	testb	%al, %al
+7ffa14fef858: 74 04                       	je	0x7ffa14fef85e <-[BKIOHIDService _setUpInitialProperties]+0x1df>
+7ffa14fef85a: c6 43 41 01                 	movb	$0x1, 0x41(%rbx)
+7ffa14fef85e: 48 8d 15 43 4f ad 2c        	leaq	0x2cad4f43(%rip), %rdx  ## 0x7ffa41ac47a8 <_usleep+0x7ffa41ac47a8>  ; -> 0x7ffa41ac47a8 __cfstring '\x01'
+7ffa14fef865: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef868: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef86b: ff 15 df ff 0d 2b           	callq	*0x2b0dffdf(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef871: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef874: e8 39 da 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef879: 48 89 45 c8                 	movq	%rax, -0x38(%rbp)
+7ffa14fef87d: 48 85 c0                    	testq	%rax, %rax
+7ffa14fef880: 4c 89 75 b8                 	movq	%r14, -0x48(%rbp)
+7ffa14fef884: 4c 89 7d c0                 	movq	%r15, -0x40(%rbp)
+7ffa14fef888: 74 73                       	je	0x7ffa14fef8fd <-[BKIOHIDService _setUpInitialProperties]+0x27e>
+7ffa14fef88a: 48 8d 15 b7 51 ad 2c        	leaq	0x2cad51b7(%rip), %rdx  ## 0x7ffa41ac4a48 <_usleep+0x7ffa41ac4a48>  ; -> 0x7ffa41ac4a48 __cfstring 'DeviceTypeHint'
+7ffa14fef891: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef894: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef897: 4c 8b 25 b2 ff 0d 2b        	movq	0x2b0dffb2(%rip), %r12  ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef89e: 41 ff d4                    	callq	*%r12
+7ffa14fef8a1: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef8a4: e8 09 da 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef8a9: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef8ac: 4c 8b 3d cd ca ad 2c        	movq	0x2cadcacd(%rip), %r15  ## 0x7ffa41acc380 <_usleep+0x7ffa41acc380>  ; -> 0x7ffa41acc380 __objc_selrefs isEqualToString:
+7ffa14fef8b3: 48 8d 15 ce 51 ad 2c        	leaq	0x2cad51ce(%rip), %rdx  ## 0x7ffa41ac4a88 <_usleep+0x7ffa41ac4a88>  ; -> 0x7ffa41ac4a88 __cfstring '\x13'
+7ffa14fef8ba: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef8bd: 4c 89 fe                    	movq	%r15, %rsi
+7ffa14fef8c0: 41 ff d4                    	callq	*%r12
+7ffa14fef8c3: b9 0b 00 00 00              	movl	$0xb, %ecx
+7ffa14fef8c8: 84 c0                       	testb	%al, %al
+7ffa14fef8ca: 75 20                       	jne	0x7ffa14fef8ec <-[BKIOHIDService _setUpInitialProperties]+0x26d>
+7ffa14fef8cc: 48 8d 15 d5 51 ad 2c        	leaq	0x2cad51d5(%rip), %rdx  ## 0x7ffa41ac4aa8 <_usleep+0x7ffa41ac4aa8>  ; -> 0x7ffa41ac4aa8 __cfstring 'Trackpad'
+7ffa14fef8d3: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef8d6: 4c 89 fe                    	movq	%r15, %rsi
+7ffa14fef8d9: ff 15 71 ff 0d 2b           	callq	*0x2b0dff71(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef8df: b9 0c 00 00 00              	movl	$0xc, %ecx
+7ffa14fef8e4: 84 c0                       	testb	%al, %al
+7ffa14fef8e6: 0f 84 ea 00 00 00           	je	0x7ffa14fef9d6 <-[BKIOHIDService _setUpInitialProperties]+0x357>
+7ffa14fef8ec: 89 4b 44                    	movl	%ecx, 0x44(%rbx)
+7ffa14fef8ef: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14fef8f2: ff 15 b8 ff 0d 2b           	callq	*0x2b0dffb8(%rip)       ## 0x7ffa400cf8b0 <_usleep+0x7ffa400cf8b0>
+7ffa14fef8f8: e9 0c 01 00 00              	jmp	0x7ffa14fefa09 <-[BKIOHIDService _setUpInitialProperties]+0x38a>
+7ffa14fef8fd: 80 7b 41 00                 	cmpb	$0x0, 0x41(%rbx)
+7ffa14fef901: 74 0c                       	je	0x7ffa14fef90f <-[BKIOHIDService _setUpInitialProperties]+0x290>
+7ffa14fef903: c7 43 44 00 00 00 00        	movl	$0x0, 0x44(%rbx)
+7ffa14fef90a: e9 fa 00 00 00              	jmp	0x7ffa14fefa09 <-[BKIOHIDService _setUpInitialProperties]+0x38a>
+7ffa14fef90f: 48 89 df                    	movq	%rbx, %rdi
+7ffa14fef912: ff 15 a0 ff 0d 2b           	callq	*0x2b0dffa0(%rip)       ## 0x7ffa400cf8b8 <_usleep+0x7ffa400cf8b8>
+7ffa14fef918: 49 89 c4                    	movq	%rax, %r12
+7ffa14fef91b: 4c 8b 35 66 cf ad 2c        	movq	0x2cadcf66(%rip), %r14  ## 0x7ffa41acc888 <_usleep+0x7ffa41acc888>  ; -> 0x7ffa41acc888 __objc_selrefs claimsToConformToUsagePage:usage:
+7ffa14fef922: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef925: 4c 89 f6                    	movq	%r14, %rsi
+7ffa14fef928: ba 01 00 00 00              	movl	$0x1, %edx
+7ffa14fef92d: b9 02 00 00 00              	movl	$0x2, %ecx
+7ffa14fef932: ff 15 18 ff 0d 2b           	callq	*0x2b0dff18(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef938: 84 c0                       	testb	%al, %al
+7ffa14fef93a: 0f 84 7c 03 00 00           	je	0x7ffa14fefcbc <-[BKIOHIDService _setUpInitialProperties]+0x63d>
+7ffa14fef940: 48 8d 15 01 51 ad 2c        	leaq	0x2cad5101(%rip), %rdx  ## 0x7ffa41ac4a48 <_usleep+0x7ffa41ac4a48>  ; -> 0x7ffa41ac4a48 __cfstring 'DeviceTypeHint'
+7ffa14fef947: 4c 89 65 d0                 	movq	%r12, -0x30(%rbp)
+7ffa14fef94b: 4c 89 e7                    	movq	%r12, %rdi
+7ffa14fef94e: 4c 89 ee                    	movq	%r13, %rsi
+7ffa14fef951: 4c 8b 25 f8 fe 0d 2b        	movq	0x2b0dfef8(%rip), %r12  ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14fef958: 41 ff d4                    	callq	*%r12
+7ffa14fef95b: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef95e: e8 4f d9 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14fef963: 49 89 c6                    	movq	%rax, %r14
+7ffa14fef966: 4c 8b 3d 13 ca ad 2c        	movq	0x2cadca13(%rip), %r15  ## 0x7ffa41acc380 <_usleep+0x7ffa41acc380>  ; -> 0x7ffa41acc380 __objc_selrefs isEqualToString:
+7ffa14fef96d: 48 8d 15 14 51 ad 2c        	leaq	0x2cad5114(%rip), %rdx  ## 0x7ffa41ac4a88 <_usleep+0x7ffa41ac4a88>  ; -> 0x7ffa41ac4a88 __cfstring '\x13'
+7ffa14fef974: 48 89 c7                    	movq	%rax, %rdi
+7ffa14fef977: 4c 89 fe                    	movq	%r15, %rsi
+7ffa14fef97a: 41 ff d4                    	callq	*%r12
+7ffa14fef97d: b9 0b 00 00 00              	movl	$0xb, %ecx
+7ffa14fef982: 84 c0                       	testb	%al, %al
+7ffa14fef984: 75 33                       	jne	0x7ffa14fef9b9 <-[BKIOHIDService _setUpInitialProperties]+0x33a>
+7ffa14fef986: 48 8d 15 1b 51 ad 2c        	leaq	0x2cad511b(%rip), %rdx  ## 0x7ffa41ac4aa8 <_usleep+0x7ffa41ac4aa8>  ; -> 0x7ffa41ac4aa8 __cfstring 'Trackpad'

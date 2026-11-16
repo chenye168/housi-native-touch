@@ -1,0 +1,35 @@
+# WindowServer 代码签名：library-validation 标志；持有 com.apple.iohideventsystem.server 等私有 HID entitlement
+# codesign -dvvv /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer
+CodeDirectory v=20400 size=495 flags=0x2000(library-validation) hashes=5+7 location=embedded
+Authority=macOS Software Signing
+Authority=Apple Code Signing Certification Authority
+Authority=Apple Root CA
+TeamIdentifier=not set
+
+# codesign -d --entitlements - /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer | grep -iE 'hid|iohid|sidecar|touch'
+	[Key] com.apple.aop.hid-device.user-client
+	[Key] com.apple.hid.heartrate-access
+	[Key] com.apple.hid.manager.user-access-device
+	[Key] com.apple.hid.manager.user-access-privileged
+	[Key] com.apple.hid.manager.user-access-protected
+	[Key] com.apple.hid.multitouch.user-access
+	[Key] com.apple.hid.system.server-access
+	[Key] com.apple.hid.system.user-access-service
+	[Key] com.apple.hid.transport.user-access
+	[Key] com.apple.hidpreferences.privileged
+	[Key] com.apple.iohideventsystem.server
+	[Key] com.apple.private.hid.client.admin
+	[Key] com.apple.private.hid.client.event-monitor
+			[String] AppleHIDTransportBootloaderUserClient
+			[String] AppleHIDTransportDeviceUserClient
+
+# hidd: flags=0x0(none) 但同样持有 com.apple.iohideventsystem.server
+CodeDirectory v=20400 size=423 flags=0x0(none) hashes=3+7 location=embedded
+	[Key] com.apple.hid.manager.user-access-device
+	[Key] com.apple.hid.multitouch.user-access
+	[Key] com.apple.iohideventsystem.server
+
+# /Library/Apple 为 SIP restricted 目录（插件搜索路径之一位于其下，不可写）
+drwxr-xr-x@ 5 root  wheel  restricted 160 Nov  6 13:22 /Library/Apple
+drwxr-xr-x  3 root  wheel  restricted  96 Nov  6 13:22 /Library/Apple/System
+drwxr-xr-x  9 root  wheel  restricted 288 Nov  6 13:22 /Library/Apple/System/Library

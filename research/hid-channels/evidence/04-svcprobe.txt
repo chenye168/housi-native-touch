@@ -1,0 +1,70 @@
+# IOHIDEventSystem 只读服务枚举：182 个 service 中可见 HOUSI (VendorID 13015/ProductID 1/usage 13,4)，displayUUID 未暴露
+# ./svcprobe  (仅调用 Copy* API，不 set 任何属性)
+
+client = 0x102df2d90
+services = 0x102df4420 count=182
+
+== service[10] target=0 ==
+  VendorID               = <CFNumber 0x82b2b76dd4f16f79 [0x1f346cfc8]>{value = +1452, type = kCFNumberSInt64Type}
+  ProductID              = <CFNumber 0x82b2b76dd4f28bf9 [0x1f346cfc8]>{value = +613, type = kCFNumberSInt64Type}
+  PrimaryUsagePage       = <CFNumber 0x82b2b76dd4f3bff1 [0x1f346cfc8]>{value = +13, type = kCFNumberSInt32Type}
+  PrimaryUsage           = <CFNumber 0x82b2b76dd4f3bf71 [0x1f346cfc8]>{value = +12, type = kCFNumberSInt32Type}
+  Product                = (null)
+  Transport              = <CFString 0x7c25088210 [0x1f346cfc8]>{contents = "USB"}
+  Built-In               = <CFBoolean 0x1f3556b98 [0x1f346cfc8]>{value = false}
+  DisplayIntegrated      = (null)
+  isVirtualService       = (null)
+  RegistryID             = <CFNumber 0x82b2b7edd4d1ae79 [0x1f346cfc8]>{value = +4294984750, type = kCFNumberSInt64Type}
+  displayUUID            = (null)
+
+== service[18] target=0 ==
+  VendorID               = <CFNumber 0x82b2b76dd4f16f79 [0x1f346cfc8]>{value = +1452, type = kCFNumberSInt64Type}
+  ProductID              = <CFNumber 0x82b2b76dd4f28bf9 [0x1f346cfc8]>{value = +613, type = kCFNumberSInt64Type}
+  PrimaryUsagePage       = <CFNumber 0x82b2b76dd4f3bff1 [0x1f346cfc8]>{value = +13, type = kCFNumberSInt32Type}
+  PrimaryUsage           = <CFNumber 0x82b2b76dd4f3bf71 [0x1f346cfc8]>{value = +12, type = kCFNumberSInt32Type}
+  Product                = (null)
+  Transport              = <CFString 0x7c250883c0 [0x1f346cfc8]>{contents = "USB"}
+  Built-In               = <CFBoolean 0x1f3556b98 [0x1f346cfc8]>{value = false}
+  DisplayIntegrated      = (null)
+  isVirtualService       = (null)
+  RegistryID             = <CFNumber 0x82b2b7edd4f61479 [0x1f346cfc8]>{value = +4294970202, type = kCFNumberSInt64Type}
+  displayUUID            = (null)
+
+== service[51] target=1 ==
+  VendorID               = <CFNumber 0x82b2b76dd4ead2f9 [0x1f346cfc8]>{value = +13015, type = kCFNumberSInt64Type}
+  ProductID              = <CFNumber 0x82b2b76dd4f3b9f9 [0x1f346cfc8]>{value = +1, type = kCFNumberSInt64Type}
+  PrimaryUsagePage       = <CFNumber 0x82b2b76dd4f3bff1 [0x1f346cfc8]>{value = +13, type = kCFNumberSInt32Type}
+  PrimaryUsage           = <CFNumber 0x82b2b76dd4f3bb71 [0x1f346cfc8]>{value = +4, type = kCFNumberSInt32Type}
+  Product                = <CFString 0x7c25088a20 [0x1f346cfc8]>{contents = "USB2IIC_CTP_CONTROL"}
+  Transport              = <CFString 0x7c25088a50 [0x1f346cfc8]>{contents = "USB"}
+  Built-In               = (null)
+  DisplayIntegrated      = (null)
+  isVirtualService       = (null)
+  RegistryID             = <CFNumber 0x82b2b7edd4d28e79 [0x1f346cfc8]>{value = +4294984302, type = kCFNumberSInt64Type}
+  displayUUID            = (null)
+
+== service[58] target=0 ==
+  VendorID               = <CFNumber 0x82b2b76dd4f16f79 [0x1f346cfc8]>{value = +1452, type = kCFNumberSInt64Type}
+  ProductID              = <CFNumber 0x82b2b76dd4f218f9 [0x1f346cfc8]>{value = +835, type = kCFNumberSInt64Type}
+  PrimaryUsagePage       = <CFNumber 0x82b2b76dd4f3bff1 [0x1f346cfc8]>{value = +13, type = kCFNumberSInt32Type}
+  PrimaryUsage           = <CFNumber 0x82b2b76dd4f3bf71 [0x1f346cfc8]>{value = +12, type = kCFNumberSInt32Type}
+  Product                = <CFString 0x7c25088bd0 [0x1f346cfc8]>{contents = "Apple Internal Keyboard / Trackpad"}
+  Transport              = <CFString 0x7c25088c00 [0x1f346cfc8]>{contents = "SPI"}
+  Built-In               = <CFBoolean 0x1f3556b88 [0x1f346cfc8]>{value = true}
+  DisplayIntegrated      = (null)
+  isVirtualService       = (null)
+  RegistryID             = <CFNumber 0x82b2b7edd4f6cd79 [0x1f346cfc8]>{value = +4294970088, type = kCFNumberSInt64Type}
+  displayUUID            = (null)
+
+== service[160] target=1 ==
+  VendorID               = <CFNumber 0x82b2b76dd4ead2f9 [0x1f346cfc8]>{value = +13015, type = kCFNumberSInt64Type}
+  ProductID              = <CFNumber 0x82b2b76dd4f3b9f9 [0x1f346cfc8]>{value = +1, type = kCFNumberSInt64Type}
+  PrimaryUsagePage       = <CFNumber 0x82b2b76dd4f3b9f1 [0x1f346cfc8]>{value = +1, type = kCFNumberSInt32Type}
+  PrimaryUsage           = <CFNumber 0x82b2b76dd4f3b871 [0x1f346cfc8]>{value = +2, type = kCFNumberSInt32Type}
+  Product                = <CFString 0x7c25089f50 [0x1f346cfc8]>{contents = "USB2IIC_CTP_CONTROL"}
+  Transport              = <CFString 0x7c25089f80 [0x1f346cfc8]>{contents = "USB"}
+  Built-In               = (null)
+  DisplayIntegrated      = (null)
+  isVirtualService       = (null)
+  RegistryID             = <CFNumber 0x82b2b7edd4d28a79 [0x1f346cfc8]>{value = +4294984294, type = kCFNumberSInt64Type}
+  displayUUID            = (null)

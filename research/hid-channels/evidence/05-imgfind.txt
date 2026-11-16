@@ -1,0 +1,48 @@
+# imgfind 输出：关键字符串所在镜像 (macOS 27.2.1 26B131)
+# 构建: clang -O1 -o imgfind imgfind.c -framework CoreFoundation
+# 运行: ./imgfind
+
+== dlopen targets ==
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit : OK
+/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID : OK
+/System/Library/PrivateFrameworks/HIDPreferences.framework/Versions/A/HIDPreferences : OK
+/System/Library/PrivateFrameworks/UniversalHID.framework/Versions/A/UniversalHID : OK
+/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight : OK
+/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices : OK
+/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation : OK
+/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor : OK
+/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport : OK
+/System/Library/Frameworks/CoreHID.framework/Versions/A/CoreHID : OK
+
+== image count: 397 ==
+
+== string hits ==
+HIT  pattern=displayUUID                                image=/usr/lib/libobjc.A.dylib seg=__OBJC_RO off=0xa94fa
+HIT  pattern=HIDServicePlugin                           image=/usr/lib/libobjc.A.dylib seg=__OBJC_RO off=0x5886ac5
+HIT  pattern=BKSTouchStream                             image=/usr/lib/libobjc.A.dylib seg=__OBJC_RO off=0x5411774
+HIT  pattern=CGVirtualDisplay                           image=/usr/lib/libobjc.A.dylib seg=__OBJC_RO off=0x538977f
+HIT  pattern=HIDVirtualDevice                           image=/usr/lib/libobjc.A.dylib seg=__OBJC_RO off=0x58147fd
+HIT  pattern=/System/Library/HIDPlugins                 image=/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit seg=__TEXT off=0xcc7dc
+HIT  pattern=ServicePluginDebug                         image=/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit seg=__TEXT off=0xc41e4
+HIT  pattern=com.apple.iohideventsystem.server          image=/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit seg=__TEXT off=0xc3d7d
+HIT  pattern=displayUUID                                image=/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit seg=__TEXT off=0xc3f45
+HIT  pattern=HIDServicePlugin                           image=/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit seg=__TEXT off=0xc43f0
+HIT  pattern=notPrivileged                              image=/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore seg=__TEXT off=0x88073
+HIT  pattern=CGVirtualDisplay                           image=/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics seg=__TEXT off=0x78936e
+HIT  pattern=displayUUID                                image=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight seg=__TEXT off=0x5f649f
+HIT  pattern=handle_digitizer_added                     image=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight seg=__TEXT off=0x5f64ab
+HIT  pattern=BKTouchEvents                              image=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight seg=__TEXT off=0x5e4506
+HIT  pattern=HIDVirtualDevice                           image=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight seg=__TEXT off=0x5e099a
+HIT  pattern=BKTouchEvents                              image=/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices seg=__TEXT off=0x6afd3
+HIT  pattern=BKSTouchStream                             image=/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices seg=__TEXT off=0x6ed6a
+HIT  pattern=displayUUID                                image=/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation seg=__TEXT off=0x4b6cb
+HIT  pattern=com.apple.backboardd.virtualDisplay        image=/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation seg=__TEXT off=0x4a1ff
+HIT  pattern=HIDVirtualDevice                           image=/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation seg=__TEXT off=0x4b7d2
+HIT  pattern=displayUUID                                image=/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia seg=__TEXT off=0x20d27a
+HIT  pattern=com.apple.Multitouch                       image=/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport seg=__TEXT off=0x1fd6d
+HIT  pattern=displayUUID                                image=/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor seg=__TEXT off=0x42395
+HIT  pattern=from unsupported service                   image=/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor seg=__TEXT off=0x49275
+HIT  pattern=com.apple.backboardd.touchStreams          image=/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor seg=__TEXT off=0x423ab
+HIT  pattern=hid.virtual                                image=/System/Library/PrivateFrameworks/UniversalHID.framework/Versions/A/UniversalHID seg=__TEXT off=0xa6d53
+HIT  pattern=notPrivileged                              image=/System/Library/Frameworks/CoreHID.framework/Versions/A/CoreHID seg=__TEXT off=0x5aa3a
+HIT  pattern=HIDVirtualDevice                           image=/System/Library/Frameworks/CoreHID.framework/Versions/A/CoreHID seg=__TEXT off=0x3f520

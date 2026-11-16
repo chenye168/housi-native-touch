@@ -1,0 +1,23 @@
+# HSTouchHIDService（唯一已知会给 HID event service 提供 displayUUID 的系统插件）
+# strings: displayUUID / display UUID 相关日志
+1835:displayUUID
+2819: builtInPortNumber=
+3029:Notified of matched display service
+3030:Found display UUID in display service: %@
+3036:Could not retrieve display UUID
+5282:{?="hidEventService"@"HIDEventService""hidDevice"@"HIDDevice""service"{SendRight="_vptr$PortRight"^^?"_mp"I}"queue"@"NSObject<OS_dispatch_queue>""dispatcher"@"<HIDEventDispatcher>""cancelHandler"@?"device"@"source"@"NSObject<OS_dispatch_source>""pipeline"@"HSStage""recording"@"HSTRecordingManager""pencilVirtualService"@"HSTPencilVirtualService""sysdiagnoseNotifyToken"i"formatter"@"NSDateFormatter""requestedProperties"@"NSArray""recordedProperties"@"NSMutableArray""recordedPropertiesCount"@"NSMutableDictionary""cachedSetProperties"@"NSMutableArray""debugProperties"@"NSMutableDictionary""deviceID"Q"builtIn"B"deviceType"C"widthMm"i"heightMm"i"hidEventsToSyncDispatch"@"NSMutableArray""hidPencilEventsToSyncDispatch"@"NSMutableArray""syncDispatch"B"dispatchCollection"B"firstPointerDispatch"@"NSDate""lastPointerDispatch"@"NSDate""pointerEventsDispatched"I"enableHIDWorkInterval"B"hidWorkIntervalTouchTimeoutUs"Q"hidWorkIntervalStylusTimeoutUs"Q"workIntervalStartTime"Q"workIntervalStartTimeContinuous"Q"wasPencilPresent"B"didPencilAppear"B"displayServiceMatched"B"displayUUID"@"NSString"}
+5664:builtInPortNumber
+
+# 该插件 Info.plist 只匹配 AppleMultitouchDevice + HSTouchHIDService=true（内置屏），见 evidence/02
+
+# DFRTouchServiceFilter：匹配任意 usage 13/4 digitizer，但仅有日志/透传方法，无 displayUUID 逻辑
+@(#)PROGRAM:DFRTouchServiceFilter  PROJECT:MultitouchSoftware-10410.4
+DFRTouchServiceFilter
+-[DFRTouchServiceFilter initWithService:]
+-[DFRTouchServiceFilter setCancelHandler:]
+-[DFRTouchServiceFilter activate]
+-[DFRTouchServiceFilter cancel]
+[HID] [MT] %s Attaching to service : %@
+[HID] [MT] %s Filter activated
+DFRTouchServiceFilter
+HIDServiceFilter

@@ -1,0 +1,23 @@
+# __objc_selrefs -> selector name resolution (cache selector pool @ 0x7ff800000000)
+# rule: stored value = chained-fixup encoded; low 32 bits == low 32 bits of the target
+#       selector strings live in the MAIN cache file (region 0x7ff800000000-...);
+#       verified 862/863 slots resolve to a valid ObjC selector identifier.
+# (this is what makes it possible to read the ObjC predicate out of stripped dylibs)
+
+# BackBoardHIDTouchEventProcessor  __objc_selrefs vma=0x7ffd40176d70 size=0x1af8 fileoff=0x60f42 (863 slots)
+# slot           raw            low32        selector
+0x7ffd40176e18 0x000200218f9a59 0x218f9a59 copy
+0x7ffd40176f88 0x00020021d92a99 0x21d92a99 senderID
+0x7ffd40176ff0 0x0002002193a559 0x2193a559 displayUUID
+0x7ffd40177060 0x00020021936e4b 0x21936e4b display
+0x7ffd40177090 0x0002002247edfb 0x2247edfb eventSource
+0x7ffd40177250 0x000200218fa155 0x218fa155 length
+0x7ffd40177820 0x00020021e257c7 0x21e257c7 displayWithHardwareIdentifier:
+0x7ffd40177870 0x00020023d829ea 0x23d829ea _queue_addDigitizerStateForService:
+0x7ffd40177878 0x00020023d82b9f 0x23d82b9f _queue_digitizerStateForService:
+0x7ffd40177890 0x00020021940477 0x21940477 primaryUsage
+0x7ffd401778c0 0x00020021940484 0x21940484 primaryUsagePage
+0x7ffd401778d8 0x00020021cf4724 0x21cf4724 isBuiltIn
+0x7ffd401778e8 0x00020023d82bed 0x23d82bed _queue_displayUUIDForDigitizerService:
+0x7ffd401778f0 0x00020021e2506b 0x21e2506b builtinDisplay
+0x7ffd401779c8 0x000200218fa08f 0x218fa08f isEqualToString:

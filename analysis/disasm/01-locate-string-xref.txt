@@ -1,0 +1,47 @@
+## 1) which dylib contains the log string (grep the extracted cache tree)
+$ grep -rl "ignoring digitizer" tools/x86cache/System/Library/PrivateFrameworks/
+tools/x86cache/System/Library/PrivateFrameworks/BackBoardHIDTouchEventProcessor.framework/Versions/A/BackBoardHIDTouchEventProcessor
+
+## 2) string offsets inside that dylib
+$ strings -t x $BIN | grep -E "ignoring digitizer|digitizer attached|displayUUID"
+4b395 displayUUID
+52070 ignoring digitizer event from non-digitizer sender (%{public}@):%{public}@
+520c0 digitizer attached (sender %llX) service:%{public}@
+52500 ignoring digitizer event for display %{public}@ from unsupported service: (%{public}@):%{public}@
+
+## 3) section table (file offset -> vmaddr)
+$ otool -l $BIN | grep -A6 "__oslogstring"
+  sectname __oslogstring
+   segname __TEXT
+      addr 0x00007ffd00952190
+      size 0x0000000000003372
+    offset 332176
+     align 2^4 (16)
+    reloff 0
+$ otool -l $BIN | grep -A6 "__cstring"
+  sectname __cstring
+   segname __TEXT
+      addr 0x00007ffd0094c330
+      size 0x0000000000001e3d
+    offset 308016
+     align 2^4 (16)
+    reloff 0
+
+## 4) file-offset -> vmaddr
+# __oslogstring: vmaddr 0x7ffd00952190 @ fileoff 0x51190
+# 0x52500 -> 0x7ffd00953500  (the 'ignoring digitizer event for display' format string)
+# __cstring:     vmaddr 0x7ffd0094c330 @ fileoff 0x4b330
+# 0x4b395 -> 0x7ffd0094c395  ("displayUUID" key)
+
+## 5) who references 0x7ffd00953500 ?
+$ llvm-objdump -d --no-show-raw-insn \$BIN | grep 0x7ffd00953500
+7ffd0091ea8b:  	leaq	0x34a6e(%rip), %rcx     ## 0x7ffd00953500 <_tan+0x7ffd00953500>
+
+## 6) containing function (nm bracket)
+$ llvm-nm -an --defined-only \$BIN | awk around 0x7ffd0091ea8b
+00007ffd0091dd8d t ___87-[BKHIDDirectTouchEventProcessor _queue_postSyntheticEventForLongPressSlotID:targetID:]_block_invoke
+00007ffd0091e645 t -[BKHIDDirectTouchEventProcessor _handleDirectTouchEvent:service:]
+00007ffd0091e898 t ___66-[BKHIDDirectTouchEventProcessor _handleDirectTouchEvent:service:]_block_invoke
+   (next symbol below = end of the containing function)
+00007ffd0091eadf t -[BKHIDDirectTouchEventProcessor _determineServiceForEvent:sender:fromTouchPad:]
+00007ffd0091ee0b t -[BKHIDDirectTouchEventProcessor _queue_addServicesMatchingSenderDescriptor:inPerDisplayInfo:toArray:]

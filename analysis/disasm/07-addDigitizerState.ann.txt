@@ -1,0 +1,94 @@
+# -[BKHIDDirectTouchEventProcessor _queue_addDigitizerStateForService:] (head)
+# creates BKDirectTouchState; label '%llX-%@' (senderID-displayUUID); displayUUID empty -> BKSDisplayUUIDMainKey
+
+
+00007ffd0091b557 <-[BKHIDDirectTouchEventProcessor _queue_addDigitizerStateForService:]>:
+7ffd0091b557: 55                          	pushq	%rbp
+7ffd0091b558: 48 89 e5                    	movq	%rsp, %rbp
+7ffd0091b55b: 41 57                       	pushq	%r15
+7ffd0091b55d: 41 56                       	pushq	%r14
+7ffd0091b55f: 41 55                       	pushq	%r13
+7ffd0091b561: 41 54                       	pushq	%r12
+7ffd0091b563: 53                          	pushq	%rbx
+7ffd0091b564: 48 81 ec 68 01 00 00        	subq	$0x168, %rsp            ## imm = 0x168
+7ffd0091b56b: 49 89 d6                    	movq	%rdx, %r14
+7ffd0091b56e: 48 89 fb                    	movq	%rdi, %rbx
+7ffd0091b571: 48 8b 05 d0 03 7b 3f        	movq	0x3f7b03d0(%rip), %rax  ## 0x7ffd400cb948 <_tan+0x7ffd400cb948>
+7ffd0091b578: 48 8b 00                    	movq	(%rax), %rax
+7ffd0091b57b: 48 89 45 d0                 	movq	%rax, -0x30(%rbp)
+7ffd0091b57f: 48 8b 7f 08                 	movq	0x8(%rdi), %rdi
+7ffd0091b583: e8 44 b6 03 00              	callq	0x7ffd00956bcc <_tan+0x7ffd00956bcc>  ; IMPORT _dispatch_assert_queue$V2
+7ffd0091b588: 48 8b 35 71 c3 85 3f        	movq	0x3f85c371(%rip), %rsi  ## 0x7ffd40177900 <_tan+0x7ffd40177900>  ; -> 0x7ffd40177900 __objc_selrefs _queue_applyCachedPropertiesToMultitouchService:
+7ffd0091b58f: 48 89 9d 48 ff ff ff        	movq	%rbx, -0xb8(%rbp)
+7ffd0091b596: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091b599: 4c 89 b5 40 ff ff ff        	movq	%r14, -0xc0(%rbp)
+7ffd0091b5a0: 4c 89 f2                    	movq	%r14, %rdx
+7ffd0091b5a3: ff 15 cf 5c 7a 3f           	callq	*0x3f7a5ccf(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b5a9: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b5ac: e8 f9 b6 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091b5b1: 48 89 85 10 ff ff ff        	movq	%rax, -0xf0(%rbp)
+7ffd0091b5b8: 48 8b 35 29 c3 85 3f        	movq	0x3f85c329(%rip), %rsi  ## 0x7ffd401778e8 <_tan+0x7ffd401778e8>  ; -> 0x7ffd401778e8 __objc_selrefs _queue_displayUUIDForDigitizerService:
+7ffd0091b5bf: 48 8b bd 48 ff ff ff        	movq	-0xb8(%rbp), %rdi
+7ffd0091b5c6: 48 8b 95 40 ff ff ff        	movq	-0xc0(%rbp), %rdx
+7ffd0091b5cd: ff 15 a5 5c 7a 3f           	callq	*0x3f7a5ca5(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b5d3: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b5d6: e8 cf b6 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091b5db: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b5de: ff 15 04 5d 7a 3f           	callq	*0x3f7a5d04(%rip)       ## 0x7ffd400c12e8 <_tan+0x7ffd400c12e8>
+7ffd0091b5e4: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091b5e7: 48 8b 35 62 bc 85 3f        	movq	0x3f85bc62(%rip), %rsi  ## 0x7ffd40177250 <_tan+0x7ffd40177250>  ; -> 0x7ffd40177250 __objc_selrefs length
+7ffd0091b5ee: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b5f1: ff 15 81 5c 7a 3f           	callq	*0x3f7a5c81(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b5f7: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091b5fa: 48 85 c0                    	testq	%rax, %rax
+7ffd0091b5fd: 75 0a                       	jne	0x7ffd0091b609 <-[BKHIDDirectTouchEventProcessor _queue_addDigitizerStateForService:]+0xb2>
+7ffd0091b5ff: 48 8b 05 22 31 72 3f        	movq	0x3f723122(%rip), %rax  ## 0x7ffd4003e728 <_tan+0x7ffd4003e728>
+7ffd0091b606: 48 8b 38                    	movq	(%rax), %rdi
+7ffd0091b609: ff 15 d9 5c 7a 3f           	callq	*0x3f7a5cd9(%rip)       ## 0x7ffd400c12e8 <_tan+0x7ffd400c12e8>
+7ffd0091b60f: 48 89 85 20 ff ff ff        	movq	%rax, -0xe0(%rbp)
+7ffd0091b616: 4c 8b 35 c3 5c 7a 3f        	movq	0x3f7a5cc3(%rip), %r14  ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091b61d: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091b620: 41 ff d6                    	callq	*%r14
+7ffd0091b623: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091b626: 41 ff d6                    	callq	*%r14
+7ffd0091b629: 48 8b 3d 58 d6 85 3f        	movq	0x3f85d658(%rip), %rdi  ## 0x7ffd40178c88 <_tan+0x7ffd40178c88>  ; -> 0x7ffd40178c88 __got
+7ffd0091b630: e8 f7 b5 03 00              	callq	0x7ffd00956c2c <_tan+0x7ffd00956c2c>  ; IMPORT _objc_alloc
+7ffd0091b635: 48 89 c3                    	movq	%rax, %rbx
+7ffd0091b638: 4c 8b 35 21 a5 6f 3f        	movq	0x3f6fa521(%rip), %r14  ## 0x7ffd40015b60 <_tan+0x7ffd40015b60>
+7ffd0091b63f: 48 8b 35 42 b9 85 3f        	movq	0x3f85b942(%rip), %rsi  ## 0x7ffd40176f88 <_tan+0x7ffd40176f88>  ; -> 0x7ffd40176f88 __objc_selrefs senderID
+7ffd0091b646: 48 8b bd 40 ff ff ff        	movq	-0xc0(%rbp), %rdi
+7ffd0091b64d: ff 15 25 5c 7a 3f           	callq	*0x3f7a5c25(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b653: 48 8b 35 06 b8 85 3f        	movq	0x3f85b806(%rip), %rsi  ## 0x7ffd40176e60 <_tan+0x7ffd40176e60>  ; -> 0x7ffd40176e60 __objc_selrefs stringWithFormat:
+7ffd0091b65a: 48 8d 15 67 30 85 3f        	leaq	0x3f853067(%rip), %rdx  ## 0x7ffd4016e6c8 <_tan+0x7ffd4016e6c8>  ; -> 0x7ffd4016e6c8 __cfstring '%llX-%@'
+7ffd0091b661: 4c 89 f7                    	movq	%r14, %rdi
+7ffd0091b664: 48 89 c1                    	movq	%rax, %rcx
+7ffd0091b667: 4c 8b 85 20 ff ff ff        	movq	-0xe0(%rbp), %r8
+7ffd0091b66e: 31 c0                       	xorl	%eax, %eax
+7ffd0091b670: ff 15 02 5c 7a 3f           	callq	*0x3f7a5c02(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b676: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b679: e8 2c b6 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091b67e: 49 89 c6                    	movq	%rax, %r14
+7ffd0091b681: 48 8b 35 80 c2 85 3f        	movq	0x3f85c280(%rip), %rsi  ## 0x7ffd40177908 <_tan+0x7ffd40177908>  ; -> 0x7ffd40177908 __objc_selrefs initWithLabel:
+7ffd0091b688: 48 89 df                    	movq	%rbx, %rdi
+7ffd0091b68b: 48 89 c2                    	movq	%rax, %rdx
+7ffd0091b68e: ff 15 e4 5b 7a 3f           	callq	*0x3f7a5be4(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b694: 48 89 85 18 ff ff ff        	movq	%rax, -0xe8(%rbp)
+7ffd0091b69b: 4c 89 f7                    	movq	%r14, %rdi
+7ffd0091b69e: ff 15 3c 5c 7a 3f           	callq	*0x3f7a5c3c(%rip)       ## 0x7ffd400c12e0 <_tan+0x7ffd400c12e0>
+7ffd0091b6a4: 48 8b 35 45 c1 85 3f        	movq	0x3f85c145(%rip), %rsi  ## 0x7ffd401777f0 <_tan+0x7ffd401777f0>  ; -> 0x7ffd401777f0 __objc_selrefs _queue_displayInfoForDisplay:createIfNeeded:
+7ffd0091b6ab: 48 8b bd 48 ff ff ff        	movq	-0xb8(%rbp), %rdi
+7ffd0091b6b2: 48 8b 95 20 ff ff ff        	movq	-0xe0(%rbp), %rdx
+7ffd0091b6b9: b9 01 00 00 00              	movl	$0x1, %ecx
+7ffd0091b6be: ff 15 b4 5b 7a 3f           	callq	*0x3f7a5bb4(%rip)       ## 0x7ffd400c1278 <_tan+0x7ffd400c1278>
+7ffd0091b6c4: 48 89 c7                    	movq	%rax, %rdi
+7ffd0091b6c7: e8 de b5 03 00              	callq	0x7ffd00956caa <_tan+0x7ffd00956caa>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffd0091b6cc: 48 8b 3d 6d d4 85 3f        	movq	0x3f85d46d(%rip), %rdi  ## 0x7ffd40178b40 <_tan+0x7ffd40178b40>  ; -> 0x7ffd40178b40 __got
+7ffd0091b6d3: 48 89 85 30 ff ff ff        	movq	%rax, -0xd0(%rbp)
+7ffd0091b6da: e8 4d b5 03 00              	callq	0x7ffd00956c2c <_tan+0x7ffd00956c2c>  ; IMPORT _objc_alloc
+7ffd0091b6df: 48 85 c0                    	testq	%rax, %rax
+7ffd0091b6e2: 0f 84 d0 02 00 00           	je	0x7ffd0091b9b8 <-[BKHIDDirectTouchEventProcessor _queue_addDigitizerStateForService:]+0x461>
+7ffd0091b6e8: 48 8b 8d 48 ff ff ff        	movq	-0xb8(%rbp), %rcx
+7ffd0091b6ef: 48 8b 59 10                 	movq	0x10(%rcx), %rbx
+7ffd0091b6f3: 4c 8b 61 20                 	movq	0x20(%rcx), %r12
+7ffd0091b6f7: 48 8b 51 48                 	movq	0x48(%rcx), %rdx
+7ffd0091b6fb: 48 89 95 28 ff ff ff        	movq	%rdx, -0xd8(%rbp)

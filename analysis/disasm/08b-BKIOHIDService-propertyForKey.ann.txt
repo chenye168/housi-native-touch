@@ -1,0 +1,118 @@
+# -[BKIOHIDService propertyForKey:]  and its block_invoke (-> IOHIDServiceGetProperty)
+
+
+00007ffa14ff0a35 <-[BKIOHIDService propertyForKey:]>:
+7ffa14ff0a35: 55                          	pushq	%rbp
+7ffa14ff0a36: 48 89 e5                    	movq	%rsp, %rbp
+7ffa14ff0a39: 41 57                       	pushq	%r15
+7ffa14ff0a3b: 41 56                       	pushq	%r14
+7ffa14ff0a3d: 41 55                       	pushq	%r13
+7ffa14ff0a3f: 41 54                       	pushq	%r12
+7ffa14ff0a41: 53                          	pushq	%rbx
+7ffa14ff0a42: 48 83 ec 78                 	subq	$0x78, %rsp
+7ffa14ff0a46: 49 89 fe                    	movq	%rdi, %r14
+7ffa14ff0a49: 48 89 d7                    	movq	%rdx, %rdi
+7ffa14ff0a4c: ff 15 66 ee 0d 2b           	callq	*0x2b0dee66(%rip)       ## 0x7ffa400cf8b8 <_usleep+0x7ffa400cf8b8>
+7ffa14ff0a52: 49 89 c7                    	movq	%rax, %r15
+7ffa14ff0a55: 31 c0                       	xorl	%eax, %eax
+7ffa14ff0a57: 48 8d 5d a0                 	leaq	-0x60(%rbp), %rbx
+7ffa14ff0a5b: 48 89 03                    	movq	%rax, (%rbx)
+7ffa14ff0a5e: 48 89 5b 08                 	movq	%rbx, 0x8(%rbx)
+7ffa14ff0a62: 48 b9 00 00 00 32 30 00 00 00	movabsq	$0x3032000000, %rcx ## imm = 0x3032000000
+7ffa14ff0a6c: 48 89 4b 10                 	movq	%rcx, 0x10(%rbx)
+7ffa14ff0a70: 48 8d 0d b9 0c 03 00        	leaq	0x30cb9(%rip), %rcx     ## 0x7ffa15021730 <___Block_byref_object_copy_.1678>  ; -> 0x7ffa15021730 __text
+7ffa14ff0a77: 48 89 4b 18                 	movq	%rcx, 0x18(%rbx)
+7ffa14ff0a7b: 48 8d 0d c4 0c 03 00        	leaq	0x30cc4(%rip), %rcx     ## 0x7ffa15021746 <___Block_byref_object_dispose_.1679>  ; -> 0x7ffa15021746 __text
+7ffa14ff0a82: 48 89 4b 20                 	movq	%rcx, 0x20(%rbx)
+7ffa14ff0a86: 48 89 43 28                 	movq	%rax, 0x28(%rbx)
+7ffa14ff0a8a: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14ff0a8d: e8 da 00 00 00              	callq	0x7ffa14ff0b6c <-[BKIOHIDService _workQueue]>
+7ffa14ff0a92: 48 89 c7                    	movq	%rax, %rdi
+7ffa14ff0a95: e8 18 c8 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14ff0a9a: 49 89 c5                    	movq	%rax, %r13
+7ffa14ff0a9d: 48 8b 05 64 8a 0e 2b        	movq	0x2b0e8a64(%rip), %rax  ## 0x7ffa400d9508 <_usleep+0x7ffa400d9508>
+7ffa14ff0aa4: 4c 8d a5 68 ff ff ff        	leaq	-0x98(%rbp), %r12
+7ffa14ff0aab: 49 89 04 24                 	movq	%rax, (%r12)
+7ffa14ff0aaf: b8 00 00 00 c2              	movl	$0xc2000000, %eax       ## imm = 0xC2000000
+7ffa14ff0ab4: 49 89 44 24 08              	movq	%rax, 0x8(%r12)
+7ffa14ff0ab9: 48 8d 05 5b 01 00 00        	leaq	0x15b(%rip), %rax       ## 0x7ffa14ff0c1b <___33-[BKIOHIDService propertyForKey:]_block_invoke>  ; -> 0x7ffa14ff0c1b __text
+7ffa14ff0ac0: 49 89 44 24 10              	movq	%rax, 0x10(%r12)
+7ffa14ff0ac5: 48 8d 05 3c 0b ad 2c        	leaq	0x2cad0b3c(%rip), %rax  ## 0x7ffa41ac1608 <___block_descriptor_56_e8_32s40s48r_e5_v8?0l>  ; -> 0x7ffa41ac1608 __const
+7ffa14ff0acc: 49 89 44 24 18              	movq	%rax, 0x18(%r12)
+7ffa14ff0ad1: 49 89 5c 24 30              	movq	%rbx, 0x30(%r12)
+7ffa14ff0ad6: 4d 89 74 24 20              	movq	%r14, 0x20(%r12)
+7ffa14ff0adb: 4d 89 7c 24 28              	movq	%r15, 0x28(%r12)
+7ffa14ff0ae0: 4c 8b 35 d1 ed 0d 2b        	movq	0x2b0dedd1(%rip), %r14  ## 0x7ffa400cf8b8 <_usleep+0x7ffa400cf8b8>
+7ffa14ff0ae7: 4c 89 ff                    	movq	%r15, %rdi
+7ffa14ff0aea: 41 ff d6                    	callq	*%r14
+7ffa14ff0aed: 4d 89 f7                    	movq	%r14, %r15
+7ffa14ff0af0: 48 89 45 d0                 	movq	%rax, -0x30(%rbp)
+7ffa14ff0af4: 4c 89 ef                    	movq	%r13, %rdi
+7ffa14ff0af7: 4c 89 e6                    	movq	%r12, %rsi
+7ffa14ff0afa: e8 05 c7 03 00              	callq	0x7ffa1502d204 <_usleep+0x7ffa1502d204>  ; IMPORT _dispatch_sync
+7ffa14ff0aff: 4c 8b 35 aa ed 0d 2b        	movq	0x2b0dedaa(%rip), %r14  ## 0x7ffa400cf8b0 <_usleep+0x7ffa400cf8b0>
+7ffa14ff0b06: 4c 89 ef                    	movq	%r13, %rdi
+7ffa14ff0b09: 41 ff d6                    	callq	*%r14
+7ffa14ff0b0c: 48 8b 45 a8                 	movq	-0x58(%rbp), %rax
+7ffa14ff0b10: 48 8b 78 28                 	movq	0x28(%rax), %rdi
+7ffa14ff0b14: 41 ff d7                    	callq	*%r15
+7ffa14ff0b17: 49 89 c7                    	movq	%rax, %r15
+7ffa14ff0b1a: 49 8b 7c 24 28              	movq	0x28(%r12), %rdi
+7ffa14ff0b1f: 41 ff d6                    	callq	*%r14
+7ffa14ff0b22: 48 89 df                    	movq	%rbx, %rdi
+7ffa14ff0b25: be 08 00 00 00              	movl	$0x8, %esi
+7ffa14ff0b2a: e8 8d c6 03 00              	callq	0x7ffa1502d1bc <_usleep+0x7ffa1502d1bc>  ; IMPORT __Block_object_dispose
+7ffa14ff0b2f: 48 8b 7d c8                 	movq	-0x38(%rbp), %rdi
+7ffa14ff0b33: 41 ff d6                    	callq	*%r14
+7ffa14ff0b36: 48 8b 7d d0                 	movq	-0x30(%rbp), %rdi
+7ffa14ff0b3a: 41 ff d6                    	callq	*%r14
+7ffa14ff0b3d: 4c 89 ff                    	movq	%r15, %rdi
+7ffa14ff0b40: 48 83 c4 78                 	addq	$0x78, %rsp
+7ffa14ff0b44: 5b                          	popq	%rbx
+7ffa14ff0b45: 41 5c                       	popq	%r12
+7ffa14ff0b47: 41 5d                       	popq	%r13
+7ffa14ff0b49: 41 5e                       	popq	%r14
+7ffa14ff0b4b: 41 5f                       	popq	%r15
+7ffa14ff0b4d: 5d                          	popq	%rbp
+7ffa14ff0b4e: e9 f9 c6 03 00              	jmp	0x7ffa1502d24c <_usleep+0x7ffa1502d24c>
+7ffa14ff0b53: 48 89 c3                    	movq	%rax, %rbx
+7ffa14ff0b56: 48 8d 7d a0                 	leaq	-0x60(%rbp), %rdi
+7ffa14ff0b5a: be 08 00 00 00              	movl	$0x8, %esi
+7ffa14ff0b5f: e8 58 c6 03 00              	callq	0x7ffa1502d1bc <_usleep+0x7ffa1502d1bc>  ; IMPORT __Block_object_dispose
+7ffa14ff0b64: 48 89 df                    	movq	%rbx, %rdi
+7ffa14ff0b67: e8 56 c6 03 00              	callq	0x7ffa1502d1c2 <_usleep+0x7ffa1502d1c2>  ; IMPORT __Unwind_Resume
+
+00007ffa14ff0b6c <-[BKIOHIDService _workQueue]>:
+7ffa14ff0b6c: 55                          	pushq	%rbp
+7ffa14ff0b6d: 48 89 e5                    	movq	%rsp, %rbp
+7ffa14ff0b70: 41 57                       	pushq	%r15
+7ffa14ff0b72: 41 56                       	pushq	%r14
+7ffa14ff0b74: 41 54                       	pushq	%r12
+7ffa14ff0b76: 53                          	pushq	%rbx
+7ffa14ff0b77: 48 85 ff                    	testq	%rdi, %rdi
+7ffa14ff0b7a: 0f 84 95 00 00 00           	je	0x7ffa14ff0c15 <-[BKIOHIDService _workQueue]+0xa9>
+7ffa14ff0b80: 49 89 fe                    	movq	%rdi, %r14
+7ffa14ff0b83: 48 8d 5f 10                 	leaq	0x10(%rdi), %rbx
+7ffa14ff0b87: 48 89 df                    	movq	%rbx, %rdi
+7ffa14ff0b8a: e8 6b c7 03 00              	callq	0x7ffa1502d2fa <_usleep+0x7ffa1502d2fa>  ; IMPORT _os_unfair_lock_lock
+7ffa14ff0b8f: 49 8b 7e 18                 	movq	0x18(%r14), %rdi
+7ffa14ff0b93: ff 15 1f ed 0d 2b           	callq	*0x2b0ded1f(%rip)       ## 0x7ffa400cf8b8 <_usleep+0x7ffa400cf8b8>
+7ffa14ff0b99: 49 89 c4                    	movq	%rax, %r12
+7ffa14ff0b9c: 48 85 c0                    	testq	%rax, %rax
+7ffa14ff0b9f: 75 5c                       	jne	0x7ffa14ff0bfd <-[BKIOHIDService _workQueue]+0x91>
+7ffa14ff0ba1: 4d 8d 7e 18                 	leaq	0x18(%r14), %r15
+7ffa14ff0ba5: 4c 8b 25 bc bb 02 2b        	movq	0x2b02bbbc(%rip), %r12  ## 0x7ffa4001c768 <_usleep+0x7ffa4001c768>
+7ffa14ff0bac: 4c 89 f7                    	movq	%r14, %rdi
+7ffa14ff0baf: e8 d4 c6 03 00              	callq	0x7ffa1502d288 <_usleep+0x7ffa1502d288>  ; IMPORT _objc_opt_class
+7ffa14ff0bb4: 48 8b 35 2d b4 ad 2c        	movq	0x2cadb42d(%rip), %rsi  ## 0x7ffa41acbfe8 <_usleep+0x7ffa41acbfe8>  ; -> 0x7ffa41acbfe8 __objc_selrefs stringWithFormat:
+7ffa14ff0bbb: 48 8d 15 c6 3d ad 2c        	leaq	0x2cad3dc6(%rip), %rdx  ## 0x7ffa41ac4988 <_usleep+0x7ffa41ac4988>  ; -> 0x7ffa41ac4988 __cfstring '%@-%p.workQueue'
+7ffa14ff0bc2: 4c 89 e7                    	movq	%r12, %rdi
+7ffa14ff0bc5: 48 89 c1                    	movq	%rax, %rcx
+7ffa14ff0bc8: 4d 89 f0                    	movq	%r14, %r8
+7ffa14ff0bcb: 31 c0                       	xorl	%eax, %eax
+7ffa14ff0bcd: ff 15 7d ec 0d 2b           	callq	*0x2b0dec7d(%rip)       ## 0x7ffa400cf850 <_usleep+0x7ffa400cf850>
+7ffa14ff0bd3: 48 89 c7                    	movq	%rax, %rdi
+7ffa14ff0bd6: e8 d7 c6 03 00              	callq	0x7ffa1502d2b2 <_usleep+0x7ffa1502d2b2>  ; IMPORT _objc_retainAutoreleasedReturnValue
+7ffa14ff0bdb: 49 89 c6                    	movq	%rax, %r14
+7ffa14ff0bde: 48 89 c7                    	movq	%rax, %rdi
+7ffa14ff0be1: e8 08 c4 03 00              	callq	0x7ffa1502cfee <_usleep+0x7ffa1502cfee>  ; IMPORT _BSDispatchQueueCreateSerial
